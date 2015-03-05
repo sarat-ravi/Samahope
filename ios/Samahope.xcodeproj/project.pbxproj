@@ -1,0 +1,644 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		413039EA1AA812E40086C445 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 413039E91AA812E40086C445 /* main.m */; };
+		413039ED1AA812E40086C445 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 413039EC1AA812E40086C445 /* AppDelegate.m */; };
+		413039F51AA812E40086C445 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413039F41AA812E40086C445 /* Images.xcassets */; };
+		413039F81AA812E40086C445 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 413039F61AA812E40086C445 /* LaunchScreen.xib */; };
+		41303A041AA812E40086C445 /* SamahopeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41303A031AA812E40086C445 /* SamahopeTests.m */; };
+		413CE52B1AA8146F002E16D9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5291AA8146F002E16D9 /* LoginViewController.m */; };
+		413CE52C1AA8146F002E16D9 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 413CE52A1AA8146F002E16D9 /* LoginViewController.xib */; };
+		413CE5301AA814DE002E16D9 /* DoctorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE52E1AA814DE002E16D9 /* DoctorsViewController.m */; };
+		413CE5311AA814DE002E16D9 /* DoctorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 413CE52F1AA814DE002E16D9 /* DoctorsViewController.xib */; };
+		413CE5351AA81502002E16D9 /* DoctorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5331AA81502002E16D9 /* DoctorDetailViewController.m */; };
+		413CE5361AA81502002E16D9 /* DoctorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 413CE5341AA81502002E16D9 /* DoctorDetailViewController.xib */; };
+		413CE53A1AA8152A002E16D9 /* DoctorTextDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5381AA8152A002E16D9 /* DoctorTextDetailViewController.m */; };
+		413CE53B1AA8152A002E16D9 /* DoctorTextDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 413CE5391AA8152A002E16D9 /* DoctorTextDetailViewController.xib */; };
+		413CE53F1AA8153D002E16D9 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE53D1AA8153D002E16D9 /* UserViewController.m */; };
+		413CE5401AA8153D002E16D9 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 413CE53E1AA8153D002E16D9 /* UserViewController.xib */; };
+		413CE5441AA8154D002E16D9 /* DonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5421AA8154D002E16D9 /* DonateViewController.m */; };
+		413CE5451AA8154D002E16D9 /* DonateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 413CE5431AA8154D002E16D9 /* DonateViewController.xib */; };
+		413CE5481AA81559002E16D9 /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5471AA81559002E16D9 /* PaymentViewController.m */; };
+		413CE54C1AA81581002E16D9 /* ThanksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE54A1AA81581002E16D9 /* ThanksViewController.m */; };
+		413CE54D1AA81581002E16D9 /* ThanksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 413CE54B1AA81581002E16D9 /* ThanksViewController.xib */; };
+		413CE5511AA815C2002E16D9 /* DoctorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE54F1AA815C2002E16D9 /* DoctorCell.m */; };
+		413CE5521AA815C2002E16D9 /* DoctorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 413CE5501AA815C2002E16D9 /* DoctorCell.xib */; };
+		413CE5551AA815FA002E16D9 /* FundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5541AA815FA002E16D9 /* FundView.m */; };
+		413CE5581AA816A8002E16D9 /* DoctorBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5571AA816A8002E16D9 /* DoctorBannerView.m */; };
+		413CE55B1AA816E5002E16D9 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE55A1AA816E5002E16D9 /* Doctor.m */; };
+		413CE55E1AA816F4002E16D9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE55D1AA816F4002E16D9 /* User.m */; };
+		413CE5611AA816FF002E16D9 /* Fund.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5601AA816FF002E16D9 /* Fund.m */; };
+		413CE5671AA8171F002E16D9 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5661AA8171F002E16D9 /* Category.m */; };
+		413CE56A1AA81731002E16D9 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5691AA81731002E16D9 /* Patient.m */; };
+		413CE56D1AA81746002E16D9 /* SamahopeClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE56C1AA81746002E16D9 /* SamahopeClient.m */; };
+		413CE5701AA817A6002E16D9 /* ParseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE56F1AA817A6002E16D9 /* ParseClient.m */; };
+		50C318DB1953477223CBEE26 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E873347A1F870346E92BC5CF /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		413039FE1AA812E40086C445 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 413039DC1AA812E40086C445 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 413039E31AA812E40086C445;
+			remoteInfo = Samahope;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		413039E41AA812E40086C445 /* Samahope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Samahope.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		413039E81AA812E40086C445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		413039E91AA812E40086C445 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		413039EB1AA812E40086C445 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		413039EC1AA812E40086C445 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		413039F41AA812E40086C445 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		413039F71AA812E40086C445 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		413039FD1AA812E40086C445 /* SamahopeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SamahopeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		41303A021AA812E40086C445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41303A031AA812E40086C445 /* SamahopeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SamahopeTests.m; sourceTree = "<group>"; };
+		413CE5281AA8146F002E16D9 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		413CE5291AA8146F002E16D9 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		413CE52A1AA8146F002E16D9 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		413CE52D1AA814DE002E16D9 /* DoctorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorsViewController.h; sourceTree = "<group>"; };
+		413CE52E1AA814DE002E16D9 /* DoctorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorsViewController.m; sourceTree = "<group>"; };
+		413CE52F1AA814DE002E16D9 /* DoctorsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorsViewController.xib; sourceTree = "<group>"; };
+		413CE5321AA81502002E16D9 /* DoctorDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorDetailViewController.h; sourceTree = "<group>"; };
+		413CE5331AA81502002E16D9 /* DoctorDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorDetailViewController.m; sourceTree = "<group>"; };
+		413CE5341AA81502002E16D9 /* DoctorDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorDetailViewController.xib; sourceTree = "<group>"; };
+		413CE5371AA8152A002E16D9 /* DoctorTextDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorTextDetailViewController.h; sourceTree = "<group>"; };
+		413CE5381AA8152A002E16D9 /* DoctorTextDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorTextDetailViewController.m; sourceTree = "<group>"; };
+		413CE5391AA8152A002E16D9 /* DoctorTextDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorTextDetailViewController.xib; sourceTree = "<group>"; };
+		413CE53C1AA8153D002E16D9 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		413CE53D1AA8153D002E16D9 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		413CE53E1AA8153D002E16D9 /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
+		413CE5411AA8154D002E16D9 /* DonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonateViewController.h; sourceTree = "<group>"; };
+		413CE5421AA8154D002E16D9 /* DonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonateViewController.m; sourceTree = "<group>"; };
+		413CE5431AA8154D002E16D9 /* DonateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DonateViewController.xib; sourceTree = "<group>"; };
+		413CE5461AA81559002E16D9 /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
+		413CE5471AA81559002E16D9 /* PaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentViewController.m; sourceTree = "<group>"; };
+		413CE5491AA81581002E16D9 /* ThanksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThanksViewController.h; sourceTree = "<group>"; };
+		413CE54A1AA81581002E16D9 /* ThanksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThanksViewController.m; sourceTree = "<group>"; };
+		413CE54B1AA81581002E16D9 /* ThanksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThanksViewController.xib; sourceTree = "<group>"; };
+		413CE54E1AA815C2002E16D9 /* DoctorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorCell.h; sourceTree = "<group>"; };
+		413CE54F1AA815C2002E16D9 /* DoctorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorCell.m; sourceTree = "<group>"; };
+		413CE5501AA815C2002E16D9 /* DoctorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorCell.xib; sourceTree = "<group>"; };
+		413CE5531AA815FA002E16D9 /* FundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FundView.h; sourceTree = "<group>"; };
+		413CE5541AA815FA002E16D9 /* FundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FundView.m; sourceTree = "<group>"; };
+		413CE5561AA816A8002E16D9 /* DoctorBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorBannerView.h; sourceTree = "<group>"; };
+		413CE5571AA816A8002E16D9 /* DoctorBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorBannerView.m; sourceTree = "<group>"; };
+		413CE5591AA816E5002E16D9 /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
+		413CE55A1AA816E5002E16D9 /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
+		413CE55C1AA816F4002E16D9 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		413CE55D1AA816F4002E16D9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		413CE55F1AA816FF002E16D9 /* Fund.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fund.h; sourceTree = "<group>"; };
+		413CE5601AA816FF002E16D9 /* Fund.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fund.m; sourceTree = "<group>"; };
+		413CE5651AA8171F002E16D9 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		413CE5661AA8171F002E16D9 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		413CE5681AA81731002E16D9 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
+		413CE5691AA81731002E16D9 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
+		413CE56B1AA81746002E16D9 /* SamahopeClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamahopeClient.h; sourceTree = "<group>"; };
+		413CE56C1AA81746002E16D9 /* SamahopeClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SamahopeClient.m; sourceTree = "<group>"; };
+		413CE56E1AA817A6002E16D9 /* ParseClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseClient.h; sourceTree = "<group>"; };
+		413CE56F1AA817A6002E16D9 /* ParseClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseClient.m; sourceTree = "<group>"; };
+		8654BA0CD8B5CD92EB16F960 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BCA538D0CCF27612265B869B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E873347A1F870346E92BC5CF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		413039E11AA812E40086C445 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50C318DB1953477223CBEE26 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		413039FA1AA812E40086C445 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BB6992F5A4534FAC7F8BA79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E873347A1F870346E92BC5CF /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		413039DB1AA812E40086C445 = {
+			isa = PBXGroup;
+			children = (
+				413039E61AA812E40086C445 /* Samahope */,
+				41303A001AA812E40086C445 /* SamahopeTests */,
+				413039E51AA812E40086C445 /* Products */,
+				DF160413ADDF7EF56A4B7511 /* Pods */,
+				2BB6992F5A4534FAC7F8BA79 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		413039E51AA812E40086C445 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				413039E41AA812E40086C445 /* Samahope.app */,
+				413039FD1AA812E40086C445 /* SamahopeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		413039E61AA812E40086C445 /* Samahope */ = {
+			isa = PBXGroup;
+			children = (
+				413CE5271AA81431002E16D9 /* API */,
+				413CE5261AA8142A002E16D9 /* Controller */,
+				413CE5251AA81425002E16D9 /* View */,
+				413CE5241AA8141E002E16D9 /* Model */,
+				413039EB1AA812E40086C445 /* AppDelegate.h */,
+				413039EC1AA812E40086C445 /* AppDelegate.m */,
+				413039F41AA812E40086C445 /* Images.xcassets */,
+				413039F61AA812E40086C445 /* LaunchScreen.xib */,
+				413039E71AA812E40086C445 /* Supporting Files */,
+			);
+			path = Samahope;
+			sourceTree = "<group>";
+		};
+		413039E71AA812E40086C445 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				413039E81AA812E40086C445 /* Info.plist */,
+				413039E91AA812E40086C445 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		41303A001AA812E40086C445 /* SamahopeTests */ = {
+			isa = PBXGroup;
+			children = (
+				41303A031AA812E40086C445 /* SamahopeTests.m */,
+				41303A011AA812E40086C445 /* Supporting Files */,
+			);
+			path = SamahopeTests;
+			sourceTree = "<group>";
+		};
+		41303A011AA812E40086C445 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				41303A021AA812E40086C445 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		413CE5241AA8141E002E16D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				413CE5591AA816E5002E16D9 /* Doctor.h */,
+				413CE55A1AA816E5002E16D9 /* Doctor.m */,
+				413CE55C1AA816F4002E16D9 /* User.h */,
+				413CE55D1AA816F4002E16D9 /* User.m */,
+				413CE55F1AA816FF002E16D9 /* Fund.h */,
+				413CE5601AA816FF002E16D9 /* Fund.m */,
+				413CE5651AA8171F002E16D9 /* Category.h */,
+				413CE5661AA8171F002E16D9 /* Category.m */,
+				413CE5681AA81731002E16D9 /* Patient.h */,
+				413CE5691AA81731002E16D9 /* Patient.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		413CE5251AA81425002E16D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				413CE54E1AA815C2002E16D9 /* DoctorCell.h */,
+				413CE54F1AA815C2002E16D9 /* DoctorCell.m */,
+				413CE5501AA815C2002E16D9 /* DoctorCell.xib */,
+				413CE5531AA815FA002E16D9 /* FundView.h */,
+				413CE5541AA815FA002E16D9 /* FundView.m */,
+				413CE5561AA816A8002E16D9 /* DoctorBannerView.h */,
+				413CE5571AA816A8002E16D9 /* DoctorBannerView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		413CE5261AA8142A002E16D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				413CE5281AA8146F002E16D9 /* LoginViewController.h */,
+				413CE5291AA8146F002E16D9 /* LoginViewController.m */,
+				413CE52A1AA8146F002E16D9 /* LoginViewController.xib */,
+				413CE52D1AA814DE002E16D9 /* DoctorsViewController.h */,
+				413CE52E1AA814DE002E16D9 /* DoctorsViewController.m */,
+				413CE52F1AA814DE002E16D9 /* DoctorsViewController.xib */,
+				413CE5321AA81502002E16D9 /* DoctorDetailViewController.h */,
+				413CE5331AA81502002E16D9 /* DoctorDetailViewController.m */,
+				413CE5341AA81502002E16D9 /* DoctorDetailViewController.xib */,
+				413CE5371AA8152A002E16D9 /* DoctorTextDetailViewController.h */,
+				413CE5381AA8152A002E16D9 /* DoctorTextDetailViewController.m */,
+				413CE5391AA8152A002E16D9 /* DoctorTextDetailViewController.xib */,
+				413CE53C1AA8153D002E16D9 /* UserViewController.h */,
+				413CE53D1AA8153D002E16D9 /* UserViewController.m */,
+				413CE53E1AA8153D002E16D9 /* UserViewController.xib */,
+				413CE5411AA8154D002E16D9 /* DonateViewController.h */,
+				413CE5421AA8154D002E16D9 /* DonateViewController.m */,
+				413CE5431AA8154D002E16D9 /* DonateViewController.xib */,
+				413CE5461AA81559002E16D9 /* PaymentViewController.h */,
+				413CE5471AA81559002E16D9 /* PaymentViewController.m */,
+				413CE5491AA81581002E16D9 /* ThanksViewController.h */,
+				413CE54A1AA81581002E16D9 /* ThanksViewController.m */,
+				413CE54B1AA81581002E16D9 /* ThanksViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		413CE5271AA81431002E16D9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				413CE56B1AA81746002E16D9 /* SamahopeClient.h */,
+				413CE56C1AA81746002E16D9 /* SamahopeClient.m */,
+				413CE56E1AA817A6002E16D9 /* ParseClient.h */,
+				413CE56F1AA817A6002E16D9 /* ParseClient.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		DF160413ADDF7EF56A4B7511 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8654BA0CD8B5CD92EB16F960 /* Pods.debug.xcconfig */,
+				BCA538D0CCF27612265B869B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		413039E31AA812E40086C445 /* Samahope */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41303A071AA812E40086C445 /* Build configuration list for PBXNativeTarget "Samahope" */;
+			buildPhases = (
+				5BF89C701283A7C6469F97B6 /* Check Pods Manifest.lock */,
+				413039E01AA812E40086C445 /* Sources */,
+				413039E11AA812E40086C445 /* Frameworks */,
+				413039E21AA812E40086C445 /* Resources */,
+				C70065F0B891F6686F3AA45D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Samahope;
+			productName = Samahope;
+			productReference = 413039E41AA812E40086C445 /* Samahope.app */;
+			productType = "com.apple.product-type.application";
+		};
+		413039FC1AA812E40086C445 /* SamahopeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41303A0A1AA812E40086C445 /* Build configuration list for PBXNativeTarget "SamahopeTests" */;
+			buildPhases = (
+				413039F91AA812E40086C445 /* Sources */,
+				413039FA1AA812E40086C445 /* Frameworks */,
+				413039FB1AA812E40086C445 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				413039FF1AA812E40086C445 /* PBXTargetDependency */,
+			);
+			name = SamahopeTests;
+			productName = SamahopeTests;
+			productReference = 413039FD1AA812E40086C445 /* SamahopeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		413039DC1AA812E40086C445 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Samahope Org";
+				TargetAttributes = {
+					413039E31AA812E40086C445 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					413039FC1AA812E40086C445 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 413039E31AA812E40086C445;
+					};
+				};
+			};
+			buildConfigurationList = 413039DF1AA812E40086C445 /* Build configuration list for PBXProject "Samahope" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 413039DB1AA812E40086C445;
+			productRefGroup = 413039E51AA812E40086C445 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				413039E31AA812E40086C445 /* Samahope */,
+				413039FC1AA812E40086C445 /* SamahopeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		413039E21AA812E40086C445 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				413CE5401AA8153D002E16D9 /* UserViewController.xib in Resources */,
+				413039F81AA812E40086C445 /* LaunchScreen.xib in Resources */,
+				413039F51AA812E40086C445 /* Images.xcassets in Resources */,
+				413CE54D1AA81581002E16D9 /* ThanksViewController.xib in Resources */,
+				413CE5451AA8154D002E16D9 /* DonateViewController.xib in Resources */,
+				413CE5361AA81502002E16D9 /* DoctorDetailViewController.xib in Resources */,
+				413CE52C1AA8146F002E16D9 /* LoginViewController.xib in Resources */,
+				413CE5311AA814DE002E16D9 /* DoctorsViewController.xib in Resources */,
+				413CE5521AA815C2002E16D9 /* DoctorCell.xib in Resources */,
+				413CE53B1AA8152A002E16D9 /* DoctorTextDetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		413039FB1AA812E40086C445 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5BF89C701283A7C6469F97B6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C70065F0B891F6686F3AA45D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		413039E01AA812E40086C445 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				413CE5511AA815C2002E16D9 /* DoctorCell.m in Sources */,
+				413CE5671AA8171F002E16D9 /* Category.m in Sources */,
+				413CE5481AA81559002E16D9 /* PaymentViewController.m in Sources */,
+				413CE56A1AA81731002E16D9 /* Patient.m in Sources */,
+				413CE54C1AA81581002E16D9 /* ThanksViewController.m in Sources */,
+				413CE5581AA816A8002E16D9 /* DoctorBannerView.m in Sources */,
+				413CE53F1AA8153D002E16D9 /* UserViewController.m in Sources */,
+				413CE55E1AA816F4002E16D9 /* User.m in Sources */,
+				413039ED1AA812E40086C445 /* AppDelegate.m in Sources */,
+				413CE5551AA815FA002E16D9 /* FundView.m in Sources */,
+				413CE5351AA81502002E16D9 /* DoctorDetailViewController.m in Sources */,
+				413CE55B1AA816E5002E16D9 /* Doctor.m in Sources */,
+				413CE5441AA8154D002E16D9 /* DonateViewController.m in Sources */,
+				413039EA1AA812E40086C445 /* main.m in Sources */,
+				413CE5701AA817A6002E16D9 /* ParseClient.m in Sources */,
+				413CE52B1AA8146F002E16D9 /* LoginViewController.m in Sources */,
+				413CE53A1AA8152A002E16D9 /* DoctorTextDetailViewController.m in Sources */,
+				413CE5611AA816FF002E16D9 /* Fund.m in Sources */,
+				413CE56D1AA81746002E16D9 /* SamahopeClient.m in Sources */,
+				413CE5301AA814DE002E16D9 /* DoctorsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		413039F91AA812E40086C445 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41303A041AA812E40086C445 /* SamahopeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		413039FF1AA812E40086C445 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 413039E31AA812E40086C445 /* Samahope */;
+			targetProxy = 413039FE1AA812E40086C445 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		413039F61AA812E40086C445 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				413039F71AA812E40086C445 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		41303A051AA812E40086C445 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		41303A061AA812E40086C445 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		41303A081AA812E40086C445 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8654BA0CD8B5CD92EB16F960 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Samahope/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		41303A091AA812E40086C445 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCA538D0CCF27612265B869B /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Samahope/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		41303A0B1AA812E40086C445 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SamahopeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Samahope.app/Samahope";
+			};
+			name = Debug;
+		};
+		41303A0C1AA812E40086C445 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SamahopeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Samahope.app/Samahope";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		413039DF1AA812E40086C445 /* Build configuration list for PBXProject "Samahope" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41303A051AA812E40086C445 /* Debug */,
+				41303A061AA812E40086C445 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41303A071AA812E40086C445 /* Build configuration list for PBXNativeTarget "Samahope" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41303A081AA812E40086C445 /* Debug */,
+				41303A091AA812E40086C445 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41303A0A1AA812E40086C445 /* Build configuration list for PBXNativeTarget "SamahopeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41303A0B1AA812E40086C445 /* Debug */,
+				41303A0C1AA812E40086C445 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 413039DC1AA812E40086C445 /* Project object */;
+}
