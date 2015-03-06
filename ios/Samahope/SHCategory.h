@@ -1,13 +1,13 @@
 //
-//  Category.h
+//  SHCategory.h
 //  Samahope
 //
-//  Created by Sarat Tallamraju on 3/4/15.
+//  Created by Charlie Hu on 3/5/15.
 //  Copyright (c) 2015 Samahope Org. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface Category : NSObject
+@interface SHCategory : NSObject
 
 @end
