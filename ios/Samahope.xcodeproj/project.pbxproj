@@ -34,11 +34,11 @@
 		413CE55B1AA816E5002E16D9 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE55A1AA816E5002E16D9 /* Doctor.m */; };
 		413CE55E1AA816F4002E16D9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE55D1AA816F4002E16D9 /* User.m */; };
 		413CE5611AA816FF002E16D9 /* Fund.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5601AA816FF002E16D9 /* Fund.m */; };
-		413CE5671AA8171F002E16D9 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5661AA8171F002E16D9 /* Category.m */; };
 		413CE56A1AA81731002E16D9 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5691AA81731002E16D9 /* Patient.m */; };
 		413CE56D1AA81746002E16D9 /* SamahopeClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE56C1AA81746002E16D9 /* SamahopeClient.m */; };
 		413CE5701AA817A6002E16D9 /* ParseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE56F1AA817A6002E16D9 /* ParseClient.m */; };
 		50C318DB1953477223CBEE26 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E873347A1F870346E92BC5CF /* libPods.a */; };
+		B2D6B9541AA96AB7008D65D0 /* SHCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D6B9531AA96AB7008D65D0 /* SHCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,8 +98,6 @@
 		413CE55D1AA816F4002E16D9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		413CE55F1AA816FF002E16D9 /* Fund.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fund.h; sourceTree = "<group>"; };
 		413CE5601AA816FF002E16D9 /* Fund.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fund.m; sourceTree = "<group>"; };
-		413CE5651AA8171F002E16D9 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
-		413CE5661AA8171F002E16D9 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
 		413CE5681AA81731002E16D9 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
 		413CE5691AA81731002E16D9 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
 		413CE56B1AA81746002E16D9 /* SamahopeClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamahopeClient.h; sourceTree = "<group>"; };
@@ -107,6 +105,8 @@
 		413CE56E1AA817A6002E16D9 /* ParseClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseClient.h; sourceTree = "<group>"; };
 		413CE56F1AA817A6002E16D9 /* ParseClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseClient.m; sourceTree = "<group>"; };
 		8654BA0CD8B5CD92EB16F960 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B2D6B9521AA96AB7008D65D0 /* SHCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCategory.h; sourceTree = "<group>"; };
+		B2D6B9531AA96AB7008D65D0 /* SHCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCategory.m; sourceTree = "<group>"; };
 		BCA538D0CCF27612265B869B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E873347A1F870346E92BC5CF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -209,10 +209,10 @@
 				413CE55D1AA816F4002E16D9 /* User.m */,
 				413CE55F1AA816FF002E16D9 /* Fund.h */,
 				413CE5601AA816FF002E16D9 /* Fund.m */,
-				413CE5651AA8171F002E16D9 /* Category.h */,
-				413CE5661AA8171F002E16D9 /* Category.m */,
 				413CE5681AA81731002E16D9 /* Patient.h */,
 				413CE5691AA81731002E16D9 /* Patient.m */,
+				B2D6B9521AA96AB7008D65D0 /* SHCategory.h */,
+				B2D6B9531AA96AB7008D65D0 /* SHCategory.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -424,7 +424,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				413CE5511AA815C2002E16D9 /* DoctorCell.m in Sources */,
-				413CE5671AA8171F002E16D9 /* Category.m in Sources */,
 				413CE5481AA81559002E16D9 /* PaymentViewController.m in Sources */,
 				413CE56A1AA81731002E16D9 /* Patient.m in Sources */,
 				413CE54C1AA81581002E16D9 /* ThanksViewController.m in Sources */,
@@ -436,6 +435,7 @@
 				413CE5351AA81502002E16D9 /* DoctorDetailViewController.m in Sources */,
 				413CE55B1AA816E5002E16D9 /* Doctor.m in Sources */,
 				413CE5441AA8154D002E16D9 /* DonateViewController.m in Sources */,
+				B2D6B9541AA96AB7008D65D0 /* SHCategory.m in Sources */,
 				413039EA1AA812E40086C445 /* main.m in Sources */,
 				413CE5701AA817A6002E16D9 /* ParseClient.m in Sources */,
 				413CE52B1AA8146F002E16D9 /* LoginViewController.m in Sources */,
@@ -557,6 +557,10 @@
 			baseConfigurationReference = 8654BA0CD8B5CD92EB16F960 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/chu/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = Samahope/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -568,6 +572,10 @@
 			baseConfigurationReference = BCA538D0CCF27612265B869B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/chu/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = Samahope/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
