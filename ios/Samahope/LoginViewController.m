@@ -9,7 +9,7 @@
 #import "LoginViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "DoctorsViewController.h"
-//#import "DonateViewController.h"
+#import "DonateViewController.h"
 
 @interface LoginViewController () <FBLoginViewDelegate>
 
@@ -37,13 +37,13 @@
 }
 
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
-    //[self presentViewController:[[DoctorsViewController alloc] init] animated:YES completion:nil];
-    loginView.center = self.view.center;
+//    [self presentViewController:[[DonateViewController alloc] init] animated:YES completion:nil];
+    loginView.center = CGPointMake(self.view.center.x, self.view.center.y + 50);
     [self.view addSubview:loginView];
 }
 
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
-    loginView.center = self.view.center;
+    loginView.center = CGPointMake(self.view.center.x, self.view.center.y + 50);
     [self.view addSubview:loginView];
 }
 

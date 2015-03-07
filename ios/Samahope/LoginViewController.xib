@@ -13,10 +13,22 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="samahope_logo" translatesAutoresizingMaskIntoConstraints="NO" id="KZY-Sd-LLb">
+                    <rect key="frame" x="117" y="120" width="86" height="52"/>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="KZY-Sd-LLb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="120" id="Gua-2s-ExA"/>
+                <constraint firstAttribute="centerX" secondItem="KZY-Sd-LLb" secondAttribute="centerX" id="m57-Jp-Nhe"/>
+            </constraints>
             <point key="canvasLocation" x="171" y="345"/>
         </view>
     </objects>
+    <resources>
+        <image name="samahope_logo" width="86" height="52"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
