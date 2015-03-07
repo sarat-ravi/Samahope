@@ -38,6 +38,8 @@
 		413CE56D1AA81746002E16D9 /* SamahopeClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE56C1AA81746002E16D9 /* SamahopeClient.m */; };
 		413CE5701AA817A6002E16D9 /* ParseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE56F1AA817A6002E16D9 /* ParseClient.m */; };
 		50C318DB1953477223CBEE26 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E873347A1F870346E92BC5CF /* libPods.a */; };
+		B21E85E11AAA5C830007A07A /* DonateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B21E85DF1AAA5C830007A07A /* DonateCell.m */; };
+		B21E85E21AAA5C830007A07A /* DonateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21E85E01AAA5C830007A07A /* DonateCell.xib */; };
 		B2D6B9541AA96AB7008D65D0 /* SHCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D6B9531AA96AB7008D65D0 /* SHCategory.m */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +107,9 @@
 		413CE56E1AA817A6002E16D9 /* ParseClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseClient.h; sourceTree = "<group>"; };
 		413CE56F1AA817A6002E16D9 /* ParseClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseClient.m; sourceTree = "<group>"; };
 		8654BA0CD8B5CD92EB16F960 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B21E85DE1AAA5C830007A07A /* DonateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonateCell.h; sourceTree = "<group>"; };
+		B21E85DF1AAA5C830007A07A /* DonateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonateCell.m; sourceTree = "<group>"; };
+		B21E85E01AAA5C830007A07A /* DonateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DonateCell.xib; sourceTree = "<group>"; };
 		B2D6B9521AA96AB7008D65D0 /* SHCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCategory.h; sourceTree = "<group>"; };
 		B2D6B9531AA96AB7008D65D0 /* SHCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCategory.m; sourceTree = "<group>"; };
 		BCA538D0CCF27612265B869B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -227,6 +232,9 @@
 				413CE5541AA815FA002E16D9 /* FundView.m */,
 				413CE5561AA816A8002E16D9 /* DoctorBannerView.h */,
 				413CE5571AA816A8002E16D9 /* DoctorBannerView.m */,
+				B21E85DE1AAA5C830007A07A /* DonateCell.h */,
+				B21E85DF1AAA5C830007A07A /* DonateCell.m */,
+				B21E85E01AAA5C830007A07A /* DonateCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -365,6 +373,7 @@
 			files = (
 				413CE5401AA8153D002E16D9 /* UserViewController.xib in Resources */,
 				413039F81AA812E40086C445 /* LaunchScreen.xib in Resources */,
+				B21E85E21AAA5C830007A07A /* DonateCell.xib in Resources */,
 				413039F51AA812E40086C445 /* Images.xcassets in Resources */,
 				413CE54D1AA81581002E16D9 /* ThanksViewController.xib in Resources */,
 				413CE5451AA8154D002E16D9 /* DonateViewController.xib in Resources */,
@@ -429,6 +438,7 @@
 				413CE54C1AA81581002E16D9 /* ThanksViewController.m in Sources */,
 				413CE5581AA816A8002E16D9 /* DoctorBannerView.m in Sources */,
 				413CE53F1AA8153D002E16D9 /* UserViewController.m in Sources */,
+				B21E85E11AAA5C830007A07A /* DonateCell.m in Sources */,
 				413CE55E1AA816F4002E16D9 /* User.m in Sources */,
 				413039ED1AA812E40086C445 /* AppDelegate.m in Sources */,
 				413CE5551AA815FA002E16D9 /* FundView.m in Sources */,

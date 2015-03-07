@@ -1,19 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DonateViewController">
             <connections>
+                <outlet property="tableView" destination="9mz-6i-ESB" id="M7g-io-TiQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9mz-6i-ESB">
+                    <rect key="frame" x="0.0" y="150" width="320" height="348"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COU-UU-FaB">
+                    <rect key="frame" x="0.0" y="498" width="320" height="70"/>
+                    <color key="backgroundColor" red="0.064374233478924348" green="1" blue="0.16486106019840097" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="zOI-Nc-eIb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="COU-UU-FaB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EzB-Is-yh9"/>
+                <constraint firstAttribute="bottom" secondItem="COU-UU-FaB" secondAttribute="bottom" id="Phh-xl-VUN"/>
+                <constraint firstAttribute="bottom" secondItem="9mz-6i-ESB" secondAttribute="bottom" constant="70" id="Qbl-Na-PXt"/>
+                <constraint firstItem="9mz-6i-ESB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="hhV-ZH-5yO"/>
+                <constraint firstItem="9mz-6i-ESB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mlC-Lw-yFu"/>
+                <constraint firstAttribute="trailing" secondItem="COU-UU-FaB" secondAttribute="trailing" id="rZW-84-U22"/>
+                <constraint firstAttribute="trailing" secondItem="9mz-6i-ESB" secondAttribute="trailing" id="tkf-AI-9H9"/>
+            </constraints>
+            <point key="canvasLocation" x="171" y="237"/>
         </view>
     </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

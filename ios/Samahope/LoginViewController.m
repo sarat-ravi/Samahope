@@ -8,8 +8,10 @@
 
 #import "LoginViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "DoctorsViewController.h"
+//#import "DonateViewController.h"
 
-@interface LoginViewController ()
+@interface LoginViewController () <FBLoginViewDelegate>
 
 @end
 
@@ -19,13 +21,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     FBLoginView *loginView = [[FBLoginView alloc] init];
-    loginView.center = self.view.center;
-    [self.view addSubview:loginView];
+    loginView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - FB Login delegate methods
+
+- (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
+                            user:(id<FBGraphUser>)user {
+    NSLog(@"%@", user);
+}
+
+- (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
+    //[self presentViewController:[[DoctorsViewController alloc] init] animated:YES completion:nil];
+    loginView.center = self.view.center;
+    [self.view addSubview:loginView];
+}
+
+- (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
+    loginView.center = self.view.center;
+    [self.view addSubview:loginView];
 }
 
 /*
