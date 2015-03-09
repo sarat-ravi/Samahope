@@ -7,7 +7,6 @@
 //
 
 #import "Doctor.h"
-#import "Patient.h"
 
 @implementation Doctor
 
@@ -23,6 +22,12 @@
         self.parentOrganization = dictionary[@"parentOrganization"];
         
         self.fund = [[Fund alloc] initWithDictionary: dictionary[@"fund"]];
+        
+        NSMutableArray *focuses = [NSMutableArray array];
+        for (NSDictionary *focusDictionary in dictionary[@"focuses"]) {
+            Focus *focus = [[Focus alloc] initWithDictionary: focusDictionary];
+            [focuses addObject: focus];
+        }
         
         self.fullScreenImageUrlString = dictionary[@"fullScreenImageUrlString"];
         self.videoUrlString = dictionary[@"videoUrlString"];
