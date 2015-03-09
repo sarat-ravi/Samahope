@@ -64,10 +64,10 @@ NSString *const kKimonoLabsKey = @"de529db82ec0c0037a7deedded30878a";
 
             NSDictionary *fund = @{
                                    @"amountNeededForCurrentTreatment": [fundInfo[@"amountNeeded"] stringByTrimmingCharactersInSet:nonDigits],
-                                   @"amountNeededPerTreatment": @150,
+                                   @"amountNeededPerTreatment": @500, // Parse properly
                                    @"numberOfTreatmentsFunded": [fundInfo[@"treatmentsFunded"] stringByTrimmingCharactersInSet:nonDigits],
-                                   @"numberOfTreatmentsNeeded": @150,
-                                   @"numberOfPeopleDonated": @0
+                                   @"numberOfTreatmentsNeeded": @100, // Parse properly
+                                   @"numberOfPeopleDonated": @0 // Parse properly
                                    };
             
             NSDictionary *focus = @{
@@ -77,15 +77,15 @@ NSString *const kKimonoLabsKey = @"de529db82ec0c0037a7deedded30878a";
                                     };
             
             NSDictionary *formattedData = @{@"name": doctorInfo[@"name"],
-                              @"profileImageUrlString": @"",
-                              @"tagLine": @"",
+                              @"profileImageUrlString": doctorInfo[@"bannerImage"][@"src"], // Get the real profile image
+                              @"tagLine": @"This is my awesome tagline!", // Replace with real tagline if possible
                               @"personalDescription": [doctorInfo[@"description"] isKindOfClass:[NSDictionary class]] ? doctorInfo[@"description"][@"text"] : doctorInfo[@"description"],
-                              @"parentOrganization": @"",
+                              @"parentOrganization": [doctorInfo[@"parentOrganization"] isKindOfClass:[NSDictionary class]] ? doctorInfo[@"parentOrganization"][@"text"] : @"",
                               @"fund": fund,
                               @"focuses": @[ focus ],
                               @"fullScreenImageUrlString": doctorInfo[@"bannerImage"][@"src"],
-                              @"quote": @"",
-                              @"videoUrlString": @"",
+                              @"quote": doctorInfo[@"quote"],
+                              @"videoUrlString": @"", // Get the video URL String if exists
                               @"humanReadableLocation": doctorInfo[@"location"]
                               };
             
