@@ -8,10 +8,10 @@
 
 #import "DonateCell.h"
 
-@interface DonateCell ()
+@interface DonateCell () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *donateAmountTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *checkButtonImageView;
-
+@property (weak, nonatomic) IBOutlet UIView *cellView;
 
 @end
 
@@ -19,6 +19,9 @@
 
 - (void)awakeFromNib {
     // Initialization code
+//    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapCell:)];
+//    tapGesture.numberOfTapsRequired = 1;
+//    [self.cellView addGestureRecognizer:tapGesture];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -46,4 +49,15 @@
     }
 }
 
+#pragma mark - text field delegate methods
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [self.delegate donateCell:self didUpdateValue:textField.text];
+}
+
+- (IBAction)onTapCell:(UITapGestureRecognizer *)sender {
+    if (self.donateAmountTextField.isFirstResponder) {
+        [self.donateAmountTextField resignFirstResponder];
+    }
+}
 @end

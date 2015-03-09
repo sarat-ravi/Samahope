@@ -15,12 +15,14 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
     DonateAmountOptionCustom
 };
 
-@interface DonateViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface DonateViewController () <UITableViewDataSource, UITableViewDelegate, DonateCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) NSArray *donateAmounts;
 @property (nonatomic, assign) DonateAmountOption selectedDonateAmountOption;
+@property (nonatomic, assign) double donateAmount;
 
+- (IBAction)onDonateButton:(id)sender;
 - (void)initDonateAmountArray;
 
 @end
@@ -33,6 +35,7 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
     if (self) {
         [self initDonateAmountArray];
         self.selectedDonateAmountOption = DonateAmountOption1;
+        self.donateAmount = [self.donateAmounts[DonateAmountOption1][@"value"] doubleValue];
     }
 
     return self;
@@ -75,6 +78,7 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     self.selectedDonateAmountOption = indexPath.row;
+    self.donateAmount = [self.donateAmounts[indexPath.row][@"value"] doubleValue];
     [tableView reloadData];
     DonateCell *cell = (DonateCell *)[tableView cellForRowAtIndexPath:indexPath];
     if (indexPath.row == DonateAmountOptionCustom) {
@@ -85,12 +89,22 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
 
 #pragma mark - private methods
 
+- (IBAction)onDonateButton:(id)sender {
+    NSLog(@"Donated %f", self.donateAmount);
+}
+
 - (void)initDonateAmountArray {
     self.donateAmounts = @[
-                           @{@"name" : @"$10.00", @"value" : @(10)},
-                           @{@"name" : @"$25.00", @"value" : @(25)},
-                           @{@"name" : @"Custom", @"value" : @(1)}
+                           @{@"name" : @"$10.00", @"value" : @(10.00)},
+                           @{@"name" : @"$25.00", @"value" : @(25.00)},
+                           @{@"name" : @"Custom", @"value" : @(1.00)}
                            ];
+}
+
+#pragma mark - Donate cell methods
+
+- (void)donateCell:(DonateCell *)cell didUpdateValue:(NSString *)value {
+    self.donateAmount = [value doubleValue];
 }
 
 /*

@@ -8,7 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class DonateCell;
+
+@protocol DonateCellDelegate <NSObject>
+
+- (void)donateCell:(DonateCell *)cell didUpdateValue:(NSString *)value;
+
+@end
+
 @interface DonateCell : UITableViewCell
+
+@property (nonatomic, weak) id<DonateCellDelegate> delegate;
 
 - (void)setDonateAmountText:(NSString *)donateAmountText;
 - (void)enableEdit;

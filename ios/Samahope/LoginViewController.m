@@ -37,7 +37,7 @@
 }
 
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
-//    [self presentViewController:[[DonateViewController alloc] init] animated:YES completion:nil];
+    //[self presentViewController:[[DonateViewController alloc] init] animated:YES completion:nil];
     loginView.center = CGPointMake(self.view.center.x, self.view.center.y + 50);
     [self.view addSubview:loginView];
 }
