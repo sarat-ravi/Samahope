@@ -40,6 +40,11 @@
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user {
     NSLog(@"%@", user);
+    DoctorsViewController *dvc = [[DoctorsViewController alloc] init];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: dvc];
+    [self presentViewController:nvc animated:YES completion:^{
+        // Completion
+    }];
 }
 
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {

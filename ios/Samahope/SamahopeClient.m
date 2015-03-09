@@ -56,7 +56,7 @@ NSString *const kKimonoLabsKey = @"de529db82ec0c0037a7deedded30878a";
             NSDictionary *categoryInfo = categoryInfos[i];
             NSDictionary *fundInfo = fundInfos[i];
 
-            NSLog(@"all info: %@ %@ %@ %@", doctorInfo, patientInfo, categoryInfo, fundInfo);
+            // NSLog(@"all info: %@ %@ %@ %@", doctorInfo, patientInfo, categoryInfo, fundInfo);
             
             NSLog(@"fund numbers: %@ %@ %@", [fundInfo[@"amountNeeded"] stringByTrimmingCharactersInSet:nonDigits], [fundInfo[@"treatmentsFunded"] stringByTrimmingCharactersInSet:nonDigits], ([fundInfo[@"peopleDonated"] isKindOfClass:[NSNull class]] || fundInfo[@"peopleDonated"] == nil || fundInfo[@"peopleDonated"] == (id)[NSNull null]) ? 0 : [fundInfo[@"peopleDonated"] stringByTrimmingCharactersInSet:nonDigits]);
 
@@ -89,16 +89,20 @@ NSString *const kKimonoLabsKey = @"de529db82ec0c0037a7deedded30878a";
                               @"humanReadableLocation": doctorInfo[@"location"]
                               };
             
-            NSLog(@"formatted Data: %@", formattedData);
+            // NSLog(@"formatted Data: %@", formattedData);
             
             Doctor *doctor = [[Doctor alloc] initWithDictionary:formattedData];
             
             [doctors addObject:doctor];
         }
         
-        completion(doctors, nil);
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            completion(doctors, nil);
+        }];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        completion(nil, error);
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            completion(nil, error);
+        }];
     }];
 
 }
