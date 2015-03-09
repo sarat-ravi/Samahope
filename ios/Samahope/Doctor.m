@@ -22,7 +22,7 @@
         self.focusDescription = dictionary[@"focusDescription"];
         self.parentOrganization = dictionary[@"parentOrganization"];
         
-        self.fund = [[Fund alloc] initWithDoctor: self andDictionary: dictionary[@"fund"]];
+        self.fund = [[Fund alloc] initWithDictionary: dictionary[@"fund"]];
         
         self.fullScreenImageUrlString = dictionary[@"fullScreenImageUrlString"];
         self.videoUrlString = dictionary[@"videoUrlString"];

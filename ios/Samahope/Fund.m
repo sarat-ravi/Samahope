@@ -11,10 +11,9 @@
 
 @implementation Fund
 
-- (id)initWithDoctor: (Doctor *)doctor andDictionary: (NSDictionary *)dictionary {
+- (id)initWithDictionary: (NSDictionary *)dictionary {
     self = [super init];
     if (self) {
-        self.doctor = doctor;
         self.amountRaisedPerTreatment = [dictionary[@"amountRaisedPerTreatment"] floatValue];
         self.amountNeededPerTreatment = [dictionary[@"amountNeededPerTreatment"] floatValue];
         self.numberOfTreatmentsFunded = [dictionary[@"numberOfTreatmentsFunded"] integerValue];

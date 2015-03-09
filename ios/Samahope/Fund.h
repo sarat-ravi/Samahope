@@ -7,16 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Doctor.h"
 #import <UIKit/UIKit.h>
 
 @interface Fund : NSObject
 
 #pragma mark Constructors
-- (id)initWithDoctor: (Doctor *)doctor andDictionary: (NSDictionary *)dictionary;
+- (id)initWithDictionary: (NSDictionary *)dictionary;
 
 #pragma mark Core Properties
-@property (nonatomic, weak) Doctor *doctor;
 @property (nonatomic, assign) CGFloat amountRaisedPerTreatment;
 @property (nonatomic, assign) CGFloat amountNeededPerTreatment;
 @property (nonatomic, assign) NSInteger numberOfTreatmentsFunded;
