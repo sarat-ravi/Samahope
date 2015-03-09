@@ -21,7 +21,6 @@
 @property (nonatomic, strong) NSString *profileImageUrlString;
 @property (nonatomic, strong) NSString *tagLine;
 @property (nonatomic, strong) NSString *personalDescription;
-@property (nonatomic, strong) NSString *focusDescription;
 @property (nonatomic, strong) NSString *parentOrganization;
 @property (nonatomic, readonly) NSArray *patients;
 

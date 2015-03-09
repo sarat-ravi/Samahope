@@ -18,7 +18,6 @@
         self.profileImageUrlString = dictionary[@"profileImageUrlString"];
         self.tagLine = dictionary[@"tagLine"];
         self.personalDescription = dictionary[@"personalDescription"];
-        self.focusDescription = dictionary[@"focusDescription"];
         self.parentOrganization = dictionary[@"parentOrganization"];
         
         self.fund = [[Fund alloc] initWithDictionary: dictionary[@"fund"]];

@@ -10,4 +10,8 @@
 
 @interface SamahopeClient : NSObject
 
++ (SamahopeClient *)sharedInstance;
+
+- (void)fetchDataWithCompletion:(void (^)(NSArray *doctors, NSError *error))completion;
+
 @end

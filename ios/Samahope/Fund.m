@@ -14,16 +14,13 @@
 - (id)initWithDictionary: (NSDictionary *)dictionary {
     self = [super init];
     if (self) {
-        self.amountRaisedPerTreatment = [dictionary[@"amountRaisedPerTreatment"] floatValue];
-        self.amountNeededPerTreatment = [dictionary[@"amountNeededPerTreatment"] floatValue];
+        self.amountNeededForCurrentTreatment = [dictionary[@"amountNeededForCurrentTreatment"] integerValue];
+        self.amountNeededPerTreatment = [dictionary[@"amountNeededPerTreatment"] integerValue];
         self.numberOfTreatmentsFunded = [dictionary[@"numberOfTreatmentsFunded"] integerValue];
         self.numberOfTreatmentsNeeded = [dictionary[@"numberOfTreatmentsNeeded"] integerValue];
+        self.numberOfPeopleDonated = [dictionary[@"numberOfPeopleDonated"] integerValue];
     }
     return self;
-}
-
-- (CGFloat)amountPerTreatment {
-    return self.amountRaisedPerTreatment + self.amountNeededPerTreatment;
 }
 
 @end

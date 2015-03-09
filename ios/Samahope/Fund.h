@@ -15,16 +15,13 @@
 - (id)initWithDictionary: (NSDictionary *)dictionary;
 
 #pragma mark Core Properties
-@property (nonatomic, assign) CGFloat amountRaisedPerTreatment;
-@property (nonatomic, assign) CGFloat amountNeededPerTreatment;
+@property (nonatomic, assign) NSInteger amountNeededForCurrentTreatment;
+@property (nonatomic, assign) NSInteger amountNeededPerTreatment;
 @property (nonatomic, assign) NSInteger numberOfTreatmentsFunded;
 @property (nonatomic, assign) NSInteger numberOfTreatmentsNeeded;
 
 #pragma mark Misc Properties
 @property (nonatomic, assign) NSInteger numberOfPeopleDonated;
 @property (nonatomic, strong) NSDictionary *costBreakdown;
-
-#pragma mark Fake Properties
-@property (nonatomic, readonly) CGFloat amountPerTreatment;
 
 @end

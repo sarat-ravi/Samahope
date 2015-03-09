@@ -10,6 +10,7 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "DoctorsViewController.h"
 #import "DonateViewController.h"
+#import "SamahopeClient.h"
 
 @interface LoginViewController () <FBLoginViewDelegate>
 
@@ -22,6 +23,11 @@
     // Do any additional setup after loading the view from its nib.
     FBLoginView *loginView = [[FBLoginView alloc] init];
     loginView.delegate = self;
+    
+    [[SamahopeClient sharedInstance] fetchDataWithCompletion:^(NSArray *doctors, NSError *error) {
+        NSLog(@"completion");
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning {
