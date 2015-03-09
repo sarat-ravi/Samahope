@@ -33,14 +33,14 @@
 		413CE5581AA816A8002E16D9 /* DoctorBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5571AA816A8002E16D9 /* DoctorBannerView.m */; };
 		413CE55B1AA816E5002E16D9 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE55A1AA816E5002E16D9 /* Doctor.m */; };
 		413CE55E1AA816F4002E16D9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE55D1AA816F4002E16D9 /* User.m */; };
-		413CE5611AA816FF002E16D9 /* Fund.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5601AA816FF002E16D9 /* Fund.m */; };
 		413CE56A1AA81731002E16D9 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5691AA81731002E16D9 /* Patient.m */; };
 		413CE56D1AA81746002E16D9 /* SamahopeClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE56C1AA81746002E16D9 /* SamahopeClient.m */; };
 		413CE5701AA817A6002E16D9 /* ParseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE56F1AA817A6002E16D9 /* ParseClient.m */; };
+		413CE5761AAD3628002E16D9 /* Focus.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5751AAD3628002E16D9 /* Focus.m */; };
+		413CE5791AAD3AC5002E16D9 /* Fund.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5781AAD3AC5002E16D9 /* Fund.m */; };
 		50C318DB1953477223CBEE26 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E873347A1F870346E92BC5CF /* libPods.a */; };
 		B21E85E11AAA5C830007A07A /* DonateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B21E85DF1AAA5C830007A07A /* DonateCell.m */; };
 		B21E85E21AAA5C830007A07A /* DonateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21E85E01AAA5C830007A07A /* DonateCell.xib */; };
-		B2D6B9541AA96AB7008D65D0 /* SHCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D6B9531AA96AB7008D65D0 /* SHCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,20 +98,20 @@
 		413CE55A1AA816E5002E16D9 /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
 		413CE55C1AA816F4002E16D9 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		413CE55D1AA816F4002E16D9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		413CE55F1AA816FF002E16D9 /* Fund.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fund.h; sourceTree = "<group>"; };
-		413CE5601AA816FF002E16D9 /* Fund.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fund.m; sourceTree = "<group>"; };
 		413CE5681AA81731002E16D9 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
 		413CE5691AA81731002E16D9 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
 		413CE56B1AA81746002E16D9 /* SamahopeClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamahopeClient.h; sourceTree = "<group>"; };
 		413CE56C1AA81746002E16D9 /* SamahopeClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SamahopeClient.m; sourceTree = "<group>"; };
 		413CE56E1AA817A6002E16D9 /* ParseClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseClient.h; sourceTree = "<group>"; };
 		413CE56F1AA817A6002E16D9 /* ParseClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseClient.m; sourceTree = "<group>"; };
+		413CE5741AAD3628002E16D9 /* Focus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Focus.h; sourceTree = "<group>"; };
+		413CE5751AAD3628002E16D9 /* Focus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Focus.m; sourceTree = "<group>"; };
+		413CE5771AAD3AC5002E16D9 /* Fund.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fund.h; sourceTree = "<group>"; };
+		413CE5781AAD3AC5002E16D9 /* Fund.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fund.m; sourceTree = "<group>"; };
 		8654BA0CD8B5CD92EB16F960 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B21E85DE1AAA5C830007A07A /* DonateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonateCell.h; sourceTree = "<group>"; };
 		B21E85DF1AAA5C830007A07A /* DonateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonateCell.m; sourceTree = "<group>"; };
 		B21E85E01AAA5C830007A07A /* DonateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DonateCell.xib; sourceTree = "<group>"; };
-		B2D6B9521AA96AB7008D65D0 /* SHCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCategory.h; sourceTree = "<group>"; };
-		B2D6B9531AA96AB7008D65D0 /* SHCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCategory.m; sourceTree = "<group>"; };
 		BCA538D0CCF27612265B869B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E873347A1F870346E92BC5CF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -212,12 +212,12 @@
 				413CE55A1AA816E5002E16D9 /* Doctor.m */,
 				413CE55C1AA816F4002E16D9 /* User.h */,
 				413CE55D1AA816F4002E16D9 /* User.m */,
-				413CE55F1AA816FF002E16D9 /* Fund.h */,
-				413CE5601AA816FF002E16D9 /* Fund.m */,
 				413CE5681AA81731002E16D9 /* Patient.h */,
 				413CE5691AA81731002E16D9 /* Patient.m */,
-				B2D6B9521AA96AB7008D65D0 /* SHCategory.h */,
-				B2D6B9531AA96AB7008D65D0 /* SHCategory.m */,
+				413CE5741AAD3628002E16D9 /* Focus.h */,
+				413CE5751AAD3628002E16D9 /* Focus.m */,
+				413CE5771AAD3AC5002E16D9 /* Fund.h */,
+				413CE5781AAD3AC5002E16D9 /* Fund.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -438,6 +438,7 @@
 				413CE54C1AA81581002E16D9 /* ThanksViewController.m in Sources */,
 				413CE5581AA816A8002E16D9 /* DoctorBannerView.m in Sources */,
 				413CE53F1AA8153D002E16D9 /* UserViewController.m in Sources */,
+				413CE5761AAD3628002E16D9 /* Focus.m in Sources */,
 				B21E85E11AAA5C830007A07A /* DonateCell.m in Sources */,
 				413CE55E1AA816F4002E16D9 /* User.m in Sources */,
 				413039ED1AA812E40086C445 /* AppDelegate.m in Sources */,
@@ -445,14 +446,13 @@
 				413CE5351AA81502002E16D9 /* DoctorDetailViewController.m in Sources */,
 				413CE55B1AA816E5002E16D9 /* Doctor.m in Sources */,
 				413CE5441AA8154D002E16D9 /* DonateViewController.m in Sources */,
-				B2D6B9541AA96AB7008D65D0 /* SHCategory.m in Sources */,
 				413039EA1AA812E40086C445 /* main.m in Sources */,
 				413CE5701AA817A6002E16D9 /* ParseClient.m in Sources */,
 				413CE52B1AA8146F002E16D9 /* LoginViewController.m in Sources */,
 				413CE53A1AA8152A002E16D9 /* DoctorTextDetailViewController.m in Sources */,
-				413CE5611AA816FF002E16D9 /* Fund.m in Sources */,
 				413CE56D1AA81746002E16D9 /* SamahopeClient.m in Sources */,
 				413CE5301AA814DE002E16D9 /* DoctorsViewController.m in Sources */,
+				413CE5791AAD3AC5002E16D9 /* Fund.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

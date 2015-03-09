@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "Fund.h"
+#import "Patient.h"
+#import "Focus.h"
 
 @interface Doctor : NSObject
 
@@ -25,6 +27,7 @@
 
 #pragma mark Foreign Properties
 @property (nonatomic, strong) Fund *fund;
+@property (nonatomic, strong) NSArray *focuses;
 
 #pragma mark Optional Properties
 @property (nonatomic, strong) NSString *fullScreenImageUrlString;
