@@ -8,30 +8,68 @@
 
 #import "DoctorsViewController.h"
 #import "SamahopeClient.h"
+#import "DoctorCell.h"
+#import "SamahopeClient.h"
 
-@interface DoctorsViewController ()
+NSString *const kDoctorCellName = @"DoctorCell";
+
+@interface DoctorsViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UITableView *doctorsTableView;
+@property (strong, nonatomic) NSArray *doctors;
 
 @end
 
 @implementation DoctorsViewController
 
+#pragma mark View Controller Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"Our Doctors";
+    
+    self.doctorsTableView.delegate = self;
+    self.doctorsTableView.dataSource = self;
+    UINib *cellNib = [UINib nibWithNibName: kDoctorCellName bundle:nil];
+    [self.doctorsTableView registerNib:cellNib forCellReuseIdentifier: kDoctorCellName];
+    self.doctorsTableView.rowHeight = UITableViewAutomaticDimension;
+    
+    [self refreshDoctorsData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark Core
+
+- (void)refreshDoctorsData {
+    NSLog(@"DoctorsViewController: refreshDoctorsData");
+    [[SamahopeClient sharedInstance] fetchDataWithCompletion:^(NSArray *doctors, NSError *error) {
+        // Completion
+        if (error) {
+            NSLog(@"DoctorsViewController: Error fetching data: %@", error);
+        } else {
+            NSLog(@"Fetched doctors: %@", doctors);
+            self.doctors = doctors;
+            [self.doctorsTableView reloadData];
+        }
+    }];
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark Table View Listeners
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    DoctorCell *cell = [self.doctorsTableView dequeueReusableCellWithIdentifier: kDoctorCellName forIndexPath:indexPath];
+    cell.doctor = self.doctors[indexPath.row];
+    return cell;
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSLog(@"Doctors count: %lu", (unsigned long)[self.doctors count]);
+    return [self.doctors count];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"Selected row %ld in section %ld", (long)indexPath.row, (long)indexPath.section);
+    [tableView deselectRowAtIndexPath: indexPath animated:NO];
+}
 
 @end
