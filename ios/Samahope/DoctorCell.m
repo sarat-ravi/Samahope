@@ -9,14 +9,15 @@
 #import "DoctorCell.h"
 #import "UIImageView+AFNetworking.h"
 #import "FundView.h"
+#import "DoctorFocusView.h"
 
 @interface DoctorCell()
 
 @property (strong, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) IBOutlet UIView *focusContentView;
 @property (strong, nonatomic) IBOutlet UIView *nameLabelBackgroundView;
 @property (strong, nonatomic) IBOutlet FundView *fundView;
+@property (strong, nonatomic) IBOutlet DoctorFocusView *doctorFocusView;
 
 @end
 
@@ -33,6 +34,7 @@
     [self.profileImageView setImageWithURL: [NSURL URLWithString: doctor.fullScreenImageUrlString]];
     self.nameLabel.text = doctor.name;
     self.fundView.fund = doctor.fund;
+    self.doctorFocusView.doctor = doctor;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

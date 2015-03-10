@@ -35,6 +35,8 @@
             [focuses addObject: focus];
         }
         
+        self.focuses = focuses;
+        
         self.fullScreenImageUrlString = dictionary[@"fullScreenImageUrlString"];
         self.videoUrlString = dictionary[@"videoUrlString"];
         self.quote = dictionary[@"quote"];

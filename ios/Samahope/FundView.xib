@@ -15,48 +15,48 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$150" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AK-Ux-Jz4">
-                    <rect key="frame" x="8" y="8" width="115" height="29"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                    <rect key="frame" x="8" y="8" width="115" height="23"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EnO-su-tye">
-                    <rect key="frame" x="131" y="8" width="114" height="29"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                    <rect key="frame" x="130" y="8" width="114" height="23"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fU-wq-SRN">
-                    <rect key="frame" x="253" y="8" width="115" height="29"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                    <rect key="frame" x="252" y="8" width="115" height="23"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MORE NEEDED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSP-ug-wRH">
-                    <rect key="frame" x="8" y="45" width="115" height="12"/>
+                    <rect key="frame" x="8" y="34" width="115" height="12"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TREATMENTS FUNDED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q30-7l-XSe">
-                    <rect key="frame" x="131" y="45" width="114" height="12"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FUNDED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q30-7l-XSe">
+                    <rect key="frame" x="130" y="34" width="114" height="12"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PEOPLE DONATED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZg-yk-aUg">
-                    <rect key="frame" x="253" y="45" width="115" height="12"/>
+                    <rect key="frame" x="252" y="34" width="115" height="12"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3HO-ix-Ocs">
-                    <rect key="frame" x="8" y="72" width="359" height="2"/>
-                    <color key="progressTintColor" red="1" green="0.0" blue="0.057803820979999997" alpha="0.70999999999999996" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="8" y="54" width="359" height="2"/>
+                    <color key="progressTintColor" red="0.79249338619999998" green="0.00653605583" blue="0.052429828810000002" alpha="1" colorSpace="calibratedRGB"/>
                 </progressView>
             </subviews>
             <constraints>
@@ -69,9 +69,9 @@
                 <constraint firstItem="q30-7l-XSe" firstAttribute="leading" secondItem="EnO-su-tye" secondAttribute="leading" id="DzJ-wG-a50"/>
                 <constraint firstItem="4fU-wq-SRN" firstAttribute="width" secondItem="EnO-su-tye" secondAttribute="width" id="ENB-6H-lgb"/>
                 <constraint firstItem="CZg-yk-aUg" firstAttribute="bottom" secondItem="LSP-ug-wRH" secondAttribute="bottom" id="HQg-ea-Mp0"/>
-                <constraint firstItem="3HO-ix-Ocs" firstAttribute="top" secondItem="CZg-yk-aUg" secondAttribute="bottom" constant="15" id="Hlc-Ie-xWN"/>
+                <constraint firstItem="3HO-ix-Ocs" firstAttribute="top" secondItem="CZg-yk-aUg" secondAttribute="bottom" constant="8" id="Hlc-Ie-xWN"/>
                 <constraint firstItem="CZg-yk-aUg" firstAttribute="trailing" secondItem="4fU-wq-SRN" secondAttribute="trailing" id="QeM-IV-bgv"/>
-                <constraint firstItem="LSP-ug-wRH" firstAttribute="top" secondItem="0AK-Ux-Jz4" secondAttribute="bottom" constant="8" id="SNM-WK-cFy"/>
+                <constraint firstItem="LSP-ug-wRH" firstAttribute="top" secondItem="0AK-Ux-Jz4" secondAttribute="bottom" constant="4" id="SNM-WK-cFy"/>
                 <constraint firstItem="4fU-wq-SRN" firstAttribute="width" secondItem="0AK-Ux-Jz4" secondAttribute="width" id="T0T-JT-hwF"/>
                 <constraint firstItem="q30-7l-XSe" firstAttribute="bottom" secondItem="LSP-ug-wRH" secondAttribute="bottom" id="Uft-6D-qib"/>
                 <constraint firstItem="0AK-Ux-Jz4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Uvl-Np-b3A"/>
@@ -88,7 +88,7 @@
                 <constraint firstItem="EnO-su-tye" firstAttribute="leading" secondItem="0AK-Ux-Jz4" secondAttribute="trailing" constant="8" id="yKN-PQ-6w7"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="292.5" y="343.5"/>
+            <point key="canvasLocation" x="292.5" y="326"/>
         </view>
     </objects>
 </document>

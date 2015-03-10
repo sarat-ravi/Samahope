@@ -13,21 +13,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="flv-xr-nkL">
-                        <rect key="frame" x="0.0" y="348" width="417" height="60"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[FOCUS VIEW HERE]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pp1-nt-txO">
-                                <rect key="frame" x="164" y="25" width="90" height="11"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="flv-xr-nkL" customClass="DoctorFocusView">
+                        <rect key="frame" x="0.0" y="314" width="417" height="80"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="60" id="Zqz-9l-Ww4"/>
-                            <constraint firstAttribute="centerY" secondItem="Pp1-nt-txO" secondAttribute="centerY" id="ePP-ym-g9g"/>
-                            <constraint firstAttribute="centerX" secondItem="Pp1-nt-txO" secondAttribute="centerX" id="fy0-lH-IDs"/>
+                            <constraint firstAttribute="height" constant="80" id="Zqz-9l-Ww4"/>
                         </constraints>
                     </view>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WhD-Xa-aPP" userLabel="Image Container View">
@@ -62,10 +52,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wnp-U0-aAI" customClass="FundView">
-                        <rect key="frame" x="0.0" y="248" width="417" height="100"/>
+                        <rect key="frame" x="0.0" y="248" width="417" height="66"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="100" id="aXt-E3-RqF"/>
+                            <constraint firstAttribute="height" constant="66" id="aXt-E3-RqF"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -96,7 +86,7 @@
                 </variation>
             </tableViewCellContentView>
             <connections>
-                <outlet property="focusContentView" destination="flv-xr-nkL" id="qbH-L9-jpU"/>
+                <outlet property="doctorFocusView" destination="flv-xr-nkL" id="xoi-i6-MND"/>
                 <outlet property="fundView" destination="Wnp-U0-aAI" id="nrg-Ir-eH7"/>
                 <outlet property="nameLabel" destination="NJ9-Yc-LyG" id="Aox-dS-8sY"/>
                 <outlet property="nameLabelBackgroundView" destination="NRf-oa-lSf" id="Hry-UD-lIt"/>

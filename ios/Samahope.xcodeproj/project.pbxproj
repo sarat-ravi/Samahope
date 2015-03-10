@@ -39,6 +39,8 @@
 		413CE5761AAD3628002E16D9 /* Focus.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5751AAD3628002E16D9 /* Focus.m */; };
 		413CE5791AAD3AC5002E16D9 /* Fund.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5781AAD3AC5002E16D9 /* Fund.m */; };
 		4172FBD31AAEB2770027C8AA /* FundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4172FBD21AAEB2770027C8AA /* FundView.xib */; };
+		41FF3E6A1AAECCEC00092320 /* DoctorFocusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FF3E691AAECCEC00092320 /* DoctorFocusView.m */; };
+		41FF3E6C1AAECD8400092320 /* DoctorFocusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FF3E6B1AAECD8400092320 /* DoctorFocusView.xib */; };
 		50C318DB1953477223CBEE26 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E873347A1F870346E92BC5CF /* libPods.a */; };
 		B21E85E11AAA5C830007A07A /* DonateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B21E85DF1AAA5C830007A07A /* DonateCell.m */; };
 		B21E85E21AAA5C830007A07A /* DonateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21E85E01AAA5C830007A07A /* DonateCell.xib */; };
@@ -110,6 +112,9 @@
 		413CE5771AAD3AC5002E16D9 /* Fund.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fund.h; sourceTree = "<group>"; };
 		413CE5781AAD3AC5002E16D9 /* Fund.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fund.m; sourceTree = "<group>"; };
 		4172FBD21AAEB2770027C8AA /* FundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FundView.xib; sourceTree = "<group>"; };
+		41FF3E681AAECCEC00092320 /* DoctorFocusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorFocusView.h; sourceTree = "<group>"; };
+		41FF3E691AAECCEC00092320 /* DoctorFocusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorFocusView.m; sourceTree = "<group>"; };
+		41FF3E6B1AAECD8400092320 /* DoctorFocusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorFocusView.xib; sourceTree = "<group>"; };
 		8654BA0CD8B5CD92EB16F960 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B21E85DE1AAA5C830007A07A /* DonateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonateCell.h; sourceTree = "<group>"; };
 		B21E85DF1AAA5C830007A07A /* DonateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonateCell.m; sourceTree = "<group>"; };
@@ -238,6 +243,9 @@
 				B21E85DF1AAA5C830007A07A /* DonateCell.m */,
 				B21E85E01AAA5C830007A07A /* DonateCell.xib */,
 				4172FBD21AAEB2770027C8AA /* FundView.xib */,
+				41FF3E681AAECCEC00092320 /* DoctorFocusView.h */,
+				41FF3E691AAECCEC00092320 /* DoctorFocusView.m */,
+				41FF3E6B1AAECD8400092320 /* DoctorFocusView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -385,6 +393,7 @@
 				413CE5311AA814DE002E16D9 /* DoctorsViewController.xib in Resources */,
 				4172FBD31AAEB2770027C8AA /* FundView.xib in Resources */,
 				413CE5521AA815C2002E16D9 /* DoctorCell.xib in Resources */,
+				41FF3E6C1AAECD8400092320 /* DoctorFocusView.xib in Resources */,
 				413CE53B1AA8152A002E16D9 /* DoctorTextDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41FF3E6A1AAECCEC00092320 /* DoctorFocusView.m in Sources */,
 				413CE5511AA815C2002E16D9 /* DoctorCell.m in Sources */,
 				413CE5481AA81559002E16D9 /* PaymentViewController.m in Sources */,
 				413CE56A1AA81731002E16D9 /* Patient.m in Sources */,
