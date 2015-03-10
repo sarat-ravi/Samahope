@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Fund.h"
 
 @interface FundView : UIView
+
+@property (strong, nonatomic) Fund *fund;
 
 @end

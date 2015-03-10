@@ -11,10 +11,16 @@
 @interface FundView()
 
 @property (strong, nonatomic) IBOutlet UIView *contentView;
+@property (strong, nonatomic) IBOutlet UILabel *moreNeededLabel;
+@property (strong, nonatomic) IBOutlet UILabel *numberOfTreatmentsFundedLabel;
+@property (strong, nonatomic) IBOutlet UILabel *numberOfPeopleDonatedLabel;
+@property (strong, nonatomic) IBOutlet UIProgressView *treatmentProgressBar;
 
 @end
 
 @implementation FundView
+
+#pragma mark Constructors
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -37,6 +43,30 @@
     [nib instantiateWithOwner: self options:nil];
     self.contentView.frame = self.bounds;
     [self addSubview: self.contentView];
+}
+
+#pragma mark Core
+
+- (void)setFund:(Fund *)fund {
+    _fund = fund;
+    
+    self.moreNeededLabel.text = [NSString stringWithFormat: @"$%ld", (long)[self.fund amountNeededForCurrentTreatment]];
+    self.numberOfTreatmentsFundedLabel.text = [NSString stringWithFormat: @"%ld", (long)[self.fund numberOfTreatmentsFunded]];
+    self.numberOfPeopleDonatedLabel.text = [NSString stringWithFormat: @"%ld", (long)[self.fund numberOfPeopleDonated]];
+    
+    NSInteger totalCost = (self.fund.numberOfTreatmentsNeeded + self.fund.numberOfTreatmentsFunded) * self.fund.amountNeededPerTreatment;
+    NSInteger raised = (self.fund.numberOfTreatmentsFunded * self.fund.amountNeededPerTreatment)
+                        + (self.fund.amountNeededPerTreatment - self.fund.amountNeededForCurrentTreatment);
+    
+    CGFloat progress = (float) raised / totalCost;
+    [self.treatmentProgressBar setProgress:progress animated:YES];
+    
+    // amountNeededForCurrentTreatment;
+    // amountNeededPerTreatment;
+    // numberOfTreatmentsFunded;
+    // numberOfTreatmentsNeeded;
+    
+    // numberOfPeopleDonated;
 }
 
 @end

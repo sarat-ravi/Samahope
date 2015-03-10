@@ -9,11 +9,18 @@
 #import "Fund.h"
 #import "Doctor.h"
 
+@interface Fund()
+
+@property (strong, nonatomic) NSDictionary *dictionary;
+
+@end
+
 @implementation Fund
 
 - (id)initWithDictionary: (NSDictionary *)dictionary {
     self = [super init];
     if (self) {
+        self.dictionary = dictionary;
         self.amountNeededForCurrentTreatment = [dictionary[@"amountNeededForCurrentTreatment"] integerValue];
         self.amountNeededPerTreatment = [dictionary[@"amountNeededPerTreatment"] integerValue];
         self.numberOfTreatmentsFunded = [dictionary[@"numberOfTreatmentsFunded"] integerValue];
@@ -21,6 +28,10 @@
         self.numberOfPeopleDonated = [dictionary[@"numberOfPeopleDonated"] integerValue];
     }
     return self;
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat: @"Fund: %@", self.dictionary];
 }
 
 @end
