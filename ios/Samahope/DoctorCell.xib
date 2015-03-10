@@ -54,10 +54,11 @@
                             <constraint firstAttribute="centerX" secondItem="Pp1-nt-txO" secondAttribute="centerX" id="fy0-lH-IDs"/>
                         </constraints>
                     </view>
-                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRf-oa-lSf">
-                        <rect key="frame" x="0.0" y="190" width="417" height="60"/>
+                    <view clipsSubviews="YES" alpha="0.69999999999999973" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRf-oa-lSf">
+                        <rect key="frame" x="0.0" y="200" width="417" height="50"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="60" id="WRg-xV-Cvg"/>
+                            <constraint firstAttribute="height" constant="50" id="WRg-xV-Cvg"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Nading Burke Harris" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJ9-Yc-LyG">
@@ -69,6 +70,13 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WhD-Xa-aPP">
+                        <rect key="frame" x="0.0" y="0.0" width="417" height="30"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="sq4-0J-9B2"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="NJ9-Yc-LyG" secondAttribute="trailing" constant="8" id="0Tr-aX-Hiy"/>
@@ -77,14 +85,17 @@
                     <constraint firstItem="Wnp-U0-aAI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="67K-SY-crx"/>
                     <constraint firstAttribute="trailing" secondItem="flv-xr-nkL" secondAttribute="trailing" id="8ey-Yr-3HE"/>
                     <constraint firstItem="6b9-mB-6fn" firstAttribute="bottom" secondItem="NRf-oa-lSf" secondAttribute="bottom" id="AD5-h4-iW1"/>
+                    <constraint firstAttribute="trailing" secondItem="WhD-Xa-aPP" secondAttribute="trailing" id="I7t-9q-xKF"/>
                     <constraint firstItem="flv-xr-nkL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="LNV-Yk-GME"/>
                     <constraint firstItem="NRf-oa-lSf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="QCH-sq-TqU"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="flv-xr-nkL" secondAttribute="bottom" id="RG1-5l-uxz"/>
                     <constraint firstItem="Wnp-U0-aAI" firstAttribute="top" secondItem="6b9-mB-6fn" secondAttribute="bottom" id="VUD-pB-uIH"/>
                     <constraint firstItem="NJ9-Yc-LyG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="YNS-aK-mW2"/>
                     <constraint firstItem="flv-xr-nkL" firstAttribute="top" secondItem="Wnp-U0-aAI" secondAttribute="bottom" id="Zef-FI-UUT"/>
+                    <constraint firstItem="WhD-Xa-aPP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aB0-oK-Rqr"/>
                     <constraint firstAttribute="trailing" secondItem="Wnp-U0-aAI" secondAttribute="trailing" id="eO7-5F-bio"/>
                     <constraint firstAttribute="trailing" secondItem="6b9-mB-6fn" secondAttribute="trailing" id="g57-0G-Nkx"/>
+                    <constraint firstItem="WhD-Xa-aPP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="n8i-OW-d8y"/>
                     <constraint firstItem="6b9-mB-6fn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qP1-xs-AbV"/>
                     <constraint firstItem="Wnp-U0-aAI" firstAttribute="top" secondItem="NJ9-Yc-LyG" secondAttribute="bottom" constant="8" id="tFO-69-hpY"/>
                 </constraints>

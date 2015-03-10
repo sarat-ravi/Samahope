@@ -40,17 +40,17 @@
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user {
     NSLog(@"%@", user);
+}
+
+- (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
+    //[self presentViewController:[[DonateViewController alloc] init] animated:YES completion:nil];
+    // loginView.center = CGPointMake(self.view.center.x, self.view.center.y + 50);
+    // [self.view addSubview:loginView];
     DoctorsViewController *dvc = [[DoctorsViewController alloc] init];
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: dvc];
     [self presentViewController:nvc animated:YES completion:^{
         // Completion
     }];
-}
-
-- (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
-    //[self presentViewController:[[DonateViewController alloc] init] animated:YES completion:nil];
-    loginView.center = CGPointMake(self.view.center.x, self.view.center.y + 50);
-    [self.view addSubview:loginView];
 }
 
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {

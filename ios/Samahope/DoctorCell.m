@@ -23,14 +23,6 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = self.nameLabelBackgroundView.bounds;
-    gradient.colors = [NSArray arrayWithObjects:
-                       (id)[[UIColor colorWithWhite: 1.0 alpha:0.0] CGColor],
-                       (id)[[UIColor colorWithWhite: 1.0 alpha:1.0] CGColor], nil];
-    gradient.startPoint = CGPointMake(0.5, 0.0); // default; bottom of the view
-    gradient.endPoint = CGPointMake(0.5, 0.5);   // default; top of the view
-    [self.nameLabelBackgroundView.layer insertSublayer:gradient atIndex:0];
 }
 
 - (void)setDoctor:(Doctor *)doctor {
