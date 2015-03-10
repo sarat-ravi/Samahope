@@ -54,19 +54,12 @@
     self.numberOfTreatmentsFundedLabel.text = [NSString stringWithFormat: @"%ld", (long)[self.fund numberOfTreatmentsFunded]];
     self.numberOfPeopleDonatedLabel.text = [NSString stringWithFormat: @"%ld", (long)[self.fund numberOfPeopleDonated]];
     
+    // Calculate percentage progress for the fund.
     NSInteger totalCost = (self.fund.numberOfTreatmentsNeeded + self.fund.numberOfTreatmentsFunded) * self.fund.amountNeededPerTreatment;
     NSInteger raised = (self.fund.numberOfTreatmentsFunded * self.fund.amountNeededPerTreatment)
                         + (self.fund.amountNeededPerTreatment - self.fund.amountNeededForCurrentTreatment);
-    
     CGFloat progress = (float) raised / totalCost;
     [self.treatmentProgressBar setProgress:progress animated:YES];
-    
-    // amountNeededForCurrentTreatment;
-    // amountNeededPerTreatment;
-    // numberOfTreatmentsFunded;
-    // numberOfTreatmentsNeeded;
-    
-    // numberOfPeopleDonated;
 }
 
 @end
