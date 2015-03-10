@@ -1,5 +1,5 @@
 //
-//  PaymentViewController.h
+//  FormTextCell.h
 //  Samahope
 //
 //  Created by Charlie Hu on 3/10/15.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PaymentViewController : UIViewController
+@interface FormTextCell : UITableViewCell
+
+- (void)setFieldName:(NSString *)fieldName;
 
 @end

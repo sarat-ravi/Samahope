@@ -1,5 +1,5 @@
 //
-//  PaymentViewController.h
+//  FormSwitchCell.h
 //  Samahope
 //
 //  Created by Charlie Hu on 3/10/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PaymentViewController : UIViewController
+@interface FormSwitchCell : UITableViewCell
 
 @end
