@@ -14,36 +14,36 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="flv-xr-nkL" customClass="DoctorFocusView">
-                        <rect key="frame" x="0.0" y="314" width="417" height="80"/>
+                        <rect key="frame" x="0.0" y="239" width="417" height="80"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="80" id="Zqz-9l-Ww4"/>
                         </constraints>
                     </view>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WhD-Xa-aPP" userLabel="Image Container View">
-                        <rect key="frame" x="0.0" y="0.0" width="417" height="250"/>
+                        <rect key="frame" x="0.0" y="0.0" width="417" height="175"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6b9-mB-6fn">
-                                <rect key="frame" x="0.0" y="-30" width="417" height="280"/>
+                                <rect key="frame" x="0.0" y="-30" width="417" height="205"/>
                             </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="6b9-mB-6fn" firstAttribute="top" secondItem="WhD-Xa-aPP" secondAttribute="top" constant="-30" id="DbB-T6-CXD"/>
-                            <constraint firstAttribute="height" constant="250" id="MCC-EP-80V"/>
+                            <constraint firstAttribute="height" constant="175" id="MCC-EP-80V"/>
                             <constraint firstItem="6b9-mB-6fn" firstAttribute="leading" secondItem="WhD-Xa-aPP" secondAttribute="leading" id="STC-Kr-X2w"/>
                             <constraint firstAttribute="trailing" secondItem="6b9-mB-6fn" secondAttribute="trailing" id="dk5-EG-AmP"/>
                             <constraint firstAttribute="bottom" secondItem="6b9-mB-6fn" secondAttribute="bottom" id="xWc-ds-Odr"/>
                         </constraints>
                     </view>
                     <view clipsSubviews="YES" alpha="0.69999999999999973" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRf-oa-lSf">
-                        <rect key="frame" x="0.0" y="200" width="417" height="50"/>
+                        <rect key="frame" x="0.0" y="125" width="417" height="50"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="WRg-xV-Cvg"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Nading Burke Harris" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJ9-Yc-LyG">
-                        <rect key="frame" x="8" y="210" width="401" height="30"/>
+                        <rect key="frame" x="8" y="135" width="401" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="MMe-8U-taR"/>
                         </constraints>
@@ -52,7 +52,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wnp-U0-aAI" customClass="FundView">
-                        <rect key="frame" x="0.0" y="248" width="417" height="66"/>
+                        <rect key="frame" x="0.0" y="173" width="417" height="66"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="66" id="aXt-E3-RqF"/>
