@@ -8,11 +8,18 @@
 
 #import "Doctor.h"
 
+@interface Doctor()
+
+@property (strong, nonatomic) NSDictionary *dictionary;
+
+@end
+
 @implementation Doctor
 
 - (id)initWithDictionary: (NSDictionary *)dictionary {
     self = [super init];
     if (self) {
+        self.dictionary = dictionary;
         // Code to init from dictionary here.
         self.name = dictionary[@"name"];
         self.profileImageUrlString = dictionary[@"profileImageUrlString"];
@@ -28,12 +35,18 @@
             [focuses addObject: focus];
         }
         
+        self.focuses = focuses;
+        
         self.fullScreenImageUrlString = dictionary[@"fullScreenImageUrlString"];
         self.videoUrlString = dictionary[@"videoUrlString"];
         self.quote = dictionary[@"quote"];
         self.humanReadableLocation = dictionary[@"humanReadableLocation"];
     }
     return self;
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat: @"Doctor: %@", self.dictionary];
 }
 
 @end

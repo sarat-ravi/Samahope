@@ -7,6 +7,19 @@
 //
 
 #import "DoctorCell.h"
+#import "UIImageView+AFNetworking.h"
+#import "FundView.h"
+#import "DoctorFocusView.h"
+
+@interface DoctorCell()
+
+@property (strong, nonatomic) IBOutlet UIImageView *profileImageView;
+@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) IBOutlet UIView *nameLabelBackgroundView;
+@property (strong, nonatomic) IBOutlet FundView *fundView;
+@property (strong, nonatomic) IBOutlet DoctorFocusView *doctorFocusView;
+
+@end
 
 @implementation DoctorCell
 
@@ -14,9 +27,18 @@
     // Initialization code
 }
 
+- (void)setDoctor:(Doctor *)doctor {
+    _doctor = doctor;
+    
+    // [self.profileImageView setImageWithURL: [NSURL URLWithString: doctor.profileImageUrlString]];
+    [self.profileImageView setImageWithURL: [NSURL URLWithString: doctor.fullScreenImageUrlString]];
+    self.nameLabel.text = doctor.name;
+    self.fundView.fund = doctor.fund;
+    self.doctorFocusView.doctor = doctor;
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
     // Configure the view for the selected state
 }
 
