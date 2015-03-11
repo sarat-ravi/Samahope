@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BannerView">
+            <connections>
+                <outlet property="bannerImageView" destination="5fH-xK-ecE" id="kBc-2h-rD1"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="paM-tg-Ioz"/>
+                <outlet property="nameLabel" destination="FFK-4e-cbc" id="i3w-DL-g26"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFc-oj-rIw" userLabel="Image Container View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5fH-xK-ecE">
+                            <rect key="frame" x="0.0" y="-30" width="375" height="180"/>
+                        </imageView>
+                        <view alpha="0.69999999999999973" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVz-Bu-MYF">
+                            <rect key="frame" x="0.0" y="100" width="375" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Nadine Burke Harris" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFK-4e-cbc">
+                                    <rect key="frame" x="8" y="13" width="203" height="24"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="J2X-oi-uU7"/>
+                                <constraint firstItem="FFK-4e-cbc" firstAttribute="leading" secondItem="XVz-Bu-MYF" secondAttribute="leading" constant="8" id="KZK-bU-XMo"/>
+                                <constraint firstAttribute="centerY" secondItem="FFK-4e-cbc" secondAttribute="centerY" id="b0A-aW-xxo"/>
+                            </constraints>
+                        </view>
+                        <view alpha="0.49999999999999961" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3q-4O-gg3" userLabel="Image Mask View">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="XVz-Bu-MYF" secondAttribute="trailing" id="5nV-2t-6by"/>
+                        <constraint firstItem="v3q-4O-gg3" firstAttribute="top" secondItem="HFc-oj-rIw" secondAttribute="top" id="M0B-tA-Csu"/>
+                        <constraint firstAttribute="trailing" secondItem="v3q-4O-gg3" secondAttribute="trailing" id="a1D-ot-TOw"/>
+                        <constraint firstItem="XVz-Bu-MYF" firstAttribute="top" secondItem="v3q-4O-gg3" secondAttribute="bottom" id="gcF-SJ-ljA"/>
+                        <constraint firstItem="v3q-4O-gg3" firstAttribute="leading" secondItem="HFc-oj-rIw" secondAttribute="leading" id="kbS-JH-qt8"/>
+                        <constraint firstItem="5fH-xK-ecE" firstAttribute="leading" secondItem="HFc-oj-rIw" secondAttribute="leading" id="mVw-dl-Eff"/>
+                        <constraint firstItem="XVz-Bu-MYF" firstAttribute="leading" secondItem="HFc-oj-rIw" secondAttribute="leading" id="nEY-Nf-jHa"/>
+                        <constraint firstAttribute="trailing" secondItem="5fH-xK-ecE" secondAttribute="trailing" id="o45-tf-X8f"/>
+                        <constraint firstAttribute="bottom" secondItem="XVz-Bu-MYF" secondAttribute="bottom" id="reN-jp-HZa"/>
+                        <constraint firstItem="5fH-xK-ecE" firstAttribute="top" secondItem="HFc-oj-rIw" secondAttribute="top" constant="-30" id="v5F-2M-r7u"/>
+                        <constraint firstAttribute="bottom" secondItem="5fH-xK-ecE" secondAttribute="bottom" id="zys-Nr-zPZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="HFc-oj-rIw" secondAttribute="bottom" id="9sV-JZ-w4A"/>
+                <constraint firstItem="HFc-oj-rIw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KT4-Rs-u6H"/>
+                <constraint firstItem="HFc-oj-rIw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MZr-QH-MXm"/>
+                <constraint firstAttribute="trailing" secondItem="HFc-oj-rIw" secondAttribute="trailing" id="tvy-gQ-162"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="291.5" y="520"/>
+        </view>
+    </objects>
+</document>

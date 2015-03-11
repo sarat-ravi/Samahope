@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DonateViewController">
             <connections>
+                <outlet property="bannerView" destination="Kr4-Gq-EBU" id="GH0-XB-qVv"/>
                 <outlet property="tableView" destination="9mz-6i-ESB" id="M7g-io-TiQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -15,43 +16,55 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9mz-6i-ESB">
-                    <rect key="frame" x="0.0" y="150" width="320" height="304"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </tableView>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gbj-3Q-28J">
-                    <rect key="frame" x="41" y="462" width="239" height="29"/>
+                    <rect key="frame" x="41" y="430" width="239" height="29"/>
                     <segments>
                         <segment title="Donate Monthly"/>
                         <segment title="Donate One Time"/>
                     </segments>
+                    <color key="tintColor" red="0.56770243228857065" green="0.93590856481481477" blue="0.67891375846509838" alpha="1" colorSpace="calibratedRGB"/>
                 </segmentedControl>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPC-P0-Igp">
                     <rect key="frame" x="0.0" y="498" width="320" height="70"/>
-                    <color key="backgroundColor" red="0.064374233480000001" green="1" blue="0.16486106019999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.60676443338994956" green="1" blue="0.71714463016047314" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="3nQ-Mn-Wpv"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="34"/>
                     <state key="normal" title="Donate">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="onDonateButton:" destination="-1" eventType="touchUpInside" id="rfu-rv-kC7"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kr4-Gq-EBU" customClass="BannerView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="9Tr-q9-Tod"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9mz-6i-ESB">
+                    <rect key="frame" x="0.0" y="150" width="320" height="240"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <gestureRecognizers/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="iPC-P0-Igp" secondAttribute="bottom" id="1Mh-Cp-iFo"/>
                 <constraint firstAttribute="centerX" secondItem="Gbj-3Q-28J" secondAttribute="centerX" id="1xm-Lb-oLA"/>
+                <constraint firstItem="Kr4-Gq-EBU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7bP-5L-Gcx"/>
                 <constraint firstAttribute="trailing" secondItem="iPC-P0-Igp" secondAttribute="trailing" id="93A-2e-Q0c"/>
-                <constraint firstItem="Gbj-3Q-28J" firstAttribute="top" secondItem="9mz-6i-ESB" secondAttribute="bottom" constant="8" id="Bhu-8o-yOT"/>
-                <constraint firstAttribute="bottom" secondItem="9mz-6i-ESB" secondAttribute="bottom" constant="114" id="Qbl-Na-PXt"/>
-                <constraint firstItem="9mz-6i-ESB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="hhV-ZH-5yO"/>
+                <constraint firstItem="9mz-6i-ESB" firstAttribute="top" secondItem="Kr4-Gq-EBU" secondAttribute="bottom" id="9F1-h0-9Zw"/>
+                <constraint firstItem="Gbj-3Q-28J" firstAttribute="top" secondItem="9mz-6i-ESB" secondAttribute="bottom" constant="40" id="Bhu-8o-yOT"/>
+                <constraint firstItem="iPC-P0-Igp" firstAttribute="top" secondItem="Gbj-3Q-28J" secondAttribute="bottom" constant="40" id="g1Z-XJ-TJc"/>
                 <constraint firstItem="9mz-6i-ESB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mlC-Lw-yFu"/>
+                <constraint firstItem="Kr4-Gq-EBU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nPO-ut-ZOQ"/>
                 <constraint firstItem="iPC-P0-Igp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sUD-4z-ezM"/>
+                <constraint firstAttribute="trailing" secondItem="Kr4-Gq-EBU" secondAttribute="trailing" id="tJK-wT-syZ"/>
                 <constraint firstAttribute="trailing" secondItem="9mz-6i-ESB" secondAttribute="trailing" id="tkf-AI-9H9"/>
             </constraints>
             <point key="canvasLocation" x="171" y="237"/>

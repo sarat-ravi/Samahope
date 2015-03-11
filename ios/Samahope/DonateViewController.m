@@ -10,6 +10,7 @@
 #import "DonateCell.h"
 #import "PaymentViewController.h"
 #import "User.h"
+#import "BannerView.h"
 
 typedef NS_ENUM(NSInteger, DonateAmountOption) {
     DonateAmountOption1 = 0,
@@ -19,6 +20,7 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
 
 @interface DonateViewController () <UITableViewDataSource, UITableViewDelegate, DonateCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet BannerView *bannerView;
 
 @property (nonatomic, strong) NSArray *donateAmounts;
 @property (nonatomic, assign) DonateAmountOption selectedDonateAmountOption;
@@ -49,6 +51,8 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
 
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    self.bannerView.doctor = self.doctor;
 
     [self.tableView registerNib:[UINib nibWithNibName:@"DonateCell" bundle:nil] forCellReuseIdentifier:@"DonateCell"];
 

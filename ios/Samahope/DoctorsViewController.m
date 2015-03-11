@@ -7,6 +7,7 @@
 //
 
 #import "DoctorsViewController.h"
+#import "DoctorDetailViewController.h"
 #import "SamahopeClient.h"
 #import "DoctorCell.h"
 #import "SamahopeClient.h"
@@ -36,6 +37,11 @@ NSString *const kDoctorCellName = @"DoctorCell";
     self.doctorsTableView.rowHeight = UITableViewAutomaticDimension;
     
     [self refreshDoctorsData];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.doctorsTableView reloadData];
 }
 
 #pragma mark Core
@@ -70,6 +76,10 @@ NSString *const kDoctorCellName = @"DoctorCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"Selected row %ld in section %ld", (long)indexPath.row, (long)indexPath.section);
     [tableView deselectRowAtIndexPath: indexPath animated:NO];
+    
+    DoctorDetailViewController *vc = [[DoctorDetailViewController alloc] init];
+    vc.doctor = self.doctors[indexPath.row];
+    [self.navigationController pushViewController: vc animated:YES];
 }
 
 @end

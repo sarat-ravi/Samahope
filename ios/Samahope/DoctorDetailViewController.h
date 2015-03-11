@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Doctor.h"
 
 @interface DoctorDetailViewController : UIViewController
+
+@property (strong, nonatomic) Doctor *doctor;
 
 @end
