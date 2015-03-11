@@ -13,6 +13,7 @@
 #import "User.h"
 #import "BannerView.h"
 #import "SamahopeClient.h"
+#import "ThanksViewController.h"
 
 typedef NS_ENUM(NSInteger, PaymentFormType) {
     PaymentFormTypeName = 0,
@@ -161,6 +162,9 @@ typedef NS_ENUM(NSInteger, PaymentFormType) {
             }
 
             // Go to Thanks View Controller
+            ThanksViewController *tvc = [[ThanksViewController alloc] init];
+            tvc.doctor = self.doctor;
+            [self.navigationController pushViewController:tvc animated:YES];
         }
     }];
 }

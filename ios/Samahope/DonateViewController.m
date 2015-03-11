@@ -12,6 +12,7 @@
 #import "User.h"
 #import "BannerView.h"
 #import "SamahopeClient.h"
+#import "ThanksViewController.h"
 
 typedef NS_ENUM(NSInteger, DonateAmountOption) {
     DonateAmountOption1 = 0,
@@ -114,6 +115,9 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
         [[SamahopeClient sharedInstance] makeDonation:paymentInfo completion:^(bool success, NSError *error) {
             if (success) {
                 // Go to Thanks View Controller
+                ThanksViewController *tvc = [[ThanksViewController alloc] init];
+                tvc.doctor = self.doctor;
+                [self.navigationController pushViewController:tvc animated:YES];
             }
         }];
         NSLog(@"Pay with params: %@", paymentInfo);
