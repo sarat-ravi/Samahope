@@ -23,11 +23,12 @@ typedef NS_ENUM(NSInteger, PaymentFormType) {
     PaymentFormTypeRememberCard
 };
 
-@interface PaymentViewController () <UITableViewDelegate, UITableViewDataSource, FormTextCellDelegate, FormDateCellDelegate>
+@interface PaymentViewController () <UITableViewDelegate, UITableViewDataSource, FormTextCellDelegate, FormDateCellDelegate, FormSwitchCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) NSArray *formFields;
 @property (nonatomic, strong) NSMutableDictionary *formValues;
+@property (nonatomic, assign) BOOL shouldRememberUserInfo;
 
 - (IBAction)onDonateButton:(id)sender;
 @end
@@ -48,6 +49,7 @@ typedef NS_ENUM(NSInteger, PaymentFormType) {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.formValues = [NSMutableDictionary dictionary];
+    self.shouldRememberUserInfo = YES;
 
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -84,6 +86,7 @@ typedef NS_ENUM(NSInteger, PaymentFormType) {
         cell = dcell;
     } else if (indexPath.row == PaymentFormTypeRememberCard) {
         scell = [tableView dequeueReusableCellWithIdentifier:@"FormSwitchCell"];
+        scell.delegate = self;
         cell = scell;
     } else {
         tcell = [tableView dequeueReusableCellWithIdentifier:@"FormTextCell"];
@@ -106,6 +109,12 @@ typedef NS_ENUM(NSInteger, PaymentFormType) {
 - (void)formDateCell:(FormDateCell *)cell didUpdateMonth:(NSString *)month year:(NSString *)year {
     [self.formValues setObject:month forKey:@"Expiration_Month"];
     [self.formValues setObject:year forKey:@"Expiration_Year"];
+}
+
+#pragma mark - form switch cell methods
+
+- (void)formSwitchCell:(FormSwitchCell *)cell shouldRememberUserInfo:(BOOL)shouldRememberUserInfo {
+    self.shouldRememberUserInfo = shouldRememberUserInfo;
 }
 
 #pragma mark - private methods
@@ -136,5 +145,10 @@ typedef NS_ENUM(NSInteger, PaymentFormType) {
 
 - (IBAction)onDonateButton:(id)sender {
     NSLog(@"Donate with params: %@", self.formValues);
+    if (self.shouldRememberUserInfo) {
+        // Persist user info.
+        NSLog(@"Persist user info");
+    }
+    // Call Samahope API to send payment info.
 }
 @end

@@ -25,6 +25,9 @@
                     </label>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ggY-TU-Cq0">
                         <rect key="frame" x="251" y="6" width="51" height="31"/>
+                        <connections>
+                            <action selector="onToggleSwitch:" destination="KGk-i7-Jjw" eventType="valueChanged" id="CrN-kB-DBO"/>
+                        </connections>
                     </switch>
                 </subviews>
                 <constraints>
@@ -35,6 +38,9 @@
                     <constraint firstItem="ggY-TU-Cq0" firstAttribute="centerY" secondItem="53C-yA-nRH" secondAttribute="centerY" id="vZM-N9-EFP"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="toggleSwitch" destination="ggY-TU-Cq0" id="m4E-58-snS"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>
