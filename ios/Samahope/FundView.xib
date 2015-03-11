@@ -59,6 +59,7 @@
                     <color key="progressTintColor" red="0.79249338619999998" green="0.00653605583" blue="0.052429828810000002" alpha="1" colorSpace="calibratedRGB"/>
                 </progressView>
             </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="4fU-wq-SRN" firstAttribute="bottom" secondItem="0AK-Ux-Jz4" secondAttribute="bottom" id="0RD-G9-kRR"/>
                 <constraint firstItem="q30-7l-XSe" firstAttribute="top" secondItem="LSP-ug-wRH" secondAttribute="top" id="1mc-J4-vd2"/>

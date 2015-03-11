@@ -7,8 +7,14 @@
 //
 
 #import "DoctorDetailViewController.h"
+#import "BannerView.h"
+#import "FundView.h"
+#import "DoctorFocusView.h"
 
 @interface DoctorDetailViewController ()
+@property (strong, nonatomic) IBOutlet BannerView *bannerView;
+@property (strong, nonatomic) IBOutlet FundView *fundView;
+@property (strong, nonatomic) IBOutlet DoctorFocusView *doctorFocusView;
 
 @end
 
@@ -16,22 +22,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.bannerView.doctor = self.doctor;
+    self.fundView.fund = self.doctor.fund;
+    self.doctorFocusView.doctor = self.doctor;
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

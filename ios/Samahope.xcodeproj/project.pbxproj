@@ -40,6 +40,8 @@
 		4172FBD31AAEB2770027C8AA /* FundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4172FBD21AAEB2770027C8AA /* FundView.xib */; };
 		41FF3E6A1AAECCEC00092320 /* DoctorFocusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FF3E691AAECCEC00092320 /* DoctorFocusView.m */; };
 		41FF3E6C1AAECD8400092320 /* DoctorFocusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FF3E6B1AAECD8400092320 /* DoctorFocusView.xib */; };
+		41FF3E6E1AAFD2F400092320 /* BannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FF3E6D1AAFD2F400092320 /* BannerView.xib */; };
+		41FF3E711AAFD30400092320 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FF3E701AAFD30400092320 /* BannerView.m */; };
 		50C318DB1953477223CBEE26 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E873347A1F870346E92BC5CF /* libPods.a */; };
 		B21646181AAFAC3B00E12C88 /* FormDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B21646161AAFAC3B00E12C88 /* FormDateCell.m */; };
 		B21646191AAFAC3B00E12C88 /* FormDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21646171AAFAC3B00E12C88 /* FormDateCell.xib */; };
@@ -120,6 +122,9 @@
 		41FF3E681AAECCEC00092320 /* DoctorFocusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorFocusView.h; sourceTree = "<group>"; };
 		41FF3E691AAECCEC00092320 /* DoctorFocusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorFocusView.m; sourceTree = "<group>"; };
 		41FF3E6B1AAECD8400092320 /* DoctorFocusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorFocusView.xib; sourceTree = "<group>"; };
+		41FF3E6D1AAFD2F400092320 /* BannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerView.xib; sourceTree = "<group>"; };
+		41FF3E6F1AAFD30400092320 /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
+		41FF3E701AAFD30400092320 /* BannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
 		8654BA0CD8B5CD92EB16F960 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B21646151AAFAC3B00E12C88 /* FormDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormDateCell.h; sourceTree = "<group>"; };
 		B21646161AAFAC3B00E12C88 /* FormDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormDateCell.m; sourceTree = "<group>"; };
@@ -272,6 +277,9 @@
 				B216461A1AAFAE2800E12C88 /* FormSwitchCell.h */,
 				B216461B1AAFAE2800E12C88 /* FormSwitchCell.m */,
 				B216461C1AAFAE2800E12C88 /* FormSwitchCell.xib */,
+				41FF3E6D1AAFD2F400092320 /* BannerView.xib */,
+				41FF3E6F1AAFD30400092320 /* BannerView.h */,
+				41FF3E701AAFD30400092320 /* BannerView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -421,6 +429,7 @@
 				413CE52C1AA8146F002E16D9 /* LoginViewController.xib in Resources */,
 				413CE5311AA814DE002E16D9 /* DoctorsViewController.xib in Resources */,
 				B216461E1AAFAE2800E12C88 /* FormSwitchCell.xib in Resources */,
+				41FF3E6E1AAFD2F400092320 /* BannerView.xib in Resources */,
 				B2765DFC1AAFA8A5006026FA /* PaymentViewController.xib in Resources */,
 				4172FBD31AAEB2770027C8AA /* FundView.xib in Resources */,
 				413CE5521AA815C2002E16D9 /* DoctorCell.xib in Resources */,
@@ -490,6 +499,7 @@
 				413039ED1AA812E40086C445 /* AppDelegate.m in Sources */,
 				413CE5551AA815FA002E16D9 /* FundView.m in Sources */,
 				413CE5351AA81502002E16D9 /* DoctorDetailViewController.m in Sources */,
+				41FF3E711AAFD30400092320 /* BannerView.m in Sources */,
 				413CE55B1AA816E5002E16D9 /* Doctor.m in Sources */,
 				413CE5441AA8154D002E16D9 /* DonateViewController.m in Sources */,
 				413039EA1AA812E40086C445 /* main.m in Sources */,
