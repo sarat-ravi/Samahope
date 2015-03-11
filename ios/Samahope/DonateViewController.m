@@ -67,6 +67,7 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     DonateCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DonateCell"];
+    cell.delegate = self;
     [cell setDonateAmountText:self.donateAmounts[indexPath.row][@"name"]];
     if (indexPath.row == self.selectedDonateAmountOption) {
         [cell setChecked:YES];
@@ -105,8 +106,9 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
 
 #pragma mark - Donate cell methods
 
-- (void)donateCell:(DonateCell *)cell didUpdateValue:(NSString *)value {
-    self.donateAmount = [value doubleValue];
+- (void)donateCell:(DonateCell *)cell didUpdateValue:(double)value {
+    NSLog(@"Received donate value: %f", value);
+    self.donateAmount = value;
 }
 
 /*

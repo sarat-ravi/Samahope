@@ -8,6 +8,13 @@
 
 #import "FormSwitchCell.h"
 
+@interface FormSwitchCell()
+@property (weak, nonatomic) IBOutlet UISwitch *toggleSwitch;
+
+- (IBAction)onToggleSwitch:(id)sender;
+
+@end
+
 @implementation FormSwitchCell
 
 - (void)awakeFromNib {
@@ -20,4 +27,7 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)onToggleSwitch:(id)sender {
+    [self.delegate formSwitchCell:self shouldRememberUserInfo:self.toggleSwitch.on];
+}
 @end

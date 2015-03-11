@@ -8,7 +8,7 @@
 
 #import "FormTextCell.h"
 
-@interface FormTextCell()
+@interface FormTextCell() <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *fieldNameLabel;
 @property (weak, nonatomic) IBOutlet UITextField *fieldTextField;
 
@@ -18,6 +18,8 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    [self.fieldTextField setEnabled:YES];
+    self.fieldTextField.delegate = self;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -28,6 +30,12 @@
 
 - (void)setFieldName:(NSString *)fieldName {
     self.fieldNameLabel.text = fieldName;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    NSLog(@"Edit did end. Text: %@", textField.text);
+    [textField resignFirstResponder];
+    [self.delegate formTextCell:self didUpdateValue:textField.text];
 }
 
 @end

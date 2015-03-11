@@ -23,11 +23,14 @@ typedef NS_ENUM(NSInteger, PaymentFormType) {
     PaymentFormTypeRememberCard
 };
 
-@interface PaymentViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface PaymentViewController () <UITableViewDelegate, UITableViewDataSource, FormTextCellDelegate, FormDateCellDelegate, FormSwitchCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) NSArray *formFields;
+@property (nonatomic, strong) NSMutableDictionary *formValues;
+@property (nonatomic, assign) BOOL shouldRememberUserInfo;
 
+- (IBAction)onDonateButton:(id)sender;
 @end
 
 @implementation PaymentViewController
@@ -45,12 +48,17 @@ typedef NS_ENUM(NSInteger, PaymentFormType) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.formValues = [NSMutableDictionary dictionary];
+    self.shouldRememberUserInfo = YES;
+
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 
     [self.tableView registerNib:[UINib nibWithNibName:@"FormDateCell" bundle:nil] forCellReuseIdentifier:@"FormDateCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"FormTextCell" bundle:nil] forCellReuseIdentifier:@"FormTextCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"FormSwitchCell" bundle:nil] forCellReuseIdentifier:@"FormSwitchCell"];
+
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
 
 }
 
@@ -68,16 +76,45 @@ typedef NS_ENUM(NSInteger, PaymentFormType) {
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell;
 
-    if (indexPath.row == PaymentFormTypeExpiration) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"FormDateCell"];
-    } else if (indexPath.row == PaymentFormTypeRememberCard) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"FormSwitchCell"];
-    } else {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"FormTextCell"];
-        [(FormTextCell *)cell setFieldName:self.formFields[indexPath.row][@"name"]];
-    }
+    FormTextCell *tcell;
+    FormDateCell *dcell;
+    FormSwitchCell *scell;
 
+    if (indexPath.row == PaymentFormTypeExpiration) {
+        dcell = [tableView dequeueReusableCellWithIdentifier:@"FormDateCell"];
+        dcell.delegate = self;
+        cell = dcell;
+    } else if (indexPath.row == PaymentFormTypeRememberCard) {
+        scell = [tableView dequeueReusableCellWithIdentifier:@"FormSwitchCell"];
+        scell.delegate = self;
+        cell = scell;
+    } else {
+        tcell = [tableView dequeueReusableCellWithIdentifier:@"FormTextCell"];
+        [tcell setFieldName:self.formFields[indexPath.row][@"name"]];
+        tcell.delegate = self;
+        cell = tcell;
+    }
     return cell;
+}
+
+#pragma mark - form text cell methods
+
+- (void)formTextCell:(FormTextCell *)cell didUpdateValue:(NSString *)value {
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    [self.formValues setObject:value forKey:self.formFields[indexPath.row][@"name"]];
+}
+
+#pragma mark - form date cell methods
+
+- (void)formDateCell:(FormDateCell *)cell didUpdateMonth:(NSString *)month year:(NSString *)year {
+    [self.formValues setObject:month forKey:@"Expiration_Month"];
+    [self.formValues setObject:year forKey:@"Expiration_Year"];
+}
+
+#pragma mark - form switch cell methods
+
+- (void)formSwitchCell:(FormSwitchCell *)cell shouldRememberUserInfo:(BOOL)shouldRememberUserInfo {
+    self.shouldRememberUserInfo = shouldRememberUserInfo;
 }
 
 #pragma mark - private methods
@@ -106,4 +143,12 @@ typedef NS_ENUM(NSInteger, PaymentFormType) {
 }
 */
 
+- (IBAction)onDonateButton:(id)sender {
+    NSLog(@"Donate with params: %@", self.formValues);
+    if (self.shouldRememberUserInfo) {
+        // Persist user info.
+        NSLog(@"Persist user info");
+    }
+    // Call Samahope API to send payment info.
+}
 @end
