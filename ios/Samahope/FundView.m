@@ -60,6 +60,9 @@
                         + (self.fund.amountNeededPerTreatment - self.fund.amountNeededForCurrentTreatment);
     CGFloat progress = (float) raised / totalCost;
     [self.treatmentProgressBar setProgress:progress animated:YES];
+    CGAffineTransform transform = CGAffineTransformMakeScale(1.0f, 3.0f);
+    self.treatmentProgressBar.transform = transform;
+
 }
 
 @end

@@ -22,11 +22,11 @@
                         <segment title="Donate Monthly"/>
                         <segment title="Donate One Time"/>
                     </segments>
-                    <color key="tintColor" red="0.56770243228857065" green="0.93590856481481477" blue="0.67891375846509838" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.027450980392156862" green="0.76078431372549016" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                 </segmentedControl>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPC-P0-Igp">
                     <rect key="frame" x="0.0" y="498" width="320" height="70"/>
-                    <color key="backgroundColor" red="0.60676443338994956" green="1" blue="0.71714463016047314" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.019607843137254902" green="0.75686274509803919" blue="0.7686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="3nQ-Mn-Wpv"/>
                     </constraints>
