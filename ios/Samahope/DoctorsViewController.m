@@ -40,6 +40,7 @@ NSString *const kDoctorCellName = @"DoctorCell";
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
     [super viewDidAppear:animated];
     [self.doctorsTableView reloadData];
 }
