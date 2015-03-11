@@ -7,7 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DoctorDetailViewController">
             <connections>
                 <outlet property="bannerView" destination="8Q4-LO-9Ku" id="gI7-0w-XcN"/>
-                <outlet property="contentScrollView" destination="FJr-pN-Iv2" id="bTZ-jK-Mky"/>
+                <outlet property="detailTableView" destination="7ue-oJ-y4W" id="bwm-k4-YcA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,9 +23,6 @@
                         <constraint firstAttribute="height" constant="150" id="tqA-BX-pd7"/>
                     </constraints>
                 </view>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FJr-pN-Iv2">
-                    <rect key="frame" x="0.0" y="150" width="600" height="380"/>
-                </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbV-nK-uO9">
                     <rect key="frame" x="0.0" y="530" width="600" height="70"/>
                     <color key="backgroundColor" red="0.60676443339999997" green="1" blue="0.71714463019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,19 +38,23 @@
                         <action selector="onDonateButtonTapped:" destination="-1" eventType="touchUpInside" id="F5M-eH-p0F"/>
                     </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7ue-oJ-y4W">
+                    <rect key="frame" x="0.0" y="150" width="600" height="380"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="8Q4-LO-9Ku" secondAttribute="trailing" id="At2-Si-ZFa"/>
+                <constraint firstItem="7ue-oJ-y4W" firstAttribute="top" secondItem="8Q4-LO-9Ku" secondAttribute="bottom" id="BhP-hK-MUo"/>
                 <constraint firstItem="8Q4-LO-9Ku" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="By5-Ce-Usq"/>
-                <constraint firstItem="FJr-pN-Iv2" firstAttribute="top" secondItem="8Q4-LO-9Ku" secondAttribute="bottom" id="EG7-gF-GY3"/>
                 <constraint firstAttribute="trailing" secondItem="zbV-nK-uO9" secondAttribute="trailing" id="FK7-gk-ZMA"/>
                 <constraint firstAttribute="bottom" secondItem="zbV-nK-uO9" secondAttribute="bottom" id="GFq-b2-Xud"/>
                 <constraint firstItem="8Q4-LO-9Ku" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HLY-SJ-cnZ"/>
-                <constraint firstItem="zbV-nK-uO9" firstAttribute="top" secondItem="FJr-pN-Iv2" secondAttribute="bottom" id="L9j-JZ-8UE"/>
-                <constraint firstAttribute="trailing" secondItem="FJr-pN-Iv2" secondAttribute="trailing" id="TTt-Lh-qjK"/>
-                <constraint firstItem="FJr-pN-Iv2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XVv-5s-pDF"/>
+                <constraint firstAttribute="trailing" secondItem="7ue-oJ-y4W" secondAttribute="trailing" id="JyX-mL-0Zc"/>
+                <constraint firstItem="zbV-nK-uO9" firstAttribute="top" secondItem="7ue-oJ-y4W" secondAttribute="bottom" id="KRA-sx-bYY"/>
                 <constraint firstItem="zbV-nK-uO9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZQu-Q9-CSy"/>
+                <constraint firstItem="7ue-oJ-y4W" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hEH-cZ-kY5"/>
             </constraints>
             <point key="canvasLocation" x="404" y="497"/>
         </view>

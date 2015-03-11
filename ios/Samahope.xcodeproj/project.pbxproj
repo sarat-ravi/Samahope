@@ -42,8 +42,12 @@
 		41FF3E6C1AAECD8400092320 /* DoctorFocusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FF3E6B1AAECD8400092320 /* DoctorFocusView.xib */; };
 		41FF3E6E1AAFD2F400092320 /* BannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FF3E6D1AAFD2F400092320 /* BannerView.xib */; };
 		41FF3E711AAFD30400092320 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FF3E701AAFD30400092320 /* BannerView.m */; };
-		41FF3E781AB0080A00092320 /* DoctorDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FF3E771AB0080A00092320 /* DoctorDetailView.m */; };
-		41FF3E7A1AB0082200092320 /* DoctorDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FF3E791AB0082200092320 /* DoctorDetailView.xib */; };
+		41FF3E7E1AB0154500092320 /* FundCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FF3E7C1AB0154500092320 /* FundCell.m */; };
+		41FF3E7F1AB0154500092320 /* FundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FF3E7D1AB0154500092320 /* FundCell.xib */; };
+		41FF3E831AB016BB00092320 /* DoctorFocusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FF3E811AB016BB00092320 /* DoctorFocusCell.m */; };
+		41FF3E841AB016BB00092320 /* DoctorFocusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FF3E821AB016BB00092320 /* DoctorFocusCell.xib */; };
+		41FF3E881AB0173200092320 /* PatientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FF3E861AB0173200092320 /* PatientCell.m */; };
+		41FF3E891AB0173200092320 /* PatientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FF3E871AB0173200092320 /* PatientCell.xib */; };
 		50C318DB1953477223CBEE26 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E873347A1F870346E92BC5CF /* libPods.a */; };
 		B21646181AAFAC3B00E12C88 /* FormDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B21646161AAFAC3B00E12C88 /* FormDateCell.m */; };
 		B21646191AAFAC3B00E12C88 /* FormDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21646171AAFAC3B00E12C88 /* FormDateCell.xib */; };
@@ -127,9 +131,15 @@
 		41FF3E6D1AAFD2F400092320 /* BannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerView.xib; sourceTree = "<group>"; };
 		41FF3E6F1AAFD30400092320 /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
 		41FF3E701AAFD30400092320 /* BannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
-		41FF3E761AB0080A00092320 /* DoctorDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorDetailView.h; sourceTree = "<group>"; };
-		41FF3E771AB0080A00092320 /* DoctorDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorDetailView.m; sourceTree = "<group>"; };
-		41FF3E791AB0082200092320 /* DoctorDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorDetailView.xib; sourceTree = "<group>"; };
+		41FF3E7B1AB0154500092320 /* FundCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FundCell.h; sourceTree = "<group>"; };
+		41FF3E7C1AB0154500092320 /* FundCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FundCell.m; sourceTree = "<group>"; };
+		41FF3E7D1AB0154500092320 /* FundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FundCell.xib; sourceTree = "<group>"; };
+		41FF3E801AB016BB00092320 /* DoctorFocusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorFocusCell.h; sourceTree = "<group>"; };
+		41FF3E811AB016BB00092320 /* DoctorFocusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorFocusCell.m; sourceTree = "<group>"; };
+		41FF3E821AB016BB00092320 /* DoctorFocusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorFocusCell.xib; sourceTree = "<group>"; };
+		41FF3E851AB0173200092320 /* PatientCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientCell.h; sourceTree = "<group>"; };
+		41FF3E861AB0173200092320 /* PatientCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientCell.m; sourceTree = "<group>"; };
+		41FF3E871AB0173200092320 /* PatientCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientCell.xib; sourceTree = "<group>"; };
 		8654BA0CD8B5CD92EB16F960 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B21646151AAFAC3B00E12C88 /* FormDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormDateCell.h; sourceTree = "<group>"; };
 		B21646161AAFAC3B00E12C88 /* FormDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormDateCell.m; sourceTree = "<group>"; };
@@ -285,9 +295,15 @@
 				41FF3E6D1AAFD2F400092320 /* BannerView.xib */,
 				41FF3E6F1AAFD30400092320 /* BannerView.h */,
 				41FF3E701AAFD30400092320 /* BannerView.m */,
-				41FF3E761AB0080A00092320 /* DoctorDetailView.h */,
-				41FF3E771AB0080A00092320 /* DoctorDetailView.m */,
-				41FF3E791AB0082200092320 /* DoctorDetailView.xib */,
+				41FF3E7B1AB0154500092320 /* FundCell.h */,
+				41FF3E7C1AB0154500092320 /* FundCell.m */,
+				41FF3E7D1AB0154500092320 /* FundCell.xib */,
+				41FF3E801AB016BB00092320 /* DoctorFocusCell.h */,
+				41FF3E811AB016BB00092320 /* DoctorFocusCell.m */,
+				41FF3E821AB016BB00092320 /* DoctorFocusCell.xib */,
+				41FF3E851AB0173200092320 /* PatientCell.h */,
+				41FF3E861AB0173200092320 /* PatientCell.m */,
+				41FF3E871AB0173200092320 /* PatientCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -434,15 +450,17 @@
 				413CE54D1AA81581002E16D9 /* ThanksViewController.xib in Resources */,
 				413CE5451AA8154D002E16D9 /* DonateViewController.xib in Resources */,
 				413CE5361AA81502002E16D9 /* DoctorDetailViewController.xib in Resources */,
+				41FF3E7F1AB0154500092320 /* FundCell.xib in Resources */,
 				413CE52C1AA8146F002E16D9 /* LoginViewController.xib in Resources */,
-				41FF3E7A1AB0082200092320 /* DoctorDetailView.xib in Resources */,
 				413CE5311AA814DE002E16D9 /* DoctorsViewController.xib in Resources */,
 				B216461E1AAFAE2800E12C88 /* FormSwitchCell.xib in Resources */,
 				41FF3E6E1AAFD2F400092320 /* BannerView.xib in Resources */,
 				B2765DFC1AAFA8A5006026FA /* PaymentViewController.xib in Resources */,
+				41FF3E841AB016BB00092320 /* DoctorFocusCell.xib in Resources */,
 				4172FBD31AAEB2770027C8AA /* FundView.xib in Resources */,
 				413CE5521AA815C2002E16D9 /* DoctorCell.xib in Resources */,
 				41FF3E6C1AAECD8400092320 /* DoctorFocusView.xib in Resources */,
+				41FF3E891AB0173200092320 /* PatientCell.xib in Resources */,
 				413CE53B1AA8152A002E16D9 /* DoctorTextDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,20 +513,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				41FF3E6A1AAECCEC00092320 /* DoctorFocusView.m in Sources */,
+				41FF3E881AB0173200092320 /* PatientCell.m in Sources */,
 				413CE5511AA815C2002E16D9 /* DoctorCell.m in Sources */,
 				413CE56A1AA81731002E16D9 /* Patient.m in Sources */,
 				B2765DFB1AAFA8A5006026FA /* PaymentViewController.m in Sources */,
 				413CE54C1AA81581002E16D9 /* ThanksViewController.m in Sources */,
 				413CE5581AA816A8002E16D9 /* DoctorBannerView.m in Sources */,
-				41FF3E781AB0080A00092320 /* DoctorDetailView.m in Sources */,
 				413CE53F1AA8153D002E16D9 /* UserViewController.m in Sources */,
 				413CE5761AAD3628002E16D9 /* Focus.m in Sources */,
 				B216461D1AAFAE2800E12C88 /* FormSwitchCell.m in Sources */,
 				B21E85E11AAA5C830007A07A /* DonateCell.m in Sources */,
 				413CE55E1AA816F4002E16D9 /* User.m in Sources */,
+				41FF3E7E1AB0154500092320 /* FundCell.m in Sources */,
 				413039ED1AA812E40086C445 /* AppDelegate.m in Sources */,
 				413CE5551AA815FA002E16D9 /* FundView.m in Sources */,
 				413CE5351AA81502002E16D9 /* DoctorDetailViewController.m in Sources */,
+				41FF3E831AB016BB00092320 /* DoctorFocusCell.m in Sources */,
 				41FF3E711AAFD30400092320 /* BannerView.m in Sources */,
 				413CE55B1AA816E5002E16D9 /* Doctor.m in Sources */,
 				413CE5441AA8154D002E16D9 /* DonateViewController.m in Sources */,

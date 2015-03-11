@@ -11,13 +11,14 @@
 #import "FundView.h"
 #import "DoctorFocusView.h"
 #import "DonateViewController.h"
-#import "ScrollViewManager.h"
+#import "FundCell.h"
+#import "DoctorFocusCell.h"
+#import "PatientCell.h"
 
-@interface DoctorDetailViewController ()
+@interface DoctorDetailViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet BannerView *bannerView;
-@property (strong, nonatomic) IBOutlet UIScrollView *contentScrollView;
-@property (strong, nonatomic) ScrollViewManager *scrollViewManager;
+@property (strong, nonatomic) IBOutlet UITableView *detailTableView;
 
 - (IBAction)onDonateButtonTapped:(id)sender;
 
@@ -30,26 +31,61 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.scrollViewManager = [[ScrollViewManager alloc] initWithScrollView: self.contentScrollView];
+    // Make nav bar transparent
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.view.backgroundColor = [UIColor clearColor];
+    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+    self.navigationController.navigationBar.tintColor = [UIColor darkTextColor];
+    
     self.bannerView.doctor = self.doctor;
-    [self addViewsToScrollView];
+    
+    // Set up table stuff
+    self.detailTableView.delegate = self;
+    self.detailTableView.dataSource = self;
+    self.detailTableView.rowHeight = UITableViewAutomaticDimension;
+    NSArray *cellNames = @[@"FundCell", @"DoctorFocusCell", @"PatientCell"];
+    for (NSString *cellName in cellNames) {
+        UINib *cellNib = [UINib nibWithNibName: cellName bundle:nil];
+        [self.detailTableView registerNib:cellNib forCellReuseIdentifier: cellName];
+    }
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.detailTableView reloadData];
 }
 
 #pragma mark Core
 
-- (void)addViewsToScrollView {
-    // self.contentScrollView.frame = CGRectMake(0, self.contentScrollView.frame.origin.y, 320, );
-    CGRect screenFrame = [[UIScreen mainScreen] bounds];
-    CGFloat width = screenFrame.size.width;
+#pragma mark Table Listeners
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        FundCell *cell = [self.detailTableView dequeueReusableCellWithIdentifier: @"FundCell" forIndexPath:indexPath];
+        cell.fund = self.doctor.fund;
+        return cell;
+    } else if (indexPath.row == 1) {
+        DoctorFocusCell *cell = [self.detailTableView dequeueReusableCellWithIdentifier: @"DoctorFocusCell" forIndexPath:indexPath];
+        cell.doctor = self.doctor;
+        return cell;
+    } else {
+        Patient *patient = self.doctor.patients[indexPath.row - 2];
+        PatientCell *cell = [self.detailTableView dequeueReusableCellWithIdentifier: @"PatientCell" forIndexPath:indexPath];
+        cell.patient = patient;
+        return cell;
+    }
     
-    FundView *fv = [[FundView alloc] initWithFrame: CGRectMake(0, 0, width, 66)];
-    DoctorFocusView *dfv = [[DoctorFocusView alloc] initWithFrame: CGRectMake(0, 0, width, 80)];
-    
-    NSArray *views = @[fv, fv, fv, fv, fv, fv, dfv];
-    [self.scrollViewManager addViewsToScrollView: views withWidth: width];
-    
-    fv.fund = self.doctor.fund;
-    dfv.doctor = self.doctor;
+    return nil;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 2 + [self.doctor.patients count];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"Selected row %ld in section %ld", (long)indexPath.row, (long)indexPath.section);
 }
 
 #pragma mark User Actions

@@ -1,5 +1,5 @@
 //
-//  DoctorDetailView.h
+//  FundCell.h
 //  Samahope
 //
 //  Created by Sarat Tallamraju on 3/10/15.
@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Doctor.h"
+#import "Fund.h"
 
-@interface DoctorDetailView : UIView
+@interface FundCell : UITableViewCell
 
-@property (strong, nonatomic) Doctor *doctor;
+@property (strong, nonatomic) Fund* fund;
 
 @end
