@@ -12,4 +12,8 @@
 
 + (ParseClient *)sharedInstance;
 
+- (void)saveUser:(NSDictionary *)fbUser completion:(void (^)(BOOL succeeded, NSError *error))completion;
+
+- (void)getUserById:(NSString *)fbUserId completion:(void (^)(BOOL succeeded, NSError *error))completion;
+
 @end
