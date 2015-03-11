@@ -9,6 +9,7 @@
 #import "DonateViewController.h"
 #import "DonateCell.h"
 #import "PaymentViewController.h"
+#import "User.h"
 
 typedef NS_ENUM(NSInteger, DonateAmountOption) {
     DonateAmountOption1 = 0,
@@ -93,7 +94,12 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
 
 - (IBAction)onDonateButton:(id)sender {
     NSLog(@"Donated %f", self.donateAmount);
-    [self.navigationController pushViewController:[[PaymentViewController alloc] init] animated:YES];
+    NSDictionary *paymentInfo = [User paymentInfo];
+    if (paymentInfo == nil) {
+        [self.navigationController pushViewController:[[PaymentViewController alloc] init] animated:YES];
+    } else {
+        NSLog(@"Pay with params: %@", paymentInfo);
+    }
 }
 
 - (void)initDonateAmountArray {
