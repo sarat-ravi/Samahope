@@ -29,24 +29,30 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="samahope_logo" translatesAutoresizingMaskIntoConstraints="NO" id="udK-VM-3eW">
-                    <rect key="frame" x="117" y="418" width="86" height="52"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rto-zX-aas">
+                    <rect key="frame" x="117" y="450" width="86" height="52"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="52" id="hvR-3Y-KnR"/>
-                        <constraint firstAttribute="width" constant="86" id="sQ3-18-GKs"/>
+                        <constraint firstAttribute="height" constant="52" id="P7Q-7h-Fls"/>
+                        <constraint firstAttribute="width" constant="86" id="bil-Bg-6s9"/>
                     </constraints>
-                </imageView>
+                    <state key="normal" title="Button" image="samahope_logo">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onLogoButton:" destination="-1" eventType="touchUpInside" id="SMX-DF-Wha"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerY" secondItem="xW2-y7-FHg" secondAttribute="centerY" id="JHU-8C-yjt"/>
                 <constraint firstAttribute="trailing" secondItem="W9J-wH-apc" secondAttribute="trailing" id="On2-uL-Cod"/>
                 <constraint firstItem="xW2-y7-FHg" firstAttribute="top" secondItem="W9J-wH-apc" secondAttribute="bottom" constant="62" id="Onb-sY-pwo"/>
-                <constraint firstAttribute="centerX" secondItem="udK-VM-3eW" secondAttribute="centerX" id="TGc-tn-e8E"/>
+                <constraint firstAttribute="bottom" secondItem="Rto-zX-aas" secondAttribute="bottom" constant="66" id="d4I-d0-kIM"/>
                 <constraint firstAttribute="centerX" secondItem="xW2-y7-FHg" secondAttribute="centerX" id="kMq-Kc-d9k"/>
                 <constraint firstItem="W9J-wH-apc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="l6E-Ah-1QN"/>
+                <constraint firstAttribute="centerX" secondItem="Rto-zX-aas" secondAttribute="centerX" id="l6x-m0-uBu"/>
                 <constraint firstItem="W9J-wH-apc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nOH-xo-zj0"/>
-                <constraint firstAttribute="bottom" secondItem="udK-VM-3eW" secondAttribute="bottom" constant="98" id="sMQ-EQ-giZ"/>
             </constraints>
             <point key="canvasLocation" x="335" y="284"/>
         </view>

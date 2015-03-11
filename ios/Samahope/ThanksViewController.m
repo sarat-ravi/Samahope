@@ -8,10 +8,12 @@
 
 #import "ThanksViewController.h"
 #import "BannerView.h"
+#import "DoctorsViewController.h"
 
 @interface ThanksViewController ()
 @property (weak, nonatomic) IBOutlet BannerView *bannerView;
 
+- (IBAction)onLogoButton:(id)sender;
 @end
 
 @implementation ThanksViewController
@@ -38,4 +40,14 @@
 }
 */
 
+- (IBAction)onLogoButton:(id)sender {
+    DoctorsViewController *dvc = [[DoctorsViewController alloc] init];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: dvc];
+
+    UIColor *globalTint = [[[UIApplication sharedApplication] delegate] window].tintColor;
+
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : globalTint}];
+
+    [self presentViewController:nvc animated:YES completion:nil];
+}
 @end
