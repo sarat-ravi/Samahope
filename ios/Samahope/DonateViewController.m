@@ -60,6 +60,11 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

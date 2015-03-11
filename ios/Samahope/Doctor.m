@@ -34,8 +34,14 @@
             Focus *focus = [[Focus alloc] initWithDictionary: focusDictionary];
             [focuses addObject: focus];
         }
-        
         self.focuses = focuses;
+        
+        NSMutableArray *patients = [NSMutableArray array];
+        for (NSDictionary *patientDictionary in dictionary[@"patients"]) {
+            Patient *patient = [[Patient alloc] initWithDictionary: patientDictionary];
+            [patients addObject: patient];
+        }
+        self.patients = patients;
         
         self.fullScreenImageUrlString = dictionary[@"fullScreenImageUrlString"];
         self.videoUrlString = dictionary[@"videoUrlString"];
