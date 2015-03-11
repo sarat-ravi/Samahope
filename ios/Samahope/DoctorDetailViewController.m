@@ -14,6 +14,7 @@
 #import "FundCell.h"
 #import "DoctorFocusCell.h"
 #import "PatientCell.h"
+#import "DescriptionCell.h"
 
 @interface DoctorDetailViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -44,16 +45,16 @@
     // Set up table stuff
     self.detailTableView.delegate = self;
     self.detailTableView.dataSource = self;
-    self.detailTableView.rowHeight = UITableViewAutomaticDimension;
-    NSArray *cellNames = @[@"FundCell", @"DoctorFocusCell", @"PatientCell"];
+    NSArray *cellNames = @[@"FundCell", @"DoctorFocusCell", @"PatientCell", @"DescriptionCell"];
     for (NSString *cellName in cellNames) {
         UINib *cellNib = [UINib nibWithNibName: cellName bundle:nil];
         [self.detailTableView registerNib:cellNib forCellReuseIdentifier: cellName];
     }
+    self.detailTableView.rowHeight = UITableViewAutomaticDimension;
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self.detailTableView reloadData];
 }
 
@@ -70,8 +71,12 @@
         DoctorFocusCell *cell = [self.detailTableView dequeueReusableCellWithIdentifier: @"DoctorFocusCell" forIndexPath:indexPath];
         cell.doctor = self.doctor;
         return cell;
+    } else if (indexPath.row == 2) {
+        DescriptionCell *cell = [self.detailTableView dequeueReusableCellWithIdentifier: @"DescriptionCell" forIndexPath:indexPath];
+        cell.doctor = self.doctor;
+        return cell;
     } else {
-        Patient *patient = self.doctor.patients[indexPath.row - 2];
+        Patient *patient = self.doctor.patients[indexPath.row - 3];
         PatientCell *cell = [self.detailTableView dequeueReusableCellWithIdentifier: @"PatientCell" forIndexPath:indexPath];
         cell.patient = patient;
         return cell;
@@ -81,7 +86,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2 + [self.doctor.patients count];
+    return 3 + [self.doctor.patients count];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -94,6 +99,6 @@
     NSLog(@"DetailVC: Donate button tapped");
     DonateViewController *vc = [[DonateViewController alloc] init];
     vc.doctor = self.doctor;
-    [self.navigationController pushViewController: vc animated:NO];
+    [self.navigationController pushViewController: vc animated:YES];
 }
 @end

@@ -36,7 +36,7 @@
 }
 
 - (NSString *)formatDescription: (NSString *)description {
-    return description;
+    return [NSString stringWithFormat: @"%@ ... Read More",[description substringToIndex: 120]];
 }
 
 @end

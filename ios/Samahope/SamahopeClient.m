@@ -102,6 +102,10 @@ NSString *const kKimonoLabsKey = @"de529db82ec0c0037a7deedded30878a";
 //            NSLog(@"fund numbers: %@ %@ %@", [fundInfo[@"amountNeeded"] stringByTrimmingCharactersInSet:nonDigits], [fundInfo[@"treatmentsFunded"] stringByTrimmingCharactersInSet:nonDigits], ([fundInfo[@"peopleDonated"] isKindOfClass:[NSNull class]] || fundInfo[@"peopleDonated"] == nil || fundInfo[@"peopleDonated"] == (id)[NSNull null]) ? 0 : [fundInfo[@"peopleDonated"] stringByTrimmingCharactersInSet:nonDigits]);
 
 //            NSLog(@"doctorInfo: %@", fundInfo);
+            
+            NSLog(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PatientInfo: %@", patientInfo);
+            
+            NSArray *patients = @[patientInfo];
 
             NSDictionary *fund = @{
                                    @"amountNeededForCurrentTreatment": [fundInfo[@"amountNeeded"] stringByTrimmingCharactersInSet:nonDigits],
@@ -124,6 +128,7 @@ NSString *const kKimonoLabsKey = @"de529db82ec0c0037a7deedded30878a";
                               @"parentOrganization": [doctorInfo[@"parentOrganization"] isKindOfClass:[NSDictionary class]] ? doctorInfo[@"parentOrganization"][@"text"] : @"",
                               @"fund": fund,
                               @"focuses": @[ focus ],
+                              @"patients": patients,
                               @"fullScreenImageUrlString": doctorInfo[@"bannerImage"][@"src"],
                               @"quote": doctorInfo[@"quote"],
                               @"videoUrlString": @"", // Get the video URL String if exists

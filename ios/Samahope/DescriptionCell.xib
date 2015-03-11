@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="132" id="KGk-i7-Jjw" customClass="DescriptionCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="132"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6q-UA-QKa">
+                        <rect key="frame" x="8" y="34" width="35" height="17"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Quote" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXd-Ak-P5E">
+                        <rect key="frame" x="8" y="8" width="42" height="18"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" red="1" green="0.0082474578879999996" blue="0.06615806481" alpha="0.41999999999999998" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some lives changed by Dr. Nadine Burke Harris" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnH-8V-BEU">
+                        <rect key="frame" x="8" y="106" width="292" height="18"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.057803820979999997" alpha="0.41999999999999998" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="e6q-UA-QKa" secondAttribute="trailing" constant="8" id="97m-sf-f1c"/>
+                    <constraint firstItem="MnH-8V-BEU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="e6q-UA-QKa" secondAttribute="bottom" constant="20" id="Aha-8a-oHZ"/>
+                    <constraint firstItem="UXd-Ak-P5E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="CE5-UE-37f"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MnH-8V-BEU" secondAttribute="trailing" constant="8" id="Njw-3H-AjD"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UXd-Ak-P5E" secondAttribute="trailing" constant="8" id="hRi-Fs-9DR"/>
+                    <constraint firstItem="UXd-Ak-P5E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="iwK-Os-Lc1"/>
+                    <constraint firstAttribute="bottom" secondItem="MnH-8V-BEU" secondAttribute="bottom" constant="8" id="jTO-3f-T4r"/>
+                    <constraint firstItem="MnH-8V-BEU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="szF-Ub-kcW"/>
+                    <constraint firstItem="e6q-UA-QKa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="tqW-wI-qC7"/>
+                    <constraint firstItem="e6q-UA-QKa" firstAttribute="top" secondItem="UXd-Ak-P5E" secondAttribute="bottom" constant="8" id="uZd-j4-Nv0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionLabel" destination="e6q-UA-QKa" id="dRD-qj-jPg"/>
+                <outlet property="livesChangedLabel" destination="MnH-8V-BEU" id="Iua-Ug-zBK"/>
+                <outlet property="quoteLabel" destination="UXd-Ak-P5E" id="nfV-e4-rON"/>
+            </connections>
+            <point key="canvasLocation" x="431.5" y="451"/>
+        </tableViewCell>
+    </objects>
+</document>

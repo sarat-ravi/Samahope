@@ -60,6 +60,11 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -103,7 +108,7 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
     if (paymentInfo == nil) {
         PaymentViewController *pvc = [[PaymentViewController alloc] init];
         pvc.doctor = self.doctor;
-        [self.navigationController pushViewController:pvc animated:NO];
+        [self.navigationController pushViewController:pvc animated:YES];
     } else {
         [[SamahopeClient sharedInstance] makeDonation:paymentInfo completion:^(bool success, NSError *error) {
             if (success) {
