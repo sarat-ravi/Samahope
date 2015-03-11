@@ -39,6 +39,11 @@ NSString *const kDoctorCellName = @"DoctorCell";
     [self refreshDoctorsData];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.doctorsTableView reloadData];
+}
+
 #pragma mark Core
 
 - (void)refreshDoctorsData {

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6254"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DoctorDetailViewController">
             <connections>
                 <outlet property="bannerView" destination="8Q4-LO-9Ku" id="gI7-0w-XcN"/>
-                <outlet property="doctorFocusView" destination="lif-O2-041" id="ptf-RT-W95"/>
-                <outlet property="fundView" destination="7ln-P7-t1l" id="47X-Zb-fJC"/>
+                <outlet property="contentScrollView" destination="FJr-pN-Iv2" id="bTZ-jK-Mky"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,36 +20,42 @@
                     <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                     <color key="backgroundColor" red="0.7972996146952015" green="0.80782903439153442" blue="0.8053067507420143" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="150" id="shV-Cy-MYm"/>
+                        <constraint firstAttribute="height" constant="150" id="tqA-BX-pd7"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ln-P7-t1l" customClass="FundView">
-                    <rect key="frame" x="0.0" y="150" width="600" height="66"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FJr-pN-Iv2">
+                    <rect key="frame" x="0.0" y="150" width="600" height="380"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbV-nK-uO9">
+                    <rect key="frame" x="0.0" y="530" width="600" height="70"/>
+                    <color key="backgroundColor" red="0.60676443339999997" green="1" blue="0.71714463019999997" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="66" id="dcu-5L-Thg"/>
+                        <constraint firstAttribute="height" constant="70" id="4qG-Gh-jhX"/>
                     </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lif-O2-041" customClass="DoctorFocusView">
-                    <rect key="frame" x="0.0" y="216" width="600" height="80"/>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="80" id="N2M-sz-dBc"/>
-                    </constraints>
-                </view>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="34"/>
+                    <state key="normal" title="Donate">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onDonateButtonTapped:" destination="-1" eventType="touchUpInside" id="F5M-eH-p0F"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="7ln-P7-t1l" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HVj-Ze-DDc"/>
-                <constraint firstItem="lif-O2-041" firstAttribute="top" secondItem="7ln-P7-t1l" secondAttribute="bottom" id="NSd-Y8-dia"/>
-                <constraint firstAttribute="trailing" secondItem="8Q4-LO-9Ku" secondAttribute="trailing" id="QI6-Pa-LCu"/>
-                <constraint firstItem="7ln-P7-t1l" firstAttribute="top" secondItem="8Q4-LO-9Ku" secondAttribute="bottom" id="RuF-wd-ahU"/>
-                <constraint firstAttribute="trailing" secondItem="7ln-P7-t1l" secondAttribute="trailing" id="UgV-Vy-OsQ"/>
-                <constraint firstItem="8Q4-LO-9Ku" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fJ0-CM-3aI"/>
-                <constraint firstAttribute="trailing" secondItem="lif-O2-041" secondAttribute="trailing" id="kRs-YO-V3L"/>
-                <constraint firstItem="lif-O2-041" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="t6R-8A-YOm"/>
-                <constraint firstItem="8Q4-LO-9Ku" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zyh-1X-c2e"/>
+                <constraint firstAttribute="trailing" secondItem="8Q4-LO-9Ku" secondAttribute="trailing" id="At2-Si-ZFa"/>
+                <constraint firstItem="8Q4-LO-9Ku" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="By5-Ce-Usq"/>
+                <constraint firstItem="FJr-pN-Iv2" firstAttribute="top" secondItem="8Q4-LO-9Ku" secondAttribute="bottom" id="EG7-gF-GY3"/>
+                <constraint firstAttribute="trailing" secondItem="zbV-nK-uO9" secondAttribute="trailing" id="FK7-gk-ZMA"/>
+                <constraint firstAttribute="bottom" secondItem="zbV-nK-uO9" secondAttribute="bottom" id="GFq-b2-Xud"/>
+                <constraint firstItem="8Q4-LO-9Ku" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HLY-SJ-cnZ"/>
+                <constraint firstItem="zbV-nK-uO9" firstAttribute="top" secondItem="FJr-pN-Iv2" secondAttribute="bottom" id="L9j-JZ-8UE"/>
+                <constraint firstAttribute="trailing" secondItem="FJr-pN-Iv2" secondAttribute="trailing" id="TTt-Lh-qjK"/>
+                <constraint firstItem="FJr-pN-Iv2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XVv-5s-pDF"/>
+                <constraint firstItem="zbV-nK-uO9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZQu-Q9-CSy"/>
             </constraints>
+            <point key="canvasLocation" x="404" y="497"/>
         </view>
     </objects>
 </document>
