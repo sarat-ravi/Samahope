@@ -12,7 +12,7 @@
 
 @protocol DonateCellDelegate <NSObject>
 
-- (void)donateCell:(DonateCell *)cell didUpdateValue:(NSString *)value;
+- (void)donateCell:(DonateCell *)cell didUpdateValue:(double)value;
 
 @end
 

@@ -14,16 +14,21 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBN-fx-uRF">
-                        <rect key="frame" x="20" y="11" width="80" height="21"/>
+                        <rect key="frame" x="20" y="11" width="77" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="sDM-fl-cJc"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="sDM-fl-cJc"/>
+                            </mask>
+                        </variation>
                     </label>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="02" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LMW-o9-5RM">
-                        <rect key="frame" x="115" y="6" width="35" height="30"/>
+                        <rect key="frame" x="112" y="6" width="35" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="35" id="gWY-5j-quu"/>
                         </constraints>
@@ -31,7 +36,7 @@
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2015" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J84-mr-duw">
-                        <rect key="frame" x="170" y="6" width="110" height="30"/>
+                        <rect key="frame" x="167" y="6" width="113" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -14,14 +14,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="unchecked" translatesAutoresizingMaskIntoConstraints="NO" id="9c2-S6-9Tv">
-                        <rect key="frame" x="14" y="13" width="32" height="33"/>
+                        <rect key="frame" x="14" y="14" width="32" height="33"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="32" id="dQN-5t-KV5"/>
                             <constraint firstAttribute="height" constant="32" id="mrK-9Q-32e"/>
                         </constraints>
                     </imageView>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$10.00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JVq-Xm-NWQ">
-                        <rect key="frame" x="67" y="19" width="60" height="22"/>
+                        <rect key="frame" x="67" y="19" width="152" height="22"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                     </textField>
@@ -30,6 +30,7 @@
                     <constraint firstItem="JVq-Xm-NWQ" firstAttribute="centerY" secondItem="9c2-S6-9Tv" secondAttribute="centerY" constant="0.75" id="11A-6R-Bch"/>
                     <constraint firstItem="9c2-S6-9Tv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="1Fm-DX-h0R"/>
                     <constraint firstAttribute="bottom" secondItem="9c2-S6-9Tv" secondAttribute="bottom" constant="14" id="J9m-EA-fJ3"/>
+                    <constraint firstAttribute="trailing" secondItem="JVq-Xm-NWQ" secondAttribute="trailing" constant="120" id="Sx0-ha-ljK"/>
                     <constraint firstItem="9c2-S6-9Tv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="Y3Q-Mv-SWm"/>
                     <constraint firstItem="JVq-Xm-NWQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="a8q-RR-b03"/>
                     <constraint firstItem="JVq-Xm-NWQ" firstAttribute="leading" secondItem="9c2-S6-9Tv" secondAttribute="trailing" constant="21" id="or0-tV-TG6"/>
@@ -46,7 +47,7 @@
                 <outlet property="checkButtonImageView" destination="9c2-S6-9Tv" id="yqO-Ov-r39"/>
                 <outlet property="donateAmountTextField" destination="JVq-Xm-NWQ" id="x3b-qs-kEw"/>
             </connections>
-            <point key="canvasLocation" x="354.5" y="364"/>
+            <point key="canvasLocation" x="354.5" y="363"/>
         </tableViewCell>
     </objects>
     <resources>
