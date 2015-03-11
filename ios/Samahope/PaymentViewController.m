@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, PaymentFormType) {
     PaymentFormTypeRememberCard
 };
 
-@interface PaymentViewController () <UITableViewDelegate, UITableViewDataSource, FormTextCellDelegate>
+@interface PaymentViewController () <UITableViewDelegate, UITableViewDataSource, FormTextCellDelegate, FormDateCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) NSArray *formFields;
@@ -80,6 +80,7 @@ typedef NS_ENUM(NSInteger, PaymentFormType) {
 
     if (indexPath.row == PaymentFormTypeExpiration) {
         dcell = [tableView dequeueReusableCellWithIdentifier:@"FormDateCell"];
+        dcell.delegate = self;
         cell = dcell;
     } else if (indexPath.row == PaymentFormTypeRememberCard) {
         scell = [tableView dequeueReusableCellWithIdentifier:@"FormSwitchCell"];
@@ -98,6 +99,13 @@ typedef NS_ENUM(NSInteger, PaymentFormType) {
 - (void)formTextCell:(FormTextCell *)cell didUpdateValue:(NSString *)value {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     [self.formValues setObject:value forKey:self.formFields[indexPath.row][@"name"]];
+}
+
+#pragma mark - form date cell methods
+
+- (void)formDateCell:(FormDateCell *)cell didUpdateMonth:(NSString *)month year:(NSString *)year {
+    [self.formValues setObject:month forKey:@"Expiration_Month"];
+    [self.formValues setObject:year forKey:@"Expiration_Year"];
 }
 
 #pragma mark - private methods

@@ -34,11 +34,17 @@
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="monthDidEndEditing:" destination="KGk-i7-Jjw" eventType="editingDidEnd" id="kYw-8n-ghw"/>
+                        </connections>
                     </textField>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2015" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J84-mr-duw">
                         <rect key="frame" x="167" y="6" width="113" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="yearDidEndEditing:" destination="KGk-i7-Jjw" eventType="editingDidEnd" id="pcn-J6-W2W"/>
+                        </connections>
                     </textField>
                 </subviews>
                 <constraints>
@@ -61,6 +67,10 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="monthField" destination="LMW-o9-5RM" id="QR6-A3-fGl"/>
+                <outlet property="yearField" destination="J84-mr-duw" id="G2f-0P-fJZ"/>
+            </connections>
             <point key="canvasLocation" x="140" y="152"/>
         </tableViewCell>
     </objects>

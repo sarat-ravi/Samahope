@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class FormDateCell;
+
+@protocol FormDateCellDelegate <NSObject>
+
+- (void)formDateCell:(FormDateCell *)cell didUpdateMonth:(NSString *)month year:(NSString *)year;
+
+@end
+
 @interface FormDateCell : UITableViewCell
+
+@property (nonatomic, weak) id<FormDateCellDelegate> delegate;
 
 @end
