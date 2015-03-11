@@ -11,6 +11,6 @@
 
 @interface PaymentViewController : UIViewController
 
-@property (nonatomic, strong) Doctor *doctor;
+@property (strong, nonatomic) Doctor *doctor;
 
 @end

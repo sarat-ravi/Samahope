@@ -12,6 +12,7 @@
 #import "FormSwitchCell.h"
 #import "User.h"
 #import "BannerView.h"
+#import "SamahopeClient.h"
 
 typedef NS_ENUM(NSInteger, PaymentFormType) {
     PaymentFormTypeName = 0,
@@ -27,11 +28,11 @@ typedef NS_ENUM(NSInteger, PaymentFormType) {
 
 @interface PaymentViewController () <UITableViewDelegate, UITableViewDataSource, FormTextCellDelegate, FormDateCellDelegate, FormSwitchCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) IBOutlet BannerView *bannerView;
 
 @property (nonatomic, strong) NSArray *formFields;
 @property (nonatomic, strong) NSMutableDictionary *formValues;
 @property (nonatomic, assign) BOOL shouldRememberUserInfo;
+@property (strong, nonatomic) IBOutlet BannerView *bannerView;
 
 - (IBAction)onDonateButton:(id)sender;
 @end
@@ -53,9 +54,9 @@ typedef NS_ENUM(NSInteger, PaymentFormType) {
     // Do any additional setup after loading the view from its nib.
     self.formValues = [NSMutableDictionary dictionary];
     self.shouldRememberUserInfo = YES;
-    
-    self.bannerView.doctor = self.doctor;
 
+    self.bannerView.doctor = self.doctor;
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 
@@ -65,11 +66,6 @@ typedef NS_ENUM(NSInteger, PaymentFormType) {
 
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -155,11 +151,17 @@ typedef NS_ENUM(NSInteger, PaymentFormType) {
 
 - (IBAction)onDonateButton:(id)sender {
     NSLog(@"Donate with params: %@", self.formValues);
-    if (self.shouldRememberUserInfo) {
-        // Persist user info.
-        NSLog(@"Persist user info");
-        [User setPaymentInfo:self.formValues];
-    }
-    // Call Samahope API to send payment info.
+
+    [[SamahopeClient sharedInstance] makeDonation:self.formValues completion:^(bool success, NSError *error) {
+        if (success) {
+            if (self.shouldRememberUserInfo) {
+                // Persist user info.
+                NSLog(@"Persist user info");
+                [User setPaymentInfo:self.formValues];
+            }
+
+            // Go to Thanks View Controller
+        }
+    }];
 }
 @end
