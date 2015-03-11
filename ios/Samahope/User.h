@@ -10,4 +10,10 @@
 
 @interface User : NSObject
 
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *id;
+
++ (NSDictionary *)paymentInfo;
++ (void)setPaymentInfo:(NSDictionary *)paymentInfo;
+
 @end

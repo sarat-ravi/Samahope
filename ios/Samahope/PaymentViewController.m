@@ -10,6 +10,7 @@
 #import "FormTextCell.h"
 #import "FormDateCell.h"
 #import "FormSwitchCell.h"
+#import "User.h"
 
 typedef NS_ENUM(NSInteger, PaymentFormType) {
     PaymentFormTypeName = 0,
@@ -148,6 +149,7 @@ typedef NS_ENUM(NSInteger, PaymentFormType) {
     if (self.shouldRememberUserInfo) {
         // Persist user info.
         NSLog(@"Persist user info");
+        [User setPaymentInfo:self.formValues];
     }
     // Call Samahope API to send payment info.
 }
