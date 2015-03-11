@@ -31,11 +31,11 @@
     
     self.quoteLabel.text = [NSString stringWithFormat: @"\"%@\"", doctor.quote];
     self.descriptionLabel.text = [self formatDescription: doctor.personalDescription];
-    self.livesChangedLabel.text = [NSString stringWithFormat: @"Some lives changed by %@", doctor.name];
+    self.livesChangedLabel.text = [NSString stringWithFormat: @"Lives changed by %@", doctor.name];
 }
 
 - (NSString*)formatDescription: (NSString *)description {
-    return [NSString stringWithFormat: @"%@ ... Read More", [description substringToIndex: 200]];
+    return [NSString stringWithFormat: @"%@ ... Read More", [description substringToIndex: 400]];
 }
 
 @end

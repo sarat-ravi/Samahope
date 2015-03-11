@@ -54,17 +54,17 @@ NSString *const kKimonoLabsKey = @"de529db82ec0c0037a7deedded30878a";
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     NSDictionary *parameters = information;
 
+    completion(true, nil);
     
     
-    
-    [manager GET:@"http://50.161.102.4:5000/donate" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"response Object of donate: %@", responseObject);
-        completion(true, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"response Object of donate: %@", error);
-
-        completion(false, error);
-    }];
+//    [manager GET:@"http://50.161.102.4:5000/donate" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSLog(@"response Object of donate: %@", responseObject);
+//        completion(true, nil);
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        NSLog(@"response Object of donate: %@", error);
+//
+//        completion(false, error);
+//    }];
     
 }
 

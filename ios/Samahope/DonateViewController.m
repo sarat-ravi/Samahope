@@ -58,6 +58,7 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
     [self.tableView registerNib:[UINib nibWithNibName:@"DonateCell" bundle:nil] forCellReuseIdentifier:@"DonateCell"];
 
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 60;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

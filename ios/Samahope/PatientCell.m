@@ -30,6 +30,8 @@
 - (void)setPatient:(Patient *)patient {
     _patient = patient;
     
+    self.thumbnailImageView.layer.cornerRadius = self.thumbnailImageView.frame.size.width / 2;
+    
     [self.thumbnailImageView setImageWithURL: [NSURL URLWithString: patient.profileImageUrlString]];
     self.nameLabel.text = patient.name;
     self.descriptionLabel.text = [self formatDescription: patient.personalDescription];
