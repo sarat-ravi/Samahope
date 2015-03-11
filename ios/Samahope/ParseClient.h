@@ -10,4 +10,6 @@
 
 @interface ParseClient : NSObject
 
++ (ParseClient *)sharedInstance;
+
 @end
