@@ -49,9 +49,12 @@
     DoctorsViewController *dvc = [[DoctorsViewController alloc] init];
     //DonateViewController *dvc = [[DonateViewController alloc] init];
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: dvc];
-    [self presentViewController:nvc animated:YES completion:^{
-        // Completion
-    }];
+    
+    UIColor *globalTint = [[[UIApplication sharedApplication] delegate] window].tintColor;
+
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : globalTint}];
+
+    [self presentViewController:nvc animated:YES completion:nil];
 }
 
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {

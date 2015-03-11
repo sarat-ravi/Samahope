@@ -28,7 +28,7 @@ NSString *const kDoctorCellName = @"DoctorCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Our Doctors";
+    self.title = @"Doctors";
     
     self.doctorsTableView.delegate = self;
     self.doctorsTableView.dataSource = self;

@@ -36,6 +36,9 @@
 
     [self.window makeKeyAndVisible];
 
+    [self.window setTintColor:[UIColor colorWithRed:7/255.0 green:194/255.0 blue:196/255.0 alpha:1]];
+    
+    
     return YES;
 }
 
