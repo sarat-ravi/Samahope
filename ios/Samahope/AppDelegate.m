@@ -35,7 +35,11 @@
     self.window.rootViewController = [[LoginViewController alloc] init];
 
     [self.window makeKeyAndVisible];
-
+    
+    NSDictionary *navbarTitleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys: [UIColor redColor], NSForegroundColorAttributeName, nil];
+    [[UINavigationBar appearance] setTitleTextAttributes: navbarTitleTextAttributes];
+    
+    
     return YES;
 }
 

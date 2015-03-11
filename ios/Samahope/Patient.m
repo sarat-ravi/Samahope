@@ -13,9 +13,9 @@
 - (id)initWithDictionary: (NSDictionary *)dictionary {
     self = [super init];
     if (self) {
-        self.name = dictionary[@"name"];
-        self.profileImageUrlString = dictionary[@"profileImageUrlString"];
-        self.personalDescription = dictionary[@"personalDescription"];
+        self.name = dictionary[@"patientName"];
+        self.profileImageUrlString = dictionary[@"patientProfileImages"][@"src"];
+        self.personalDescription = dictionary[@"patientDescriptions"];
     }
     return self;
 }

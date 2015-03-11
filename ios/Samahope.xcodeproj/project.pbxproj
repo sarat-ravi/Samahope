@@ -48,6 +48,8 @@
 		41FF3E841AB016BB00092320 /* DoctorFocusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FF3E821AB016BB00092320 /* DoctorFocusCell.xib */; };
 		41FF3E881AB0173200092320 /* PatientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FF3E861AB0173200092320 /* PatientCell.m */; };
 		41FF3E891AB0173200092320 /* PatientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FF3E871AB0173200092320 /* PatientCell.xib */; };
+		41FF3E8D1AB0309C00092320 /* DescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FF3E8B1AB0309C00092320 /* DescriptionCell.m */; };
+		41FF3E8E1AB0309C00092320 /* DescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FF3E8C1AB0309C00092320 /* DescriptionCell.xib */; };
 		50C318DB1953477223CBEE26 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E873347A1F870346E92BC5CF /* libPods.a */; };
 		B21646181AAFAC3B00E12C88 /* FormDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B21646161AAFAC3B00E12C88 /* FormDateCell.m */; };
 		B21646191AAFAC3B00E12C88 /* FormDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21646171AAFAC3B00E12C88 /* FormDateCell.xib */; };
@@ -140,6 +142,9 @@
 		41FF3E851AB0173200092320 /* PatientCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientCell.h; sourceTree = "<group>"; };
 		41FF3E861AB0173200092320 /* PatientCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientCell.m; sourceTree = "<group>"; };
 		41FF3E871AB0173200092320 /* PatientCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientCell.xib; sourceTree = "<group>"; };
+		41FF3E8A1AB0309C00092320 /* DescriptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionCell.h; sourceTree = "<group>"; };
+		41FF3E8B1AB0309C00092320 /* DescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionCell.m; sourceTree = "<group>"; };
+		41FF3E8C1AB0309C00092320 /* DescriptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DescriptionCell.xib; sourceTree = "<group>"; };
 		8654BA0CD8B5CD92EB16F960 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B21646151AAFAC3B00E12C88 /* FormDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormDateCell.h; sourceTree = "<group>"; };
 		B21646161AAFAC3B00E12C88 /* FormDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormDateCell.m; sourceTree = "<group>"; };
@@ -304,6 +309,9 @@
 				41FF3E851AB0173200092320 /* PatientCell.h */,
 				41FF3E861AB0173200092320 /* PatientCell.m */,
 				41FF3E871AB0173200092320 /* PatientCell.xib */,
+				41FF3E8A1AB0309C00092320 /* DescriptionCell.h */,
+				41FF3E8B1AB0309C00092320 /* DescriptionCell.m */,
+				41FF3E8C1AB0309C00092320 /* DescriptionCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -459,6 +467,7 @@
 				41FF3E841AB016BB00092320 /* DoctorFocusCell.xib in Resources */,
 				4172FBD31AAEB2770027C8AA /* FundView.xib in Resources */,
 				413CE5521AA815C2002E16D9 /* DoctorCell.xib in Resources */,
+				41FF3E8E1AB0309C00092320 /* DescriptionCell.xib in Resources */,
 				41FF3E6C1AAECD8400092320 /* DoctorFocusView.xib in Resources */,
 				41FF3E891AB0173200092320 /* PatientCell.xib in Resources */,
 				413CE53B1AA8152A002E16D9 /* DoctorTextDetailViewController.xib in Resources */,
@@ -512,6 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41FF3E8D1AB0309C00092320 /* DescriptionCell.m in Sources */,
 				41FF3E6A1AAECCEC00092320 /* DoctorFocusView.m in Sources */,
 				41FF3E881AB0173200092320 /* PatientCell.m in Sources */,
 				413CE5511AA815C2002E16D9 /* DoctorCell.m in Sources */,

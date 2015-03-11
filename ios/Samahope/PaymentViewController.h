@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Doctor.h"
 
 @interface PaymentViewController : UIViewController
+
+@property (nonatomic, strong) Doctor *doctor;
 
 @end
