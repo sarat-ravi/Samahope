@@ -11,6 +11,7 @@
 #import "PaymentViewController.h"
 #import "User.h"
 #import "BannerView.h"
+#import "SamahopeClient.h"
 
 typedef NS_ENUM(NSInteger, DonateAmountOption) {
     DonateAmountOption1 = 0,
@@ -83,13 +84,13 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
     self.selectedDonateAmountOption = indexPath.row;
     self.donateAmount = [self.donateAmounts[indexPath.row][@"value"] doubleValue];
     [tableView reloadData];
     DonateCell *cell = (DonateCell *)[tableView cellForRowAtIndexPath:indexPath];
     if (indexPath.row == DonateAmountOptionCustom) {
-        [cell setDonateAmountText:@"$1.00"];
+        [cell setDonateAmountText:@"$50.00"];
         [cell enableEdit];
     }
 }
@@ -100,8 +101,15 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
     NSLog(@"Donated %f", self.donateAmount);
     NSDictionary *paymentInfo = [User paymentInfo];
     if (paymentInfo == nil) {
-        [self.navigationController pushViewController:[[PaymentViewController alloc] init] animated:YES];
+        PaymentViewController *pvc = [[PaymentViewController alloc] init];
+        pvc.doctor = self.doctor;
+        [self.navigationController pushViewController:pvc animated:NO];
     } else {
+        [[SamahopeClient sharedInstance] makeDonation:paymentInfo completion:^(bool success, NSError *error) {
+            if (success) {
+                // Go to Thanks View Controller
+            }
+        }];
         NSLog(@"Pay with params: %@", paymentInfo);
     }
 }
@@ -110,7 +118,7 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
     self.donateAmounts = @[
                            @{@"name" : @"$10.00", @"value" : @(10.00)},
                            @{@"name" : @"$25.00", @"value" : @(25.00)},
-                           @{@"name" : @"Custom", @"value" : @(1.00)}
+                           @{@"name" : @"Custom", @"value" : @(50.00)}
                            ];
 }
 

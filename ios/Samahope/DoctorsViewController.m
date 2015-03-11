@@ -35,13 +35,15 @@ NSString *const kDoctorCellName = @"DoctorCell";
     UINib *cellNib = [UINib nibWithNibName: kDoctorCellName bundle:nil];
     [self.doctorsTableView registerNib:cellNib forCellReuseIdentifier: kDoctorCellName];
     self.doctorsTableView.rowHeight = UITableViewAutomaticDimension;
+    self.doctorsTableView.estimatedRowHeight = 100;
     
     [self refreshDoctorsData];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
     [super viewDidAppear:animated];
+
+    [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
     [self.doctorsTableView reloadData];
 }
 

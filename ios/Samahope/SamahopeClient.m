@@ -27,6 +27,47 @@ NSString *const kKimonoLabsKey = @"de529db82ec0c0037a7deedded30878a";
     return instance;
 }
 
+/*
+ 
+    This is super important.  We don't have any error checking so we have to make sure that the following API is strictly enforced.  All of the request argument names must be case accurate to the keys that are in the information.
+ 
+ 
+ doc = request.args.get("doctor")
+ interval = request.args.get("interval") // MUST BE EITHER 'once' or 'monthly'
+ amount = request.args.get("amount")
+ first_name = request.args.get("firstName")
+ last_name = request.args.get("lastName")
+ email = request.args.get("email")
+ card_number = request.args.get("cardNumber")
+ security_code = request.args.get("securityCode")
+ expiration_month = request.args.get("expirationMonth") // MUST BE TWO DIGITS
+ expiration_year = request.args.get("expirationYear") // MUST BE FOUR DIGITS FROM 2015 to 2022
+ address = request.args.get("address")
+ city = request.args.get("city")
+ state = request.args.get("state") // MUST BE Titlecase OF STATE NAME: 'California'
+ zip_code = request.args.get("zip")
+
+ 
+ */
+
+- (void)makeDonation:(NSDictionary *)information completion:(void(^)(bool success, NSError *error))completion {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSDictionary *parameters = information;
+
+    
+    
+    
+    [manager GET:@"http://50.161.102.4:5000/donate" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"response Object of donate: %@", responseObject);
+        completion(true, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"response Object of donate: %@", error);
+
+        completion(false, error);
+    }];
+    
+}
+
 - (void)fetchDataWithCompletion:(void (^)(NSArray *doctors, NSError *error))completion {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 

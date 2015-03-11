@@ -12,6 +12,8 @@
 
 + (SamahopeClient *)sharedInstance;
 
+- (void)makeDonation:(NSDictionary *)information completion:(void(^)(bool success, NSError *error))completion;
+
 - (void)fetchDataWithCompletion:(void (^)(NSArray *doctors, NSError *error))completion;
 
 @end
