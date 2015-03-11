@@ -7,8 +7,10 @@
 //
 
 #import "ThanksViewController.h"
+#import "BannerView.h"
 
 @interface ThanksViewController ()
+@property (weak, nonatomic) IBOutlet BannerView *bannerView;
 
 @end
 
@@ -17,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
+    self.bannerView.doctor = self.doctor;
 }
 
 - (void)didReceiveMemoryWarning {
