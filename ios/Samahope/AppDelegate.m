@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "LoginViewController.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -19,6 +20,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [Parse enableLocalDatastore];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"7eANpwhLhUEqvSRg4AWqnMKznZVEq95sULEKMDxn"
+                  clientKey:@"sOdrVUth69U6XJJzscRl1DJK9o9OZiYKxlmbExgK"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     self.window.rootViewController = [[LoginViewController alloc] init];

@@ -47,7 +47,7 @@ NSString *const kKimonoLabsKey = @"de529db82ec0c0037a7deedded30878a";
         NSArray *patientInfos = results[@"patientInfo"];
         NSArray *fundInfos = results[@"fundInfo"];
         
-        NSLog(@"lenghts of apis: %ld %ld %ld %ld", [categoryInfos count], [doctorInfos count], [patientInfos count], [fundInfos count]);
+//        NSLog(@"lenghts of apis: %ld %ld %ld %ld", [categoryInfos count], [doctorInfos count], [patientInfos count], [fundInfos count]);
         
         for (int i = 0; i < [doctorInfos count]; i++) {
             
@@ -56,9 +56,9 @@ NSString *const kKimonoLabsKey = @"de529db82ec0c0037a7deedded30878a";
             NSDictionary *categoryInfo = categoryInfos[i];
             NSDictionary *fundInfo = fundInfos[i];
 
-            NSLog(@"all info: %@ %@ %@ %@", doctorInfo, patientInfo, categoryInfo, fundInfo);
+//            NSLog(@"all info: %@ %@ %@ %@", doctorInfo, patientInfo, categoryInfo, fundInfo);
             
-            NSLog(@"fund numbers: %@ %@ %@", [fundInfo[@"amountNeeded"] stringByTrimmingCharactersInSet:nonDigits], [fundInfo[@"treatmentsFunded"] stringByTrimmingCharactersInSet:nonDigits], ([fundInfo[@"peopleDonated"] isKindOfClass:[NSNull class]] || fundInfo[@"peopleDonated"] == nil || fundInfo[@"peopleDonated"] == (id)[NSNull null]) ? 0 : [fundInfo[@"peopleDonated"] stringByTrimmingCharactersInSet:nonDigits]);
+//            NSLog(@"fund numbers: %@ %@ %@", [fundInfo[@"amountNeeded"] stringByTrimmingCharactersInSet:nonDigits], [fundInfo[@"treatmentsFunded"] stringByTrimmingCharactersInSet:nonDigits], ([fundInfo[@"peopleDonated"] isKindOfClass:[NSNull class]] || fundInfo[@"peopleDonated"] == nil || fundInfo[@"peopleDonated"] == (id)[NSNull null]) ? 0 : [fundInfo[@"peopleDonated"] stringByTrimmingCharactersInSet:nonDigits]);
 
 //            NSLog(@"doctorInfo: %@", fundInfo);
 
@@ -89,7 +89,7 @@ NSString *const kKimonoLabsKey = @"de529db82ec0c0037a7deedded30878a";
                               @"humanReadableLocation": doctorInfo[@"location"]
                               };
             
-            NSLog(@"formatted Data: %@", formattedData);
+//            NSLog(@"formatted Data: %@", formattedData);
             
             Doctor *doctor = [[Doctor alloc] initWithDictionary:formattedData];
             
