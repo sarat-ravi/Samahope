@@ -48,6 +48,6 @@
 
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : globalTint}];
 
-    [self presentViewController:nvc animated:YES completion:nil];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

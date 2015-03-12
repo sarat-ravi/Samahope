@@ -105,6 +105,7 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
 #pragma mark - private methods
 
 - (IBAction)onDonateButton:(id)sender {
+    [self.view endEditing:YES];
     NSLog(@"Donated %f", self.donateAmount);
     NSDictionary *paymentInfo = [User paymentInfo];
     if (paymentInfo == nil) {
