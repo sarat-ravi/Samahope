@@ -151,6 +151,7 @@ typedef NS_ENUM(NSInteger, PaymentFormType) {
 */
 
 - (IBAction)onDonateButton:(id)sender {
+    [self.view endEditing:YES];
     NSLog(@"Donate with params: %@", self.formValues);
 
     [[SamahopeClient sharedInstance] makeDonation:self.formValues completion:^(bool success, NSError *error) {
