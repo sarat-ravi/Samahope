@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (strong, nonatomic) IBOutlet UIImageView *bannerImageView;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) IBOutlet UIView *imageMaskView;
 
 @end
 
@@ -52,6 +53,11 @@
     
     [self.bannerImageView setImageWithURL: [NSURL URLWithString: doctor.fullScreenImageUrlString]];
     self.nameLabel.text = doctor.name;
+}
+
+- (void)setMaskAlpha:(CGFloat)maskAlpha {
+    _maskAlpha = maskAlpha;
+    self.imageMaskView.alpha = maskAlpha;
 }
 
 @end

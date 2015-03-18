@@ -15,10 +15,10 @@
 #import "DoctorFocusCell.h"
 #import "PatientCell.h"
 #import "DescriptionCell.h"
+#import "BannerCell.h"
 
 @interface DoctorDetailViewController () <UITableViewDataSource, UITableViewDelegate, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 
-@property (strong, nonatomic) IBOutlet BannerView *bannerView;
 @property (strong, nonatomic) IBOutlet UITableView *detailTableView;
 @property (nonatomic, assign) CGFloat transitionDuration;
 @property (nonatomic, assign) BOOL isPresenting;
@@ -45,12 +45,10 @@
     self.navigationController.navigationBar.tintColor = [UIColor darkTextColor];
     [self customizeNavBar: self.navigationController];
     
-    self.bannerView.doctor = self.doctor;
-    
     // Set up table stuff
     self.detailTableView.delegate = self;
     self.detailTableView.dataSource = self;
-    NSArray *cellNames = @[@"FundCell", @"DoctorFocusCell", @"PatientCell", @"DescriptionCell"];
+    NSArray *cellNames = @[@"FundCell", @"DoctorFocusCell", @"PatientCell", @"DescriptionCell", @"BannerCell"];
     for (NSString *cellName in cellNames) {
         UINib *cellNib = [UINib nibWithNibName: cellName bundle:nil];
         [self.detailTableView registerNib:cellNib forCellReuseIdentifier: cellName];
@@ -117,19 +115,24 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
+        BannerCell *cell = [self.detailTableView dequeueReusableCellWithIdentifier: @"BannerCell" forIndexPath:indexPath];
+        cell.maskAlpha = 0.0;
+        cell.doctor = self.doctor;
+        return cell;
+    } else if (indexPath.row == 1) {
         FundCell *cell = [self.detailTableView dequeueReusableCellWithIdentifier: @"FundCell" forIndexPath:indexPath];
         cell.fund = self.doctor.fund;
         return cell;
-    } else if (indexPath.row == 1) {
+    } else if (indexPath.row == 2) {
         DoctorFocusCell *cell = [self.detailTableView dequeueReusableCellWithIdentifier: @"DoctorFocusCell" forIndexPath:indexPath];
         cell.doctor = self.doctor;
         return cell;
-    } else if (indexPath.row == 2) {
+    } else if (indexPath.row == 3) {
         DescriptionCell *cell = [self.detailTableView dequeueReusableCellWithIdentifier: @"DescriptionCell" forIndexPath:indexPath];
         cell.doctor = self.doctor;
         return cell;
     } else {
-        Patient *patient = self.doctor.patients[indexPath.row - 3];
+        Patient *patient = self.doctor.patients[indexPath.row - 4];
         PatientCell *cell = [self.detailTableView dequeueReusableCellWithIdentifier: @"PatientCell" forIndexPath:indexPath];
         cell.patient = patient;
         return cell;
@@ -139,7 +142,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3 + [self.doctor.patients count];
+    return 4 + [self.doctor.patients count];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
