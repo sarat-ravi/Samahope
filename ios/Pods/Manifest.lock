@@ -23,6 +23,7 @@ PODS:
   - Bolts (1.1.4)
   - Facebook-iOS-SDK (3.23.0):
     - Bolts (~> 1.0)
+  - FXForms (1.2.12)
   - Parse (1.6.4):
     - Bolts (~> 1.1)
   - ParseFacebookUtils (1.6.4):
@@ -31,6 +32,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - FXForms
   - Parse
   - ParseFacebookUtils
 
@@ -38,7 +40,8 @@ SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
   Bolts: dd9fb8433d67f5acc3b6b4d1379bbc5513d716c1
   Facebook-iOS-SDK: 3d65f685348b789e46a9aacf92bfa85b60b63755
+  FXForms: ae90610432a0a9cbb71e0180f202d0fff375881f
   Parse: c2610f7a12ad0defc974803b819c4efe7746e6db
   ParseFacebookUtils: 00833ccf6fec7d6429e2403fe457496a5089358b
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.36.0

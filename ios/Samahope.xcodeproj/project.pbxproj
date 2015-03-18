@@ -63,6 +63,9 @@
 		B2765DFC1AAFA8A5006026FA /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2765DFA1AAFA8A5006026FA /* PaymentViewController.xib */; };
 		B2765E001AAFAACA006026FA /* FormTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2765DFE1AAFAACA006026FA /* FormTextCell.m */; };
 		B2765E011AAFAACA006026FA /* FormTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2765DFF1AAFAACA006026FA /* FormTextCell.xib */; };
+		B2E814B31AB90E0F00848929 /* PaymentForm.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E814B21AB90E0F00848929 /* PaymentForm.m */; };
+		B2E814B71AB90E8B00848929 /* PaymentFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E814B51AB90E8B00848929 /* PaymentFormViewController.m */; };
+		B2E814B81AB90E8B00848929 /* PaymentFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E814B61AB90E8B00848929 /* PaymentFormViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +169,11 @@
 		B2765DFD1AAFAACA006026FA /* FormTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormTextCell.h; sourceTree = "<group>"; };
 		B2765DFE1AAFAACA006026FA /* FormTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormTextCell.m; sourceTree = "<group>"; };
 		B2765DFF1AAFAACA006026FA /* FormTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormTextCell.xib; sourceTree = "<group>"; };
+		B2E814B11AB90E0F00848929 /* PaymentForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentForm.h; sourceTree = "<group>"; };
+		B2E814B21AB90E0F00848929 /* PaymentForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentForm.m; sourceTree = "<group>"; };
+		B2E814B41AB90E8B00848929 /* PaymentFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentFormViewController.h; sourceTree = "<group>"; };
+		B2E814B51AB90E8B00848929 /* PaymentFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentFormViewController.m; sourceTree = "<group>"; };
+		B2E814B61AB90E8B00848929 /* PaymentFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentFormViewController.xib; sourceTree = "<group>"; };
 		BCA538D0CCF27612265B869B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E873347A1F870346E92BC5CF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -314,6 +322,8 @@
 				41FF3E851AB0173200092320 /* PatientCell.h */,
 				41FF3E861AB0173200092320 /* PatientCell.m */,
 				41FF3E871AB0173200092320 /* PatientCell.xib */,
+				B2E814B11AB90E0F00848929 /* PaymentForm.h */,
+				B2E814B21AB90E0F00848929 /* PaymentForm.m */,
 				41FF3E8A1AB0309C00092320 /* DescriptionCell.h */,
 				41FF3E8B1AB0309C00092320 /* DescriptionCell.m */,
 				41FF3E8C1AB0309C00092320 /* DescriptionCell.xib */,
@@ -351,6 +361,9 @@
 				B2765DF81AAFA8A5006026FA /* PaymentViewController.h */,
 				B2765DF91AAFA8A5006026FA /* PaymentViewController.m */,
 				B2765DFA1AAFA8A5006026FA /* PaymentViewController.xib */,
+				B2E814B41AB90E8B00848929 /* PaymentFormViewController.h */,
+				B2E814B51AB90E8B00848929 /* PaymentFormViewController.m */,
+				B2E814B61AB90E8B00848929 /* PaymentFormViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -471,6 +484,7 @@
 				41BCA3831AB92B8100260715 /* BannerCell.xib in Resources */,
 				413CE5311AA814DE002E16D9 /* DoctorsViewController.xib in Resources */,
 				B216461E1AAFAE2800E12C88 /* FormSwitchCell.xib in Resources */,
+				B2E814B81AB90E8B00848929 /* PaymentFormViewController.xib in Resources */,
 				41FF3E6E1AAFD2F400092320 /* BannerView.xib in Resources */,
 				B2765DFC1AAFA8A5006026FA /* PaymentViewController.xib in Resources */,
 				41FF3E841AB016BB00092320 /* DoctorFocusCell.xib in Resources */,
@@ -537,6 +551,7 @@
 				413CE56A1AA81731002E16D9 /* Patient.m in Sources */,
 				B2765DFB1AAFA8A5006026FA /* PaymentViewController.m in Sources */,
 				413CE54C1AA81581002E16D9 /* ThanksViewController.m in Sources */,
+				B2E814B71AB90E8B00848929 /* PaymentFormViewController.m in Sources */,
 				413CE5581AA816A8002E16D9 /* DoctorBannerView.m in Sources */,
 				413CE53F1AA8153D002E16D9 /* UserViewController.m in Sources */,
 				413CE5761AAD3628002E16D9 /* Focus.m in Sources */,
@@ -546,6 +561,7 @@
 				41BCA3821AB92B8100260715 /* BannerCell.m in Sources */,
 				41FF3E7E1AB0154500092320 /* FundCell.m in Sources */,
 				413039ED1AA812E40086C445 /* AppDelegate.m in Sources */,
+				B2E814B31AB90E0F00848929 /* PaymentForm.m in Sources */,
 				413CE5551AA815FA002E16D9 /* FundView.m in Sources */,
 				413CE5351AA81502002E16D9 /* DoctorDetailViewController.m in Sources */,
 				41FF3E831AB016BB00092320 /* DoctorFocusCell.m in Sources */,

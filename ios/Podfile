@@ -1,3 +1,4 @@
 pod "AFNetworking"
 pod "Parse"
 pod "ParseFacebookUtils"
+pod "FXForms"
