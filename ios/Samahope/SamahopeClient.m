@@ -99,9 +99,12 @@ NSString *const kKimonoLabsKey = @"de529db82ec0c0037a7deedded30878a";
 
             // NSLog(@"all info: %@ %@ %@ %@", doctorInfo, patientInfo, categoryInfo, fundInfo);
             
-//            NSLog(@"fund numbers: %@ %@ %@", [fundInfo[@"amountNeeded"] stringByTrimmingCharactersInSet:nonDigits], [fundInfo[@"treatmentsFunded"] stringByTrimmingCharactersInSet:nonDigits], ([fundInfo[@"peopleDonated"] isKindOfClass:[NSNull class]] || fundInfo[@"peopleDonated"] == nil || fundInfo[@"peopleDonated"] == (id)[NSNull null]) ? 0 : [fundInfo[@"peopleDonated"] stringByTrimmingCharactersInSet:nonDigits]);
+            NSLog(@"fund numbers: %@", fundInfo);
 
-//            NSLog(@"doctorInfo: %@", fundInfo);
+            NSArray *splitArray = [fundInfo[@"treatmentNeeds"] componentsSeparatedByString:@"per"];
+            
+            
+            NSLog(@"doctorInfo: %@", splitArray);
             
             NSLog(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PatientInfo: %@", patientInfo);
             
@@ -109,9 +112,9 @@ NSString *const kKimonoLabsKey = @"de529db82ec0c0037a7deedded30878a";
 
             NSDictionary *fund = @{
                                    @"amountNeededForCurrentTreatment": [fundInfo[@"amountNeeded"] stringByTrimmingCharactersInSet:nonDigits],
-                                   @"amountNeededPerTreatment": @500, // Parse properly
+                                   @"amountNeededPerTreatment": [splitArray[0] stringByTrimmingCharactersInSet:nonDigits], // Parse properly
                                    @"numberOfTreatmentsFunded": [fundInfo[@"treatmentsFunded"] stringByTrimmingCharactersInSet:nonDigits],
-                                   @"numberOfTreatmentsNeeded": @100, // Parse properly
+                                   @"numberOfTreatmentsNeeded": [splitArray[1] stringByTrimmingCharactersInSet:nonDigits], // Parse properly
                                    @"numberOfPeopleDonated": @0 // Parse properly
                                    };
             

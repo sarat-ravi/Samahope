@@ -73,6 +73,8 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation: UIStatusBarAnimationNone];
 }
 
 - (void)didReceiveMemoryWarning {

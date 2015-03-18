@@ -65,6 +65,19 @@
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation: UIStatusBarAnimationFade];
 }
 
+- (IBAction)didSelectShare:(UIButton *)sender {
+    NSString *textToShare = [NSString stringWithFormat:@"%@ is doing an awesome job helping out people in %@.  Donate some money to help their cause!", self.doctor.name, self.doctor.humanReadableLocation];
+    
+    NSMutableArray *itemsToShare = [[NSMutableArray alloc] initWithObjects: textToShare, nil];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
+    
+    [activityVC setValue:@"Support this doctor" forKey:@"subject"];
+
+    activityVC.excludedActivityTypes= @[UIActivityTypePrint, UIActivityTypeAssignToContact, UIActivityTypeAirDrop];
+    [self presentViewController:activityVC animated:YES completion:nil];
+}
+
 #pragma mark UI Animated Transitioning
 
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext {
