@@ -55,11 +55,14 @@
         [self.detailTableView registerNib:cellNib forCellReuseIdentifier: cellName];
     }
     self.detailTableView.rowHeight = UITableViewAutomaticDimension;
+    
+    self.detailTableView.tableFooterView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, self.detailTableView.bounds.size.width, 100)];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.detailTableView reloadData];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation: UIStatusBarAnimationFade];
 }
 
 #pragma mark UI Animated Transitioning
@@ -83,6 +86,7 @@
             [transitionContext completeTransition: YES];
         }];
     } else {
+        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation: UIStatusBarAnimationFade];
         [UIView animateWithDuration: self.transitionDuration animations:^{
             fromViewController.view.alpha = 0.0;
         } completion:^(BOOL finished) {
@@ -159,7 +163,7 @@
     nvc.navigationBar.translucent = YES;
     nvc.view.backgroundColor = [UIColor clearColor];
     nvc.navigationBar.backgroundColor = [UIColor clearColor];
-    nvc.navigationBar.tintColor = [UIColor darkTextColor];
+    nvc.navigationBar.tintColor = [UIColor whiteColor];
 }
 
 #pragma mark User Actions
@@ -167,6 +171,8 @@
 - (IBAction)onXButtonTapped:(id)sender {
     NSLog(@"on X button tapped");
     [self dismissViewControllerAnimated: YES completion:nil];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation: UIStatusBarAnimationFade];
+    [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleDefault];
 }
 
 - (IBAction)onDonateButtonTapped:(id)sender {
@@ -179,6 +185,8 @@
     
     [self customizeNavBar: nvc];
     
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation: UIStatusBarAnimationFade];
+    [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleLightContent];
     
     [self presentViewController: nvc animated:YES completion:nil];
     // [self.navigationController pushViewController: vc animated:YES];
