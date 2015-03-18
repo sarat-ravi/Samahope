@@ -8,11 +8,12 @@
 
 #import "DonateViewController.h"
 #import "DonateCell.h"
-#import "PaymentViewController.h"
+//#import "PaymentViewController.h"
 #import "User.h"
 #import "BannerView.h"
 #import "SamahopeClient.h"
 #import "ThanksViewController.h"
+#import "PaymentFormViewController.h"
 
 typedef NS_ENUM(NSInteger, DonateAmountOption) {
     DonateAmountOption1 = 0,
@@ -116,7 +117,7 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
     NSLog(@"Donated %f", self.donateAmount);
     NSDictionary *paymentInfo = [User paymentInfo];
     if (paymentInfo == nil) {
-        PaymentViewController *pvc = [[PaymentViewController alloc] init];
+        PaymentFormViewController *pvc = [[PaymentFormViewController alloc] init];
         pvc.doctor = self.doctor;
         [self.navigationController pushViewController:pvc animated:YES];
     } else {
