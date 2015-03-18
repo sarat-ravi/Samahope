@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <FXForms/FXForms.h>
+#import "FXModelValidation/FXModelValidation.h"
 
-@interface PaymentForm : NSObject <FXForm>
+@interface PaymentForm : NSObject <FXForm, FXModelValidation>
 
 @property (nonatomic, copy) NSString *nameOnCard;
 @property (nonatomic, copy) NSNumber *cardNumber;
