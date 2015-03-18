@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="bannerImageView" destination="5fH-xK-ecE" id="kBc-2h-rD1"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="paM-tg-Ioz"/>
+                <outlet property="imageMaskView" destination="v3q-4O-gg3" id="8S1-tu-jOL"/>
                 <outlet property="nameLabel" destination="FFK-4e-cbc" id="i3w-DL-g26"/>
             </connections>
         </placeholder>
@@ -22,7 +23,7 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5fH-xK-ecE">
                             <rect key="frame" x="0.0" y="-30" width="375" height="180"/>
                         </imageView>
-                        <view alpha="0.69999999999999973" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVz-Bu-MYF">
+                        <view alpha="0.89999999999999991" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVz-Bu-MYF">
                             <rect key="frame" x="0.0" y="100" width="375" height="50"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Nadine Burke Harris" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFK-4e-cbc">
@@ -41,7 +42,7 @@
                         </view>
                         <view alpha="0.49999999999999961" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3q-4O-gg3" userLabel="Image Mask View">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>

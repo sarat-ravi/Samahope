@@ -38,6 +38,8 @@
 		413CE5761AAD3628002E16D9 /* Focus.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5751AAD3628002E16D9 /* Focus.m */; };
 		413CE5791AAD3AC5002E16D9 /* Fund.m in Sources */ = {isa = PBXBuildFile; fileRef = 413CE5781AAD3AC5002E16D9 /* Fund.m */; };
 		4172FBD31AAEB2770027C8AA /* FundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4172FBD21AAEB2770027C8AA /* FundView.xib */; };
+		41BCA3821AB92B8100260715 /* BannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BCA3801AB92B8100260715 /* BannerCell.m */; };
+		41BCA3831AB92B8100260715 /* BannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41BCA3811AB92B8100260715 /* BannerCell.xib */; };
 		41FF3E6A1AAECCEC00092320 /* DoctorFocusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FF3E691AAECCEC00092320 /* DoctorFocusView.m */; };
 		41FF3E6C1AAECD8400092320 /* DoctorFocusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FF3E6B1AAECD8400092320 /* DoctorFocusView.xib */; };
 		41FF3E6E1AAFD2F400092320 /* BannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FF3E6D1AAFD2F400092320 /* BannerView.xib */; };
@@ -127,6 +129,9 @@
 		413CE5771AAD3AC5002E16D9 /* Fund.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fund.h; sourceTree = "<group>"; };
 		413CE5781AAD3AC5002E16D9 /* Fund.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fund.m; sourceTree = "<group>"; };
 		4172FBD21AAEB2770027C8AA /* FundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FundView.xib; sourceTree = "<group>"; };
+		41BCA37F1AB92B8100260715 /* BannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerCell.h; sourceTree = "<group>"; };
+		41BCA3801AB92B8100260715 /* BannerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerCell.m; sourceTree = "<group>"; };
+		41BCA3811AB92B8100260715 /* BannerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerCell.xib; sourceTree = "<group>"; };
 		41FF3E681AAECCEC00092320 /* DoctorFocusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorFocusView.h; sourceTree = "<group>"; };
 		41FF3E691AAECCEC00092320 /* DoctorFocusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorFocusView.m; sourceTree = "<group>"; };
 		41FF3E6B1AAECD8400092320 /* DoctorFocusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorFocusView.xib; sourceTree = "<group>"; };
@@ -312,6 +317,9 @@
 				41FF3E8A1AB0309C00092320 /* DescriptionCell.h */,
 				41FF3E8B1AB0309C00092320 /* DescriptionCell.m */,
 				41FF3E8C1AB0309C00092320 /* DescriptionCell.xib */,
+				41BCA37F1AB92B8100260715 /* BannerCell.h */,
+				41BCA3801AB92B8100260715 /* BannerCell.m */,
+				41BCA3811AB92B8100260715 /* BannerCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -460,6 +468,7 @@
 				413CE5361AA81502002E16D9 /* DoctorDetailViewController.xib in Resources */,
 				41FF3E7F1AB0154500092320 /* FundCell.xib in Resources */,
 				413CE52C1AA8146F002E16D9 /* LoginViewController.xib in Resources */,
+				41BCA3831AB92B8100260715 /* BannerCell.xib in Resources */,
 				413CE5311AA814DE002E16D9 /* DoctorsViewController.xib in Resources */,
 				B216461E1AAFAE2800E12C88 /* FormSwitchCell.xib in Resources */,
 				41FF3E6E1AAFD2F400092320 /* BannerView.xib in Resources */,
@@ -534,6 +543,7 @@
 				B216461D1AAFAE2800E12C88 /* FormSwitchCell.m in Sources */,
 				B21E85E11AAA5C830007A07A /* DonateCell.m in Sources */,
 				413CE55E1AA816F4002E16D9 /* User.m in Sources */,
+				41BCA3821AB92B8100260715 /* BannerCell.m in Sources */,
 				41FF3E7E1AB0154500092320 /* FundCell.m in Sources */,
 				413039ED1AA812E40086C445 /* AppDelegate.m in Sources */,
 				413CE5551AA815FA002E16D9 /* FundView.m in Sources */,
