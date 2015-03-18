@@ -51,6 +51,7 @@ NSString *const kDoctorCellName = @"DoctorCell";
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
     [self.doctorsTableView reloadData];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation: UIStatusBarAnimationFade];
 }
 
 #pragma mark Core
