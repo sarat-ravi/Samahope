@@ -16,10 +16,12 @@
 #import "PatientCell.h"
 #import "DescriptionCell.h"
 
-@interface DoctorDetailViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface DoctorDetailViewController () <UITableViewDataSource, UITableViewDelegate, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 
 @property (strong, nonatomic) IBOutlet BannerView *bannerView;
 @property (strong, nonatomic) IBOutlet UITableView *detailTableView;
+@property (nonatomic, assign) CGFloat transitionDuration;
+@property (nonatomic, assign) BOOL isPresenting;
 
 - (IBAction)onDonateButtonTapped:(id)sender;
 
@@ -32,6 +34,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.transitionDuration = 0.4;
+    
     // Make nav bar transparent
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
@@ -39,6 +43,7 @@
     self.navigationController.view.backgroundColor = [UIColor clearColor];
     self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
     self.navigationController.navigationBar.tintColor = [UIColor darkTextColor];
+    [self customizeNavBar: self.navigationController];
     
     self.bannerView.doctor = self.doctor;
     
@@ -58,7 +63,55 @@
     [self.detailTableView reloadData];
 }
 
-#pragma mark Core
+#pragma mark UI Animated Transitioning
+
+- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext {
+    return self.transitionDuration;
+}
+
+- (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
+    UIView *containerView = [transitionContext containerView];
+    UIViewController *fromViewController = [transitionContext viewControllerForKey: UITransitionContextFromViewControllerKey];
+    UIViewController *toViewController = [transitionContext viewControllerForKey: UITransitionContextToViewControllerKey];
+    
+    if (self.isPresenting) {
+        [containerView addSubview: toViewController.view];
+        toViewController.view.alpha = 0.0;
+        
+        [UIView animateWithDuration: self.transitionDuration animations:^{
+            toViewController.view.alpha = 1.0;
+        } completion:^(BOOL finished) {
+            [transitionContext completeTransition: YES];
+        }];
+    } else {
+        [UIView animateWithDuration: self.transitionDuration animations:^{
+            fromViewController.view.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            [transitionContext completeTransition: YES];
+            [fromViewController.view removeFromSuperview];
+        }];
+    }
+}
+
+#pragma mark UI Transition Delegate
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    self.isPresenting = YES;
+    return self;
+}
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    self.isPresenting = NO;
+    return self;
+}
+
+// - (id <UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id <UIViewControllerAnimatedTransitioning>)animator {
+    
+// }
+
+// - (id <UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id <UIViewControllerAnimatedTransitioning>)animator {
+    
+// }
 
 #pragma mark Table Listeners
 
@@ -93,12 +146,32 @@
     NSLog(@"Selected row %ld in section %ld", (long)indexPath.row, (long)indexPath.section);
 }
 
+#pragma mark Nav Bar Customization
+
+- (void) customizeNavBar: (UINavigationController *)nvc {
+    // Make nav bar transparent
+    [nvc.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    nvc.navigationBar.shadowImage = [UIImage new];
+    nvc.navigationBar.translucent = YES;
+    nvc.view.backgroundColor = [UIColor clearColor];
+    nvc.navigationBar.backgroundColor = [UIColor clearColor];
+    nvc.navigationBar.tintColor = [UIColor darkTextColor];
+}
+
 #pragma mark User Actions
 
 - (IBAction)onDonateButtonTapped:(id)sender {
     NSLog(@"DetailVC: Donate button tapped");
     DonateViewController *vc = [[DonateViewController alloc] init];
     vc.doctor = self.doctor;
-    [self.navigationController pushViewController: vc animated:YES];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: vc];
+    nvc.modalPresentationStyle = UIModalPresentationCustom;
+    nvc.transitioningDelegate = self;
+    
+    [self customizeNavBar: nvc];
+    
+    
+    [self presentViewController: nvc animated:YES completion:nil];
+    // [self.navigationController pushViewController: vc animated:YES];
 }
 @end
