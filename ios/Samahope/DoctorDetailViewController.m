@@ -23,6 +23,7 @@
 @property (nonatomic, assign) CGFloat transitionDuration;
 @property (nonatomic, assign) BOOL isPresenting;
 
+- (IBAction)onXButtonTapped:(id)sender;
 - (IBAction)onDonateButtonTapped:(id)sender;
 
 @end
@@ -162,6 +163,11 @@
 }
 
 #pragma mark User Actions
+
+- (IBAction)onXButtonTapped:(id)sender {
+    NSLog(@"on X button tapped");
+    [self dismissViewControllerAnimated: YES completion:nil];
+}
 
 - (IBAction)onDonateButtonTapped:(id)sender {
     NSLog(@"DetailVC: Donate button tapped");

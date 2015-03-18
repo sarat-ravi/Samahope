@@ -81,7 +81,10 @@ NSString *const kDoctorCellName = @"DoctorCell";
     
     DoctorDetailViewController *vc = [[DoctorDetailViewController alloc] init];
     vc.doctor = self.doctors[indexPath.row];
-    [self.navigationController pushViewController: vc animated:YES];
+    // vc.modalPresentationStyle = UIModalPresentationPopover;
+    vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController: vc animated:YES completion:nil];
+    // [self.navigationController pushViewController: vc animated:YES];
 }
 
 @end

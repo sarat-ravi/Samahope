@@ -15,35 +15,74 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbV-nK-uO9">
-                    <rect key="frame" x="0.0" y="530" width="600" height="70"/>
-                    <color key="backgroundColor" red="0.019607843140000001" green="0.75686274509999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="70" id="4qG-Gh-jhX"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="34"/>
-                    <state key="normal" title="Donate">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="onDonateButtonTapped:" destination="-1" eventType="touchUpInside" id="F5M-eH-p0F"/>
-                    </connections>
-                </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7ue-oJ-y4W">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="530"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cl-nu-Uo3">
+                    <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJg-gi-YgG">
+                            <rect key="frame" x="538" y="8" width="54" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="54" id="qjH-t8-hYz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
+                            <state key="normal" title="👤">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbV-nK-uO9">
+                            <rect key="frame" x="70" y="8" width="460" height="34"/>
+                            <color key="backgroundColor" red="0.019607843140000001" green="0.75686274509999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                            <state key="normal" title="Donate">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onDonateButtonTapped:" destination="-1" eventType="touchUpInside" id="F5M-eH-p0F"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7n-JN-D54">
+                            <rect key="frame" x="8" y="8" width="54" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="54" id="mGb-Ua-GhI"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
+                            <state key="normal" title="✕">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onXButtonTapped:" destination="-1" eventType="touchUpInside" id="NlL-nz-GYY"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="zbV-nK-uO9" firstAttribute="leading" secondItem="T7n-JN-D54" secondAttribute="trailing" constant="8" id="0g0-z9-wTi"/>
+                        <constraint firstItem="T7n-JN-D54" firstAttribute="top" secondItem="3cl-nu-Uo3" secondAttribute="top" constant="8" id="2DZ-L2-bxh"/>
+                        <constraint firstItem="zbV-nK-uO9" firstAttribute="top" secondItem="3cl-nu-Uo3" secondAttribute="top" constant="8" id="Ey3-Mu-sqC"/>
+                        <constraint firstItem="T7n-JN-D54" firstAttribute="leading" secondItem="3cl-nu-Uo3" secondAttribute="leading" constant="8" id="GyO-WO-s4J"/>
+                        <constraint firstAttribute="bottom" secondItem="T7n-JN-D54" secondAttribute="bottom" constant="8" id="gVB-Xx-nXC"/>
+                        <constraint firstAttribute="height" constant="50" id="lTg-8x-RIq"/>
+                        <constraint firstAttribute="bottom" secondItem="zbV-nK-uO9" secondAttribute="bottom" constant="8" id="nO2-Nx-3ef"/>
+                        <constraint firstItem="BJg-gi-YgG" firstAttribute="top" secondItem="3cl-nu-Uo3" secondAttribute="top" constant="8" id="wKl-bf-J8l"/>
+                        <constraint firstAttribute="bottom" secondItem="BJg-gi-YgG" secondAttribute="bottom" constant="8" id="wKv-DS-cCt"/>
+                        <constraint firstItem="BJg-gi-YgG" firstAttribute="leading" secondItem="zbV-nK-uO9" secondAttribute="trailing" constant="8" id="wle-kB-niz"/>
+                        <constraint firstAttribute="trailing" secondItem="BJg-gi-YgG" secondAttribute="trailing" constant="8" id="yao-ao-NBt"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="zbV-nK-uO9" secondAttribute="trailing" id="FK7-gk-ZMA"/>
-                <constraint firstAttribute="bottom" secondItem="zbV-nK-uO9" secondAttribute="bottom" id="GFq-b2-Xud"/>
-                <constraint firstAttribute="trailing" secondItem="7ue-oJ-y4W" secondAttribute="trailing" id="JyX-mL-0Zc"/>
-                <constraint firstItem="zbV-nK-uO9" firstAttribute="top" secondItem="7ue-oJ-y4W" secondAttribute="bottom" id="KRA-sx-bYY"/>
-                <constraint firstItem="zbV-nK-uO9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZQu-Q9-CSy"/>
-                <constraint firstItem="7ue-oJ-y4W" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hEH-cZ-kY5"/>
-                <constraint firstItem="7ue-oJ-y4W" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xgo-mJ-D0V"/>
+                <constraint firstItem="3cl-nu-Uo3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5JR-RT-sZA"/>
+                <constraint firstAttribute="trailing" secondItem="7ue-oJ-y4W" secondAttribute="trailing" id="AbL-px-YHP"/>
+                <constraint firstAttribute="bottom" secondItem="3cl-nu-Uo3" secondAttribute="bottom" id="Fam-Kx-zJ3"/>
+                <constraint firstItem="7ue-oJ-y4W" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Sen-5s-gva"/>
+                <constraint firstItem="7ue-oJ-y4W" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="T43-zF-LXX"/>
+                <constraint firstItem="7ue-oJ-y4W" firstAttribute="bottom" secondItem="3cl-nu-Uo3" secondAttribute="bottom" id="fiU-V3-7dO"/>
+                <constraint firstAttribute="trailing" secondItem="3cl-nu-Uo3" secondAttribute="trailing" id="p8k-y2-Xpc"/>
             </constraints>
             <point key="canvasLocation" x="404" y="497"/>
         </view>
