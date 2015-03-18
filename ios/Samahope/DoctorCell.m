@@ -10,12 +10,11 @@
 #import "UIImageView+AFNetworking.h"
 #import "FundView.h"
 #import "DoctorFocusView.h"
+#import "BannerView.h"
 
 @interface DoctorCell()
 
-@property (strong, nonatomic) IBOutlet UIImageView *profileImageView;
-@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) IBOutlet UIView *nameLabelBackgroundView;
+@property (strong, nonatomic) IBOutlet BannerView *bannerView;
 @property (strong, nonatomic) IBOutlet FundView *fundView;
 @property (strong, nonatomic) IBOutlet DoctorFocusView *doctorFocusView;
 
@@ -31,8 +30,8 @@
     _doctor = doctor;
     
     // [self.profileImageView setImageWithURL: [NSURL URLWithString: doctor.profileImageUrlString]];
-    [self.profileImageView setImageWithURL: [NSURL URLWithString: doctor.fullScreenImageUrlString]];
-    self.nameLabel.text = doctor.name;
+    self.bannerView.doctor = doctor;
+    self.bannerView.maskAlpha = 0.0;
     self.fundView.fund = doctor.fund;
     self.doctorFocusView.doctor = doctor;
 }
