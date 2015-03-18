@@ -11,6 +11,7 @@
 #import "SamahopeClient.h"
 #import "DoctorCell.h"
 #import "SamahopeClient.h"
+#import "BannerView.h"
 
 NSString *const kDoctorCellName = @"DoctorCell";
 
@@ -20,6 +21,8 @@ NSString *const kDoctorCellName = @"DoctorCell";
 @property (strong, nonatomic) NSArray *doctors;
 @property (nonatomic, assign) CGFloat transitionDuration;
 @property (nonatomic, assign) BOOL isPresenting;
+@property (nonatomic, strong) Doctor *selectedDoctor;
+@property (nonatomic, assign) CGRect selectedDoctorCellRect;
 
 @end
 
@@ -32,7 +35,7 @@ NSString *const kDoctorCellName = @"DoctorCell";
     
     self.title = @"Doctors";
     
-    self.transitionDuration = 0.4;
+    self.transitionDuration = 0.5;
     
     self.doctorsTableView.delegate = self;
     self.doctorsTableView.dataSource = self;
@@ -85,14 +88,30 @@ NSString *const kDoctorCellName = @"DoctorCell";
         toViewController.view.bounds = containerView.bounds;
         toViewController.view.center = CGPointMake(containerView.center.x + screenWidth, containerView.center.y);
         
+        BannerView *bannerView = [[BannerView alloc] initWithFrame: CGRectMake(0, self.selectedDoctorCellRect.origin.y, screenWidth, 150)];
+        [containerView addSubview: bannerView];
+        bannerView.maskAlpha = 0.0;
+        bannerView.doctor = self.selectedDoctor;
+        bannerView.alpha = 0.0;
+        
         [UIView animateWithDuration: self.transitionDuration animations:^{
             toViewController.view.center = CGPointMake(containerView.center.x, containerView.center.y);
+            bannerView.frame = CGRectMake(0, 0, screenWidth, 150);
+            bannerView.alpha = 1.0;
         } completion:^(BOOL finished) {
             [transitionContext completeTransition: YES];
+            [bannerView removeFromSuperview];
         }];
     } else {
+        BannerView *bannerView = [[BannerView alloc] initWithFrame: CGRectMake(0, 0, screenWidth, 150)];
+        [containerView addSubview: bannerView];
+        bannerView.maskAlpha = 0.0;
+        bannerView.doctor = self.selectedDoctor;
+        
         [UIView animateWithDuration: self.transitionDuration animations:^{
             fromViewController.view.center = CGPointMake(containerView.center.x + screenWidth, containerView.center.y);
+            bannerView.frame = CGRectMake(0, self.selectedDoctorCellRect.origin.y, screenWidth, 150);
+            bannerView.alpha = 0.0;
         } completion:^(BOOL finished) {
             [transitionContext completeTransition: YES];
             [fromViewController.view removeFromSuperview];
@@ -129,8 +148,12 @@ NSString *const kDoctorCellName = @"DoctorCell";
     NSLog(@"Selected row %ld in section %ld", (long)indexPath.row, (long)indexPath.section);
     [tableView deselectRowAtIndexPath: indexPath animated:NO];
     
+    CGRect rectOfCellInTableView = [tableView rectForRowAtIndexPath:indexPath];
+    self.selectedDoctorCellRect = [tableView convertRect:rectOfCellInTableView toView:[tableView superview]];
+    self.selectedDoctor = self.doctors[indexPath.row];
+    
     DoctorDetailViewController *vc = [[DoctorDetailViewController alloc] init];
-    vc.doctor = self.doctors[indexPath.row];
+    vc.doctor = self.selectedDoctor;
     // vc.modalPresentationStyle = UIModalPresentationPopover;
     // vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     vc.modalPresentationStyle = UIModalPresentationCustom;
