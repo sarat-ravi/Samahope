@@ -23,6 +23,7 @@
 - (IBAction)onDonateButton:(id)sender;
 
 - (NSMutableDictionary *)paymentParams;
+-(void)showErrors;
 @end
 
 @implementation PaymentFormViewController
@@ -70,23 +71,28 @@
 */
 
 - (IBAction)onDonateButton:(id)sender {
-    NSMutableDictionary *params = [self paymentParams];
-    NSLog(@"Donate with params: %@", params);
+    if (![self.paymentForm validate]) {
+        [self showErrors];
+    } else {
 
-    [[SamahopeClient sharedInstance] makeDonation:params completion:^(bool success, NSError *error) {
-        if (success) {
-            if (self.paymentForm.rememberCard) {
-                // Persist user info.
-                NSLog(@"Persist user info");
-                [User setPaymentInfo:params];
+        NSMutableDictionary *params = [self paymentParams];
+        NSLog(@"Donate with params: %@", params);
+
+        [[SamahopeClient sharedInstance] makeDonation:params completion:^(bool success, NSError *error) {
+            if (success) {
+                if (self.paymentForm.rememberCard) {
+                    // Persist user info.
+                    NSLog(@"Persist user info");
+                    [User setPaymentInfo:params];
+                }
+
+                // Go to Thanks View Controller
+                ThanksViewController *tvc = [[ThanksViewController alloc] init];
+                tvc.doctor = self.doctor;
+                [self.navigationController pushViewController:tvc animated:YES];
             }
-
-            // Go to Thanks View Controller
-            ThanksViewController *tvc = [[ThanksViewController alloc] init];
-            tvc.doctor = self.doctor;
-            [self.navigationController pushViewController:tvc animated:YES];
-        }
-    }];
+        }];
+    }
 }
 
 - (NSMutableDictionary *)paymentParams {
@@ -102,6 +108,23 @@
     [params setObject:self.paymentForm.CVN forKey:@"CVN"];
 
     return params;
+}
+
+-(void)showErrors {
+    NSMutableString *message = [NSMutableString string];
+
+    [self.paymentForm.errors enumerateKeysAndObjectsUsingBlock:^(NSString *attribute, NSArray *errors, BOOL *stop) {
+        for(NSString *error in errors) {
+            [message appendFormat:@"- %@\n", error];
+        };
+    }];
+
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!"
+                                                    message:message
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 
 @end

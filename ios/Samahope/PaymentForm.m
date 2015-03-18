@@ -76,6 +76,11 @@
                          @"WY": @"Wyoming",
                          @"DC": @"DistrictOfColumbia"
                          };
+
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            [[self class] validationInit];
+        });
     }
     return self;
 }
@@ -125,6 +130,23 @@
     return @[
              @"stateCodes",
              ];
+}
+
+-(NSArray *)rules {
+    return @[
+             // username, email and password are all required in "register" scenario
+             @{
+                 FXModelValidatorAttributes : @[@"nameOnCard", @"cardNumber", @"address", @"city", @"state", @"zipCode", @"expirationMonth", @"expirationYear", @"CVN"],
+                 FXModelValidatorType : @"required",
+                 },
+//             // email should be valid email address
+//             @{
+//                 FXModelValidatorAttributes : @"email",
+//                 FXModelValidatorType : @"email",
+//                 },
+
+             ];
+    
 }
 
 @end
