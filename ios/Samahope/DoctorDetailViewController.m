@@ -99,6 +99,8 @@
     NSLog(@"DetailVC: Donate button tapped");
     DonateViewController *vc = [[DonateViewController alloc] init];
     vc.doctor = self.doctor;
-    [self.navigationController pushViewController: vc animated:YES];
+    vc.modalPresentationStyle = UIModalPresentationCustom;
+    vc.transitioningDelegate = self;
+    // [self.navigationController pushViewController: vc animated:YES];
 }
 @end
