@@ -54,12 +54,19 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle: @"Cancel" style:UIBarButtonItemStylePlain target: self action: @selector(onCancelTapped)];
+    
     self.bannerView.doctor = self.doctor;
 
     [self.tableView registerNib:[UINib nibWithNibName:@"DonateCell" bundle:nil] forCellReuseIdentifier:@"DonateCell"];
 
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 60;
+}
+
+- (void)onCancelTapped {
+    NSLog(@"DonateViewController: on Navigation bar Cancel tapped");
+    [self dismissViewControllerAnimated: YES completion:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
