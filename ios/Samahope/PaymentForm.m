@@ -134,7 +134,7 @@
 
 -(NSArray *)rules {
     return @[
-             // username, email and password are all required in "register" scenario
+             // all required fields
              @{
                  FXModelValidatorAttributes : @[@"nameOnCard", @"cardNumber", @"address", @"city", @"state", @"zipCode", @"expirationMonth", @"expirationYear", @"CVN"],
                  FXModelValidatorType : @"required",
