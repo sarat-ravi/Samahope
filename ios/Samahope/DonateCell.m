@@ -48,6 +48,7 @@
     } else {
         [self.checkButtonImageView setImage:[UIImage imageNamed:@"unchecked"]];
     }
+    self.checkButtonImageView.image = [self.checkButtonImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 }
 
 #pragma mark - text field delegate methods

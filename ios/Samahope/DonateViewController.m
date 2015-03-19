@@ -15,6 +15,8 @@
 #import "ThanksViewController.h"
 #import "PaymentFormViewController.h"
 
+#define ENABLE_PAYMENTS YES
+
 typedef NS_ENUM(NSInteger, DonateAmountOption) {
     DonateAmountOption1 = 0,
     DonateAmountOption2,
@@ -118,7 +120,7 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
     [self.view endEditing:YES];
     NSLog(@"Donated %f", self.donateAmount);
     NSDictionary *paymentInfo = [User paymentInfo];
-    if (paymentInfo == nil) {
+    if (paymentInfo == nil || ENABLE_PAYMENTS) {
         PaymentFormViewController *pvc = [[PaymentFormViewController alloc] init];
         pvc.doctor = self.doctor;
         [self.navigationController pushViewController:pvc animated:YES];
