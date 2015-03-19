@@ -91,7 +91,7 @@
 
     NSArray *states = self.stateCodes.allKeys;
 
-    return @{FXFormFieldOptions: states, FXFormFieldPlaceholder: @"-", FXFormFieldAction: @"updateFields"};
+    return @{FXFormFieldOptions: states, FXFormFieldPlaceholder: @"Select…", FXFormFieldCell: [FXFormOptionPickerCell class], FXFormFieldAction: @"updateFields"};
 }
 
 - (NSDictionary *)expirationYearField
@@ -104,7 +104,7 @@
         [years addObject:@(i)];
     }
 
-    return @{FXFormFieldOptions: years, FXFormFieldPlaceholder: @"-", FXFormFieldAction: @"updateFields"};
+    return @{FXFormFieldOptions: years, FXFormFieldPlaceholder: @"Select…", FXFormFieldCell: [FXFormOptionPickerCell class], FXFormFieldAction: @"updateFields"};
 }
 
 - (NSDictionary *)expirationMonthField
@@ -122,7 +122,7 @@
                         @"November",
                         @"December"];
 
-    return @{FXFormFieldOptions: months, FXFormFieldPlaceholder: @"-", FXFormFieldAction: @"updateFields"};
+    return @{FXFormFieldOptions: months, FXFormFieldPlaceholder: @"Select…", FXFormFieldCell: [FXFormOptionPickerCell class], FXFormFieldAction: @"updateFields"};
 }
 
 - (NSArray *)excludedFields
