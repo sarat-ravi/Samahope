@@ -59,17 +59,18 @@
 //    return YES;
 //}
 //
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    NSLog(@"Donate Amount: %f", [textField.text floatValue]);
-    [self.delegate donateCell:self didUpdateValue:[textField.text floatValue]];
-    [textField resignFirstResponder];
-    return YES;
-}
-
-//- (void)textFieldDidEndEditing:(UITextField *)textField {
-//    NSLog(@"Donate Amount: %@", textField.text);
-//    [self.delegate donateCell:self didUpdateValue:[textField.text doubleValue]];
+//- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+//    NSLog(@"Donate Amount: %f", [textField.text floatValue]);
+//    [self.delegate donateCell:self didUpdateValue:[textField.text floatValue]];
 //    [textField resignFirstResponder];
+//    return YES;
 //}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    double donateAmount = [[textField.text substringFromIndex:1] doubleValue];
+    NSLog(@"Donate Amount: %f", donateAmount);
+    [self.delegate donateCell:self didUpdateValue:donateAmount];
+    [textField resignFirstResponder];
+}
 
 @end
