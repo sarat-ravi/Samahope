@@ -23,6 +23,12 @@
     // Do any additional setup after loading the view from its nib.
 
     self.bannerView.doctor = self.doctor;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle: @"Back" style:UIBarButtonItemStylePlain target: self action: @selector(onBackTapped)];
+}
+
+- (void)onBackTapped {
+    NSLog(@"ThanksVC: onBackTapped");
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,13 +47,12 @@
 */
 
 - (IBAction)onLogoButton:(id)sender {
-    DoctorsViewController *dvc = [[DoctorsViewController alloc] init];
-    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: dvc];
+    // DoctorsViewController *dvc = [[DoctorsViewController alloc] init];
+    // UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: dvc];
 
-    UIColor *globalTint = [[[UIApplication sharedApplication] delegate] window].tintColor;
+    // UIColor *globalTint = [[[UIApplication sharedApplication] delegate] window].tintColor;
 
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : globalTint}];
-
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    // [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : globalTint}];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 @end
