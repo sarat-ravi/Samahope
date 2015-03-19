@@ -89,7 +89,9 @@
 {
 
 
-    NSArray *states = self.stateCodes.allKeys;
+    NSArray *states = [[self.stateCodes allValues] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        return [obj1 compare:obj2];
+    }];
 
     return @{FXFormFieldOptions: states, FXFormFieldPlaceholder: @"Select…", FXFormFieldCell: [FXFormOptionPickerCell class], FXFormFieldAction: @"updateFields"};
 }
