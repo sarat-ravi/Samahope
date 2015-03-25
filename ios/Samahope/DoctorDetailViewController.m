@@ -37,15 +37,6 @@
     
     self.transitionDuration = 0.4;
     
-    // Make nav bar transparent
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.shadowImage = [UIImage new];
-    self.navigationController.navigationBar.translucent = YES;
-    self.navigationController.view.backgroundColor = [UIColor clearColor];
-    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
-    self.navigationController.navigationBar.tintColor = [UIColor darkTextColor];
-    [self customizeNavBar: self.navigationController];
-    
     // Set up table stuff
     self.detailTableView.delegate = self;
     self.detailTableView.dataSource = self;

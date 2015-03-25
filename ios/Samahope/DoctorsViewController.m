@@ -89,30 +89,30 @@ NSString *const kDoctorCellName = @"DoctorCell";
         toViewController.view.bounds = containerView.bounds;
         toViewController.view.center = CGPointMake(containerView.center.x + screenWidth, containerView.center.y);
         
-        BannerView *bannerView = [[BannerView alloc] initWithFrame: CGRectMake(0, self.selectedDoctorCellRect.origin.y, screenWidth, 150)];
+        BannerView *bannerView = [[BannerView alloc] initWithFrame: CGRectMake(0, self.selectedDoctorCellRect.origin.y, screenWidth, 170)];
         [containerView addSubview: bannerView];
         bannerView.maskAlpha = 0.0;
         bannerView.doctor = self.selectedDoctor;
-        bannerView.alpha = 0.0;
+        // bannerView.alpha = 0.0;
         
         [UIView animateWithDuration: self.transitionDuration animations:^{
             toViewController.view.center = CGPointMake(containerView.center.x, containerView.center.y);
-            bannerView.frame = CGRectMake(0, 0, screenWidth, 150);
-            bannerView.alpha = 1.0;
+            bannerView.frame = CGRectMake(0, 0, screenWidth, 170);
+            // bannerView.alpha = 1.0;
         } completion:^(BOOL finished) {
             [transitionContext completeTransition: YES];
             [bannerView removeFromSuperview];
         }];
     } else {
-        BannerView *bannerView = [[BannerView alloc] initWithFrame: CGRectMake(0, 0, screenWidth, 150)];
+        BannerView *bannerView = [[BannerView alloc] initWithFrame: CGRectMake(0, 0, screenWidth, 170)];
         [containerView addSubview: bannerView];
         bannerView.maskAlpha = 0.0;
         bannerView.doctor = self.selectedDoctor;
         
         [UIView animateWithDuration: self.transitionDuration animations:^{
             fromViewController.view.center = CGPointMake(containerView.center.x + screenWidth, containerView.center.y);
-            bannerView.frame = CGRectMake(0, self.selectedDoctorCellRect.origin.y, screenWidth, 150);
-            bannerView.alpha = 0.0;
+            bannerView.frame = CGRectMake(0, self.selectedDoctorCellRect.origin.y, screenWidth, 170);
+            // bannerView.alpha = 0.0;
         } completion:^(BOOL finished) {
             [transitionContext completeTransition: YES];
             [fromViewController.view removeFromSuperview];
