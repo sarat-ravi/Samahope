@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4110F5221AC28997009BEFA5 /* SimpleDonateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4110F5201AC28997009BEFA5 /* SimpleDonateCell.m */; };
+		4110F5231AC28997009BEFA5 /* SimpleDonateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4110F5211AC28997009BEFA5 /* SimpleDonateCell.xib */; };
 		413039EA1AA812E40086C445 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 413039E91AA812E40086C445 /* main.m */; };
 		413039ED1AA812E40086C445 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 413039EC1AA812E40086C445 /* AppDelegate.m */; };
 		413039F51AA812E40086C445 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413039F41AA812E40086C445 /* Images.xcassets */; };
@@ -71,6 +73,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4110F51F1AC28997009BEFA5 /* SimpleDonateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleDonateCell.h; sourceTree = "<group>"; };
+		4110F5201AC28997009BEFA5 /* SimpleDonateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleDonateCell.m; sourceTree = "<group>"; };
+		4110F5211AC28997009BEFA5 /* SimpleDonateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleDonateCell.xib; sourceTree = "<group>"; };
 		413039E41AA812E40086C445 /* Samahope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Samahope.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		413039E81AA812E40086C445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		413039E91AA812E40086C445 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -301,6 +306,9 @@
 				41BCA37F1AB92B8100260715 /* BannerCell.h */,
 				41BCA3801AB92B8100260715 /* BannerCell.m */,
 				41BCA3811AB92B8100260715 /* BannerCell.xib */,
+				4110F51F1AC28997009BEFA5 /* SimpleDonateCell.h */,
+				4110F5201AC28997009BEFA5 /* SimpleDonateCell.m */,
+				4110F5211AC28997009BEFA5 /* SimpleDonateCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -444,6 +452,7 @@
 				413039F51AA812E40086C445 /* Images.xcassets in Resources */,
 				413CE54D1AA81581002E16D9 /* ThanksViewController.xib in Resources */,
 				413CE5451AA8154D002E16D9 /* DonateViewController.xib in Resources */,
+				4110F5231AC28997009BEFA5 /* SimpleDonateCell.xib in Resources */,
 				413CE5361AA81502002E16D9 /* DoctorDetailViewController.xib in Resources */,
 				41FF3E7F1AB0154500092320 /* FundCell.xib in Resources */,
 				413CE52C1AA8146F002E16D9 /* LoginViewController.xib in Resources */,
@@ -518,6 +527,7 @@
 				413CE5581AA816A8002E16D9 /* DoctorBannerView.m in Sources */,
 				413CE53F1AA8153D002E16D9 /* UserViewController.m in Sources */,
 				413CE5761AAD3628002E16D9 /* Focus.m in Sources */,
+				4110F5221AC28997009BEFA5 /* SimpleDonateCell.m in Sources */,
 				B21E85E11AAA5C830007A07A /* DonateCell.m in Sources */,
 				413CE55E1AA816F4002E16D9 /* User.m in Sources */,
 				41BCA3821AB92B8100260715 /* BannerCell.m in Sources */,

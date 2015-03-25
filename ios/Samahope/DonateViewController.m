@@ -7,8 +7,8 @@
 //
 
 #import "DonateViewController.h"
+#import "SimpleDonateCell.h"
 #import "DonateCell.h"
-//#import "PaymentViewController.h"
 #import "User.h"
 #import "BannerView.h"
 #import "SamahopeClient.h"
@@ -17,18 +17,12 @@
 
 #define ENABLE_PAYMENTS YES
 
-typedef NS_ENUM(NSInteger, DonateAmountOption) {
-    DonateAmountOption1 = 0,
-    DonateAmountOption2,
-    DonateAmountOptionCustom
-};
-
 @interface DonateViewController () <UITableViewDataSource, UITableViewDelegate, DonateCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet BannerView *bannerView;
 
 @property (nonatomic, strong) NSArray *donateAmounts;
-@property (nonatomic, assign) DonateAmountOption selectedDonateAmountOption;
+@property (nonatomic, assign) NSInteger selectedDonateAmountOption;
 @property (nonatomic, assign) double donateAmount;
 
 - (IBAction)onDonateButton:(id)sender;
@@ -43,8 +37,8 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
 
     if (self) {
         [self initDonateAmountArray];
-        self.selectedDonateAmountOption = DonateAmountOption1;
-        self.donateAmount = [self.donateAmounts[DonateAmountOption1][@"value"] doubleValue];
+        self.selectedDonateAmountOption = 0;
+        self.donateAmount = [self.donateAmounts[self.selectedDonateAmountOption][@"value"] doubleValue];
     }
 
     return self;
@@ -61,10 +55,11 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
     
     self.bannerView.doctor = self.doctor;
 
+    [self.tableView registerNib:[UINib nibWithNibName:@"SimpleDonateCell" bundle:nil] forCellReuseIdentifier:@"SimpleDonateCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"DonateCell" bundle:nil] forCellReuseIdentifier:@"DonateCell"];
 
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 60;
+    self.tableView.rowHeight = 60;
+    // self.tableView.estimatedRowHeight = 100;
 }
 
 - (void)onCancelTapped {
@@ -91,15 +86,22 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    DonateCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DonateCell"];
-    cell.delegate = self;
-    [cell setDonateAmountText:self.donateAmounts[indexPath.row][@"name"]];
-    if (indexPath.row == self.selectedDonateAmountOption) {
-        [cell setChecked:YES];
+    UITableViewCell *tableCell = nil;
+    if ([self.donateAmounts[indexPath.row][@"name"] isEqualToString: @"Custom"]) {
+        DonateCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DonateCell"];
+        cell.delegate = self;
+        [cell setDonateAmountText:self.donateAmounts[indexPath.row][@"name"]];
+        [cell setChecked: indexPath.row == self.selectedDonateAmountOption];
+        tableCell = cell;
     } else {
-        [cell setChecked:NO];
+        SimpleDonateCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SimpleDonateCell"];
+        cell.amount = [self.donateAmounts[indexPath.row][@"value"] doubleValue];
+        cell.checked = indexPath.row == self.selectedDonateAmountOption;
+        tableCell = cell;
     }
-    return cell;
+    
+    tableCell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return tableCell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -108,7 +110,7 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
     self.donateAmount = [self.donateAmounts[indexPath.row][@"value"] doubleValue];
     [tableView reloadData];
     DonateCell *cell = (DonateCell *)[tableView cellForRowAtIndexPath:indexPath];
-    if (indexPath.row == DonateAmountOptionCustom) {
+    if ([self.donateAmounts[indexPath.row][@"name"] isEqualToString: @"Custom"]) {
         [cell setDonateAmountText:@"$50.00"];
         [cell enableEdit];
     }
@@ -141,7 +143,7 @@ typedef NS_ENUM(NSInteger, DonateAmountOption) {
     self.donateAmounts = @[
                            @{@"name" : @"$10.00", @"value" : @(10.00)},
                            @{@"name" : @"$25.00", @"value" : @(25.00)},
-                           @{@"name" : @"Custom", @"value" : @(50.00)}
+                           @{@"name" : @"$50.00", @"value" : @(50.00)}
                            ];
 }
 
