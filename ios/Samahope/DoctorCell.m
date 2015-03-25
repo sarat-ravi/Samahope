@@ -14,7 +14,6 @@
 
 @interface DoctorCell()
 
-@property (strong, nonatomic) IBOutlet BannerView *bannerView;
 @property (strong, nonatomic) IBOutlet FundView *fundView;
 @property (strong, nonatomic) IBOutlet DoctorFocusView *doctorFocusView;
 

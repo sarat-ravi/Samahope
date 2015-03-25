@@ -69,6 +69,11 @@
     [self presentViewController:activityVC animated:YES completion:nil];
 }
 
+- (void)setHideBannerCell:(BOOL)hideBannerCell {
+    _hideBannerCell = hideBannerCell;
+    [self.detailTableView reloadData];
+}
+
 #pragma mark UI Animated Transitioning
 
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext {
@@ -126,6 +131,7 @@
     if (indexPath.row == 0) {
         BannerCell *cell = [self.detailTableView dequeueReusableCellWithIdentifier: @"BannerCell" forIndexPath:indexPath];
         cell.maskAlpha = 0.0;
+        cell.hidden = self.hideBannerCell;
         cell.doctor = self.doctor;
         return cell;
     } else if (indexPath.row == 1) {

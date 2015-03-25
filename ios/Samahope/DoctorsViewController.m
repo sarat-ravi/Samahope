@@ -23,6 +23,7 @@ NSString *const kDoctorCellName = @"DoctorCell";
 @property (nonatomic, assign) BOOL isPresenting;
 @property (nonatomic, strong) Doctor *selectedDoctor;
 @property (nonatomic, assign) CGRect selectedDoctorCellRect;
+@property (nonatomic, strong) DoctorCell *selectedDoctorCell;
 
 @end
 
@@ -78,13 +79,15 @@ NSString *const kDoctorCellName = @"DoctorCell";
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
     UIView *containerView = [transitionContext containerView];
-    UIViewController *fromViewController = [transitionContext viewControllerForKey: UITransitionContextFromViewControllerKey];
-    UIViewController *toViewController = [transitionContext viewControllerForKey: UITransitionContextToViewControllerKey];
+    UIViewController *fromVC = [transitionContext viewControllerForKey: UITransitionContextFromViewControllerKey];
+    UIViewController *toVC = [transitionContext viewControllerForKey: UITransitionContextToViewControllerKey];
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
     
     if (self.isPresenting) {
+        DoctorDetailViewController *toViewController = (DoctorDetailViewController *)toVC;
+        
         [containerView addSubview: toViewController.view];
         toViewController.view.bounds = containerView.bounds;
         toViewController.view.center = CGPointMake(containerView.center.x + screenWidth, containerView.center.y);
@@ -94,6 +97,9 @@ NSString *const kDoctorCellName = @"DoctorCell";
         bannerView.maskAlpha = 0.0;
         bannerView.doctor = self.selectedDoctor;
         // bannerView.alpha = 0.0;
+        toViewController.hideBannerCell = YES;
+        
+        self.selectedDoctorCell.bannerView.alpha = 0.0;
         
         [UIView animateWithDuration: self.transitionDuration animations:^{
             toViewController.view.center = CGPointMake(containerView.center.x, containerView.center.y);
@@ -102,12 +108,17 @@ NSString *const kDoctorCellName = @"DoctorCell";
         } completion:^(BOOL finished) {
             [transitionContext completeTransition: YES];
             [bannerView removeFromSuperview];
+            toViewController.hideBannerCell = NO;
         }];
     } else {
+        DoctorDetailViewController *fromViewController = (DoctorDetailViewController *)fromVC;
+        
         BannerView *bannerView = [[BannerView alloc] initWithFrame: CGRectMake(0, 0, screenWidth, 170)];
         [containerView addSubview: bannerView];
         bannerView.maskAlpha = 0.0;
         bannerView.doctor = self.selectedDoctor;
+        
+        fromViewController.hideBannerCell = YES;
         
         [UIView animateWithDuration: self.transitionDuration animations:^{
             fromViewController.view.center = CGPointMake(containerView.center.x + screenWidth, containerView.center.y);
@@ -116,6 +127,8 @@ NSString *const kDoctorCellName = @"DoctorCell";
         } completion:^(BOOL finished) {
             [transitionContext completeTransition: YES];
             [fromViewController.view removeFromSuperview];
+            self.selectedDoctorCell.bannerView.alpha = 1.0;
+            fromViewController.hideBannerCell = NO;
         }];
     }
 }
@@ -153,6 +166,7 @@ NSString *const kDoctorCellName = @"DoctorCell";
     CGRect rectOfCellInTableView = [tableView rectForRowAtIndexPath:indexPath];
     self.selectedDoctorCellRect = [tableView convertRect:rectOfCellInTableView toView:[tableView superview]];
     self.selectedDoctor = self.doctors[indexPath.row];
+    self.selectedDoctorCell = (DoctorCell *)[tableView cellForRowAtIndexPath: indexPath];
     
     DoctorDetailViewController *vc = [[DoctorDetailViewController alloc] init];
     vc.doctor = self.selectedDoctor;

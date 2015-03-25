@@ -12,5 +12,6 @@
 @interface DoctorDetailViewController : UIViewController
 
 @property (strong, nonatomic) Doctor *doctor;
+@property (nonatomic, assign) BOOL hideBannerCell;
 
 @end

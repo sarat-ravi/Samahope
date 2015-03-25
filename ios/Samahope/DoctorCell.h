@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Doctor.h"
+#import "BannerView.h"
 
 @interface DoctorCell : UITableViewCell
 
 @property (nonatomic, strong) Doctor* doctor;
+@property (strong, nonatomic) IBOutlet BannerView *bannerView;
 
 @end
