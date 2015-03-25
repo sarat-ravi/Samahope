@@ -13,5 +13,6 @@
 
 @property (strong, nonatomic) Doctor *doctor;
 @property (nonatomic, assign) CGFloat maskAlpha;
+@property (nonatomic, assign) CGFloat labelBackgroundAlpha;
 
 @end

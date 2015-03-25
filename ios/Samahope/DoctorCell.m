@@ -26,6 +26,19 @@
     // Initialization code
 }
 
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+    NSLog(@"DoctorCell: setHighlighted: %d animated: %d", highlighted, animated);
+    if (highlighted) {
+        self.bannerView.maskAlpha = 0.5;
+        self.fundView.alpha = 0.5;
+        self.doctorFocusView.alpha = 0.5;
+    } else {
+        self.bannerView.maskAlpha = 0.0;
+        self.fundView.alpha = 1.0;
+        self.doctorFocusView.alpha = 1.0;
+    }
+}
+
 - (void)setDoctor:(Doctor *)doctor {
     _doctor = doctor;
     
@@ -34,11 +47,6 @@
     self.bannerView.maskAlpha = 0.0;
     self.fundView.fund = doctor.fund;
     self.doctorFocusView.doctor = doctor;
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-    // Configure the view for the selected state
 }
 
 @end

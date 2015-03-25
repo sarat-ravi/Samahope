@@ -136,6 +136,7 @@ NSString *const kDoctorCellName = @"DoctorCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     DoctorCell *cell = [self.doctorsTableView dequeueReusableCellWithIdentifier: kDoctorCellName forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.doctor = self.doctors[indexPath.row];
     return cell;
 }

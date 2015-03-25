@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *bannerImageView;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UIView *imageMaskView;
+@property (strong, nonatomic) IBOutlet UIView *labelBackgroundView;
 
 @end
 
@@ -58,6 +59,12 @@
 - (void)setMaskAlpha:(CGFloat)maskAlpha {
     _maskAlpha = maskAlpha;
     self.imageMaskView.alpha = maskAlpha;
+}
+
+- (void)setLabelBackgroundAlpha:(CGFloat)labelBackgroundAlpha {
+    NSLog(@"setLabelBackgroundAlpha called");
+    _labelBackgroundAlpha= labelBackgroundAlpha;
+    self.labelBackgroundView.alpha = labelBackgroundAlpha;
 }
 
 @end
